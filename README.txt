@@ -2,7 +2,7 @@ COOLSHOWS ATLAS -> https://myceliation.github.io/shows/
 
 How it stays current, with nothing running on your PC:
   - The page reads the coolshows.life sheet itself every time someone opens it.
-  - A GitHub Action (.github/workflows/refresh.yml) runs Monday and Thursday:
+  - A GitHub Action (.github/workflows/refresh.yml) runs every morning:
     it rescrapes, looks up exact spots for new venues, saves past shows that
     coolshows' rolling calendar drops (data/shows.json), rebuilds the page and
     deploys it. It also runs on every push, and on demand from the repo's

@@ -6,7 +6,7 @@ name: Refresh shows
 
 on:
   schedule:
-    - cron: "17 13 * * 1,4"   # Mon + Thu, ~9am Eastern (GitHub may run it a bit late)
+    - cron: "17 9 * * *"      # every day, ~5am Eastern (GitHub may run it a bit late)
   push:
     branches: [main]
   workflow_dispatch:          # "Run workflow" button on the Actions tab
