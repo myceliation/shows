@@ -286,5 +286,110 @@
   42.0984335,
   -75.8872215,
   "Hughes Street, City of Binghamton, Broome County, New York, 13903, United States"
- ]
+ ],
+ "The Room, New Brunswick, New Jersey": null,
+ "Garwood, New Jersey": [
+  40.6517692,
+  -74.3229264,
+  "Garwood, Union County, New Jersey, 07027, United States"
+ ],
+ "Crossroads, Garwood, New Jersey": [
+  40.6543786,
+  -74.3185186,
+  "Crossroads, North Avenue, Garwood, Union County, New Jersey, 07027, United States"
+ ],
+ "Fringe Records, Queens, New York": null,
+ "N/A, Brooklyn, New York": [
+  40.5442857,
+  -74.0353897,
+  "Chapel Hill North Channel, Queens, Queens County, New York, United States"
+ ],
+ "Tompkins Square Park, Manhattan, New York": [
+  40.7264858,
+  -73.9816843,
+  "Tompkins Square Park, Manhattan Community Board 3, Manhattan, New York County, New York, 10009, United States"
+ ],
+ "Property is Theft, Brooklyn, New York": null,
+ "Ambretta, Philadelphia, Pennsylvania": null,
+ "Hightstown, New Jersey": [
+  40.269559,
+  -74.5232454,
+  "Hightstown, Mercer County, New Jersey, United States"
+ ],
+ "Randy Now's Man Cave, Hightstown, New Jersey": null,
+ "Philamoca, Philadelphia, Pennsylvania": [
+  39.9622418,
+  -75.1574577,
+  "Philadelphia Mausoleum of Contemporary Art, 531, North 12th Street, Cambridge Plaza, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19123, United States"
+ ],
+ "Maggie's Farm, Philadelphia, Pennsylvania": null,
+ "Saint Vitus, Brooklyn, New York": null,
+ "In The West, New Brunswick, New Jersey": null,
+ "Greys Ferry Courtyard, Philadelphia, Pennsylvania": null,
+ "The Attic, Brooklyn, New York": [
+  40.635656,
+  -74.0233237,
+  "The Attic, 6754, 4th Avenue, Bay Ridge, Brooklyn, Kings County, New York, 11220, United States"
+ ],
+ "352 Troutman St, Brooklyn, New York": [
+  40.7053318,
+  -73.9239526,
+  "352, Troutman Street, Bushwick, Brooklyn, Kings County, New York, 11237, United States"
+ ],
+ "Meatlocker, Montclair, New Jersey": null,
+ "Cobra Club, Brooklyn, New York": [
+  40.7066852,
+  -73.9235217,
+  "Cobra Club, 6, Wyckoff Avenue, Bushwick, Brooklyn, Kings County, New York, 11237, United States"
+ ],
+ "Market Hotel, Brooklyn, New York": [
+  40.6969323,
+  -73.934588,
+  "Market Hotel, 1140, Myrtle Avenue, Brooklyn, Kings County, New York, 11221, United States"
+ ],
+ "Milford, New Jersey": [
+  40.5687128,
+  -75.0946169,
+  "Milford, Hunterdon County, New Jersey, United States"
+ ],
+ "The Vault, Milford, New Jersey": null,
+ "The Sanctuary, Philadelphia, Pennsylvania": [
+  39.9591401,
+  -75.2406194,
+  "Sanctuary Church of the Open Door, 5923, Walnut Street, Garden Court, West Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19139, United States"
+ ],
+ "Relax Lounge, Queens, New York": null,
+ "Maggie's, Lakewood, New Jersey": null,
+ "Colab Arts, New Brunswick, New Jersey": null,
+ "ErF, Brooklyn, New York": null,
+ "Waretown, New Jersey": [
+  39.788423,
+  -74.195851,
+  "Waretown, Barnegat Beach, Waretown, Ocean Township, Ocean County, New Jersey, 08758, United States"
+ ],
+ "Bella Pizza, Waretown, New Jersey": null,
+ "Fringe Records, Brooklyn, New York": null,
+ "The Sanctuary, Butler, New Jersey": null,
+ "Union Pool, Brooklyn, New York": [
+  40.7150021,
+  -73.9516171,
+  "Union Pool, 484, Union Avenue, Williamsburg, Brooklyn, Kings County, New York, 11211, United States"
+ ],
+ "1906 Rittenhouse Sq., Philadelphia, Pennsylvania": [
+  39.9485761,
+  -75.173053,
+  "Philadelphia Ethical Society, 1906, Rittenhouse Square, Center City, Philadelphia, Philadelphia County, Pennsylvania, 19103, United States"
+ ],
+ "Belmar, New Jersey": [
+  40.1784471,
+  -74.0218037,
+  "Belmar, Monmouth County, New Jersey, United States"
+ ],
+ "Vintage on Ninth, Belmar, New Jersey": null,
+ "Reading, Pennsylvania": [
+  40.335345,
+  -75.9279495,
+  "Reading, Berks County, Pennsylvania, United States"
+ ],
+ "Pleasuretone, Reading, Pennsylvania": null
 }
