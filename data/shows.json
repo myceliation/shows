@@ -1,6 +1,6 @@
 {
  "source": "https://coolshows.life/",
- "scraped": "2026-11-01",
+ "scraped": "2026-11-02",
  "shows": [
   {
    "id": "s4c8cd8248b",
@@ -2994,6 +2994,29 @@
    "link": ""
   },
   {
+   "id": "s8abf144a7e",
+   "date": "2026-11-05",
+   "bands": [
+    "Cursed Image",
+    "Handfruit",
+    "Trusselina",
+    "Glorp DJ"
+   ],
+   "venue": "Minimart",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|minimart",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$15",
+   "price": 15.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/hgQiW0z.jpeg",
+   "link": ""
+  },
+  {
    "id": "se8f547e508",
    "date": "2026-11-05",
    "bands": [
@@ -3386,6 +3409,28 @@
    "link": ""
   },
   {
+   "id": "s0cc103fc05",
+   "date": "2026-11-11",
+   "bands": [
+    "Paper Lady",
+    "Brookelen",
+    "Veronica"
+   ],
+   "venue": "Trans Pecos",
+   "city": "Queens",
+   "state": "NY",
+   "vkey": "NY|queens|trans pecos",
+   "time": "doors 7pm",
+   "start": 1140,
+   "door": "$12",
+   "price": 12.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/4NNKGUk.jpeg",
+   "link": ""
+  },
+  {
    "id": "s79512ba5a6",
    "date": "2026-11-12",
    "bands": [
@@ -3456,6 +3501,30 @@
    "link": ""
   },
   {
+   "id": "scfef3c318e",
+   "date": "2026-11-13",
+   "bands": [
+    "My Hands Were Tied",
+    "xpetalsofcarrionx",
+    "Comply",
+    "Aralia",
+    "Myelins Sheath"
+   ],
+   "venue": "Trans Pecos",
+   "city": "Queens",
+   "state": "NY",
+   "vkey": "NY|queens|trans pecos",
+   "time": "-",
+   "start": null,
+   "door": "tickets online",
+   "price": null,
+   "priceKind": "unknown",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/rRyrtxy.jpeg",
+   "link": ""
+  },
+  {
    "id": "s006000f4e7",
    "date": "2026-11-13",
    "bands": [
@@ -3474,6 +3543,52 @@
    "age": "unknown",
    "ageRaw": "",
    "flier": "https://i.imgur.com/zbesUmI.jpeg",
+   "link": ""
+  },
+  {
+   "id": "sdcd0a9884a",
+   "date": "2026-11-13",
+   "bands": [
+    "Whale Teeth",
+    "Under Review",
+    "Young and Doomed",
+    "50 Days At Iliam"
+   ],
+   "venue": "Philly Salt Office",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|philly salt office",
+   "time": "6:00 PM",
+   "start": 1080,
+   "door": "$10",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "notaflof",
+   "flier": "https://i.imgur.com/ToZV0gX.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s6a5925bc29",
+   "date": "2026-11-13",
+   "bands": [
+    "Darkest Dungeons",
+    "Doom Lounge",
+    "Chris Bozzone",
+    "Ritual Audio"
+   ],
+   "venue": "Flemington DIY",
+   "city": "Flemington",
+   "state": "NJ",
+   "vkey": "NJ|flemington|flemington diy",
+   "time": "6:30 PM",
+   "start": 1110,
+   "door": "$10",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "all ages",
+   "ageRaw": "all ages, no drugs or booze",
+   "flier": "https://i.imgur.com/9ssX5Yg.jpeg",
    "link": ""
   },
   {
@@ -3568,6 +3683,31 @@
    "age": "unknown",
    "ageRaw": "notaflof",
    "flier": "https://i.imgur.com/isLGtA1.jpeg",
+   "link": ""
+  },
+  {
+   "id": "sa5b5180c8c",
+   "date": "2026-11-14",
+   "bands": [
+    "rojava",
+    "ariadne's thread",
+    "delta screws",
+    "allison",
+    "tyrant",
+    "show thy face"
+   ],
+   "venue": "Principles Gd Coffeehouse",
+   "city": "Brooklyn",
+   "state": "NY",
+   "vkey": "NY|brooklyn|principles gd coffeehouse",
+   "time": "6:00 PM",
+   "start": 1080,
+   "door": "$10",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/McvuqxS.jpeg",
    "link": ""
   },
   {
@@ -3829,6 +3969,29 @@
    "link": ""
   },
   {
+   "id": "s3a47cebfa2",
+   "date": "2026-11-19",
+   "bands": [
+    "Until Then",
+    "No Diving",
+    "Juniper",
+    "Montage Montage"
+   ],
+   "venue": "Debonair Music Hall",
+   "city": "Teaneck",
+   "state": "NJ",
+   "vkey": "NJ|teaneck|debonair music hall",
+   "time": "doors 6 music 7pm",
+   "start": 1140,
+   "door": "$15 adv $20 atd",
+   "price": 15.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/JRJsPFW.jpeg",
+   "link": ""
+  },
+  {
    "id": "s2f56b17ba8",
    "date": "2026-11-20",
    "bands": [
@@ -4042,6 +4205,31 @@
    "link": ""
   },
   {
+   "id": "sf696dec914",
+   "date": "2026-11-22",
+   "bands": [
+    "Arcon(IN)",
+    "the icks (FL)",
+    "acid test",
+    "peaceful",
+    "ezy feeling",
+    "military school"
+   ],
+   "venue": "Cousin Danny's",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|cousin danny's",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$10",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/NlGH8bs.jpeg",
+   "link": ""
+  },
+  {
    "id": "s8ea9b38c4d",
    "date": "2026-11-24",
    "bands": [
@@ -4090,6 +4278,24 @@
    "link": ""
   },
   {
+   "id": "sd2be9fc731",
+   "date": "2026-11-28",
+   "bands": [],
+   "venue": "",
+   "city": "",
+   "state": "",
+   "vkey": "||",
+   "time": "",
+   "start": null,
+   "door": "",
+   "price": null,
+   "priceKind": "unknown",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/FnsRVT1.jpeg",
+   "link": ""
+  },
+  {
    "id": "s6999c9e1c4",
    "date": "2026-11-29",
    "bands": [
@@ -4115,215 +4321,6 @@
  ],
  "venues": [
   {
-   "key": "NJ|new brunswick|the room",
-   "state": "NJ",
-   "city": "New Brunswick",
-   "venue": "The Room",
-   "hidden": false,
-   "lat": 40.4936119,
-   "lng": -74.4436416,
-   "precision": "city",
-   "match": "New Brunswick, Middlesex County, New Jersey, United States"
-  },
-  {
-   "key": "NJ|montclair|the meatlocker",
-   "state": "NJ",
-   "city": "Montclair",
-   "venue": "The Meatlocker",
-   "hidden": false,
-   "lat": 40.8164458,
-   "lng": -74.2210643,
-   "precision": "city",
-   "match": "Montclair, Essex County, New Jersey, United States"
-  },
-  {
-   "key": "PA|philadelphia|gray's warehouse",
-   "state": "PA",
-   "city": "Philadelphia",
-   "venue": "Gray's Warehouse",
-   "hidden": false,
-   "lat": 39.9527237,
-   "lng": -75.1635262,
-   "precision": "city",
-   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
-  },
-  {
-   "key": "NY|brooklyn|gold sounds",
-   "state": "NY",
-   "city": "Brooklyn",
-   "venue": "Gold Sounds",
-   "hidden": false,
-   "lat": 40.7027061,
-   "lng": -73.9295401,
-   "precision": "venue",
-   "match": "Gold Sounds Bar, 44, Wilson Avenue, Bushwick, Brooklyn, Kings County, New York, 11207, United States"
-  },
-  {
-   "key": "NJ|garwood|crossroads",
-   "state": "NJ",
-   "city": "Garwood",
-   "venue": "Crossroads",
-   "hidden": false,
-   "lat": 40.6543786,
-   "lng": -74.3185186,
-   "precision": "venue",
-   "match": "Crossroads, North Avenue, Garwood, Union County, New Jersey, 07027, United States"
-  },
-  {
-   "key": "NY|queens|tv eye",
-   "state": "NY",
-   "city": "Queens",
-   "venue": "TV Eye",
-   "hidden": false,
-   "lat": 40.6978683,
-   "lng": -73.9052427,
-   "precision": "venue",
-   "match": "TV Eye NYC, 16-47, Weirfield Street, Ridgewood, Queens, Queens County, New York, 11385, United States"
-  },
-  {
-   "key": "NJ|new brunswick|cinco",
-   "state": "NJ",
-   "city": "New Brunswick",
-   "venue": "Cinco",
-   "hidden": false,
-   "lat": 40.4936119,
-   "lng": -74.4436416,
-   "precision": "city",
-   "match": "New Brunswick, Middlesex County, New Jersey, United States"
-  },
-  {
-   "key": "NY|brooklyn|7th borough",
-   "state": "NY",
-   "city": "Brooklyn",
-   "venue": "7th Borough",
-   "hidden": false,
-   "lat": 40.6526006,
-   "lng": -73.9497211,
-   "precision": "city",
-   "match": "Brooklyn, Kings County, New York, United States"
-  },
-  {
-   "key": "PA|philadelphia|cousin danny's",
-   "state": "PA",
-   "city": "Philadelphia",
-   "venue": "Cousin Danny's",
-   "hidden": false,
-   "lat": 39.9527237,
-   "lng": -75.1635262,
-   "precision": "city",
-   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
-  },
-  {
-   "key": "NJ|new brunswick|ferren mall",
-   "state": "NJ",
-   "city": "New Brunswick",
-   "venue": "Ferren Mall",
-   "hidden": false,
-   "lat": 40.4936119,
-   "lng": -74.4436416,
-   "precision": "city",
-   "match": "New Brunswick, Middlesex County, New Jersey, United States"
-  },
-  {
-   "key": "NJ|boonton|boonton elks lodge",
-   "state": "NJ",
-   "city": "Boonton",
-   "venue": "Boonton Elks Lodge",
-   "hidden": false,
-   "lat": 40.9025989,
-   "lng": -74.4070971,
-   "precision": "city",
-   "match": "Boonton, Morris County, New Jersey, 07005, United States"
-  },
-  {
-   "key": "PA|philadelphia|minimart",
-   "state": "PA",
-   "city": "Philadelphia",
-   "venue": "Minimart",
-   "hidden": false,
-   "lat": 39.9527237,
-   "lng": -75.1635262,
-   "precision": "city",
-   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
-  },
-  {
-   "key": "NY|queens|fringe records",
-   "state": "NY",
-   "city": "Queens",
-   "venue": "Fringe Records",
-   "hidden": false,
-   "lat": 40.7135078,
-   "lng": -73.8283132,
-   "precision": "city",
-   "match": "Queens, Queens County, New York, United States"
-  },
-  {
-   "key": "NY|brooklyn|~hidden",
-   "state": "NY",
-   "city": "Brooklyn",
-   "venue": "Address by DM",
-   "hidden": true,
-   "lat": 40.6526006,
-   "lng": -73.9497211,
-   "precision": "city",
-   "match": "Brooklyn, Kings County, New York, United States"
-  },
-  {
-   "key": "NY|brooklyn|n/a",
-   "state": "NY",
-   "city": "Brooklyn",
-   "venue": "N/A",
-   "hidden": false,
-   "lat": 40.6526006,
-   "lng": -73.9497211,
-   "precision": "city",
-   "match": "Brooklyn, Kings County, New York, United States"
-  },
-  {
-   "key": "NJ|newton|stillwater",
-   "state": "NJ",
-   "city": "Newton",
-   "venue": "Stillwater",
-   "hidden": false,
-   "lat": 41.0583121,
-   "lng": -74.7531445,
-   "precision": "city",
-   "match": "Newton, Sussex County, New Jersey, United States"
-  },
-  {
-   "key": "PA|bethlehem|national sokols",
-   "state": "PA",
-   "city": "Bethlehem",
-   "venue": "National Sokols",
-   "hidden": false,
-   "lat": 40.6178915,
-   "lng": -75.3786521,
-   "precision": "city",
-   "match": "Bethlehem, Northampton County, Pennsylvania, United States"
-  },
-  {
-   "key": "NY|manhattan|tompkins square park",
-   "state": "NY",
-   "city": "Manhattan",
-   "venue": "Tompkins Square Park",
-   "hidden": false,
-   "lat": 40.7264858,
-   "lng": -73.9816843,
-   "precision": "venue",
-   "match": "Tompkins Square Park, Manhattan Community Board 3, Manhattan, New York County, New York, 10009, United States"
-  },
-  {
-   "key": "NY|brooklyn|property is theft",
-   "state": "NY",
-   "city": "Brooklyn",
-   "venue": "Property is Theft",
-   "hidden": false,
-   "lat": 40.6526006,
-   "lng": -73.9497211,
-   "precision": "city",
-   "match": "Brooklyn, Kings County, New York, United States"
-  },
-  {
    "key": "PA|philadelphia|ambretta",
    "state": "PA",
    "city": "Philadelphia",
@@ -4344,6 +4341,39 @@
    "lng": -73.906323,
    "precision": "venue",
    "match": "Trans-Pecos, 915, Wyckoff Avenue, Ridgewood, Queens, Queens County, New York, 11385, United States"
+  },
+  {
+   "key": "NJ|new brunswick|cinco",
+   "state": "NJ",
+   "city": "New Brunswick",
+   "venue": "Cinco",
+   "hidden": false,
+   "lat": 40.4936119,
+   "lng": -74.4436416,
+   "precision": "city",
+   "match": "New Brunswick, Middlesex County, New Jersey, United States"
+  },
+  {
+   "key": "NY|brooklyn|gold sounds",
+   "state": "NY",
+   "city": "Brooklyn",
+   "venue": "Gold Sounds",
+   "hidden": false,
+   "lat": 40.7027061,
+   "lng": -73.9295401,
+   "precision": "venue",
+   "match": "Gold Sounds Bar, 44, Wilson Avenue, Bushwick, Brooklyn, Kings County, New York, 11207, United States"
+  },
+  {
+   "key": "PA|philadelphia|minimart",
+   "state": "PA",
+   "city": "Philadelphia",
+   "venue": "Minimart",
+   "hidden": false,
+   "lat": 39.9527237,
+   "lng": -75.1635262,
+   "precision": "city",
+   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
   },
   {
    "key": "NJ|hightstown|randy now's man cave",
@@ -4445,6 +4475,17 @@
    "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
   },
   {
+   "key": "NJ|new brunswick|ferren mall",
+   "state": "NJ",
+   "city": "New Brunswick",
+   "venue": "Ferren Mall",
+   "hidden": false,
+   "lat": 40.4936119,
+   "lng": -74.4436416,
+   "precision": "city",
+   "match": "New Brunswick, Middlesex County, New Jersey, United States"
+  },
+  {
    "key": "PA|philadelphia|greys ferry courtyard",
    "state": "PA",
    "city": "Philadelphia",
@@ -4500,6 +4541,17 @@
    "match": "The Attic, 6754, 4th Avenue, Bay Ridge, Brooklyn, Kings County, New York, 11220, United States"
   },
   {
+   "key": "NY|queens|tv eye",
+   "state": "NY",
+   "city": "Queens",
+   "venue": "TV Eye",
+   "hidden": false,
+   "lat": 40.6978683,
+   "lng": -73.9052427,
+   "precision": "venue",
+   "match": "TV Eye NYC, 16-47, Weirfield Street, Ridgewood, Queens, Queens County, New York, 11385, United States"
+  },
+  {
    "key": "NY|brooklyn|352 troutman st",
    "state": "NY",
    "city": "Brooklyn",
@@ -4553,6 +4605,28 @@
    "lng": -75.0946169,
    "precision": "city",
    "match": "Milford, Hunterdon County, New Jersey, United States"
+  },
+  {
+   "key": "NJ|flemington|flemington diy",
+   "state": "NJ",
+   "city": "Flemington",
+   "venue": "Flemington DIY",
+   "hidden": false,
+   "lat": 40.5130953,
+   "lng": -74.8591333,
+   "precision": "city",
+   "match": "Flemington, Hunterdon County, New Jersey, United States"
+  },
+  {
+   "key": "PA|philadelphia|philly salt office",
+   "state": "PA",
+   "city": "Philadelphia",
+   "venue": "Philly Salt Office",
+   "hidden": false,
+   "lat": 39.9527237,
+   "lng": -75.1635262,
+   "precision": "city",
+   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
   },
   {
    "key": "PA|philadelphia|1737",
@@ -4621,6 +4695,17 @@
    "match": "New Brunswick, Middlesex County, New Jersey, United States"
   },
   {
+   "key": "NY|brooklyn|principles gd coffeehouse",
+   "state": "NY",
+   "city": "Brooklyn",
+   "venue": "Principles Gd Coffeehouse",
+   "hidden": false,
+   "lat": 40.6526006,
+   "lng": -73.9497211,
+   "precision": "city",
+   "match": "Brooklyn, Kings County, New York, United States"
+  },
+  {
    "key": "NY|brooklyn|erf",
    "state": "NY",
    "city": "Brooklyn",
@@ -4630,6 +4715,17 @@
    "lng": -73.9497211,
    "precision": "city",
    "match": "Brooklyn, Kings County, New York, United States"
+  },
+  {
+   "key": "NJ|garwood|crossroads",
+   "state": "NJ",
+   "city": "Garwood",
+   "venue": "Crossroads",
+   "hidden": false,
+   "lat": 40.6543786,
+   "lng": -74.3185186,
+   "precision": "venue",
+   "match": "Crossroads, North Avenue, Garwood, Union County, New Jersey, 07027, United States"
   },
   {
    "key": "NJ|waretown|bella pizza",
@@ -4652,6 +4748,17 @@
    "lng": -75.1635262,
    "precision": "city",
    "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
+  },
+  {
+   "key": "NJ|teaneck|debonair music hall",
+   "state": "NJ",
+   "city": "Teaneck",
+   "venue": "Debonair Music Hall",
+   "hidden": false,
+   "lat": 40.8860164,
+   "lng": -74.0072568,
+   "precision": "city",
+   "match": "Teaneck Township, Bergen County, New Jersey, United States"
   },
   {
    "key": "NY|brooklyn|fringe records",
@@ -4709,6 +4816,28 @@
    "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
   },
   {
+   "key": "PA|philadelphia|cousin danny's",
+   "state": "PA",
+   "city": "Philadelphia",
+   "venue": "Cousin Danny's",
+   "hidden": false,
+   "lat": 39.9527237,
+   "lng": -75.1635262,
+   "precision": "city",
+   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
+  },
+  {
+   "key": "NY|brooklyn|property is theft",
+   "state": "NY",
+   "city": "Brooklyn",
+   "venue": "Property is Theft",
+   "hidden": false,
+   "lat": 40.6526006,
+   "lng": -73.9497211,
+   "precision": "city",
+   "match": "Brooklyn, Kings County, New York, United States"
+  },
+  {
    "key": "NJ|belmar|vintage on ninth",
    "state": "NJ",
    "city": "Belmar",
@@ -4729,6 +4858,138 @@
    "lng": -75.9279495,
    "precision": "city",
    "match": "Reading, Berks County, Pennsylvania, United States"
+  },
+  {
+   "key": "||",
+   "state": "",
+   "city": "",
+   "venue": "",
+   "hidden": false,
+   "lat": null,
+   "lng": null,
+   "precision": "none",
+   "match": ""
+  },
+  {
+   "key": "NJ|new brunswick|the room",
+   "state": "NJ",
+   "city": "New Brunswick",
+   "venue": "The Room",
+   "hidden": false,
+   "lat": 40.4936119,
+   "lng": -74.4436416,
+   "precision": "city",
+   "match": "New Brunswick, Middlesex County, New Jersey, United States"
+  },
+  {
+   "key": "NJ|montclair|the meatlocker",
+   "state": "NJ",
+   "city": "Montclair",
+   "venue": "The Meatlocker",
+   "hidden": false,
+   "lat": 40.8164458,
+   "lng": -74.2210643,
+   "precision": "city",
+   "match": "Montclair, Essex County, New Jersey, United States"
+  },
+  {
+   "key": "PA|philadelphia|gray's warehouse",
+   "state": "PA",
+   "city": "Philadelphia",
+   "venue": "Gray's Warehouse",
+   "hidden": false,
+   "lat": 39.9527237,
+   "lng": -75.1635262,
+   "precision": "city",
+   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
+  },
+  {
+   "key": "NY|brooklyn|7th borough",
+   "state": "NY",
+   "city": "Brooklyn",
+   "venue": "7th Borough",
+   "hidden": false,
+   "lat": 40.6526006,
+   "lng": -73.9497211,
+   "precision": "city",
+   "match": "Brooklyn, Kings County, New York, United States"
+  },
+  {
+   "key": "NJ|boonton|boonton elks lodge",
+   "state": "NJ",
+   "city": "Boonton",
+   "venue": "Boonton Elks Lodge",
+   "hidden": false,
+   "lat": 40.9025989,
+   "lng": -74.4070971,
+   "precision": "city",
+   "match": "Boonton, Morris County, New Jersey, 07005, United States"
+  },
+  {
+   "key": "NY|queens|fringe records",
+   "state": "NY",
+   "city": "Queens",
+   "venue": "Fringe Records",
+   "hidden": false,
+   "lat": 40.7135078,
+   "lng": -73.8283132,
+   "precision": "city",
+   "match": "Queens, Queens County, New York, United States"
+  },
+  {
+   "key": "NY|brooklyn|~hidden",
+   "state": "NY",
+   "city": "Brooklyn",
+   "venue": "Address by DM",
+   "hidden": true,
+   "lat": 40.6526006,
+   "lng": -73.9497211,
+   "precision": "city",
+   "match": "Brooklyn, Kings County, New York, United States"
+  },
+  {
+   "key": "NY|brooklyn|n/a",
+   "state": "NY",
+   "city": "Brooklyn",
+   "venue": "N/A",
+   "hidden": false,
+   "lat": 40.6526006,
+   "lng": -73.9497211,
+   "precision": "city",
+   "match": "Brooklyn, Kings County, New York, United States"
+  },
+  {
+   "key": "NJ|newton|stillwater",
+   "state": "NJ",
+   "city": "Newton",
+   "venue": "Stillwater",
+   "hidden": false,
+   "lat": 41.0583121,
+   "lng": -74.7531445,
+   "precision": "city",
+   "match": "Newton, Sussex County, New Jersey, United States"
+  },
+  {
+   "key": "PA|bethlehem|national sokols",
+   "state": "PA",
+   "city": "Bethlehem",
+   "venue": "National Sokols",
+   "hidden": false,
+   "lat": 40.6178915,
+   "lng": -75.3786521,
+   "precision": "city",
+   "match": "Bethlehem, Northampton County, Pennsylvania, United States"
+  },
+  {
+   "key": "NY|manhattan|tompkins square park",
+   "state": "NY",
+   "city": "Manhattan",
+   "venue": "Tompkins Square Park",
+   "hidden": false,
+   "lat": 40.7264858,
+   "lng": -73.9816843,
+   "precision": "venue",
+   "match": "Tompkins Square Park, Manhattan Community Board 3, Manhattan, New York County, New York, 10009, United States"
   },
   {
    "key": "NY|brooklyn|the sultan room",
