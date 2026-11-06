@@ -1,6 +1,6 @@
 {
  "source": "https://coolshows.life/",
- "scraped": "2026-11-05",
+ "scraped": "2026-11-06",
  "shows": [
   {
    "id": "s4c8cd8248b",
@@ -3061,6 +3061,30 @@
    "link": ""
   },
   {
+   "id": "s494821ab81",
+   "date": "2026-11-06",
+   "bands": [
+    "The Pandemics",
+    "Eevie Echoes",
+    "Ins\u00f6uciant",
+    "The Sunset Chasers",
+    "double jointed."
+   ],
+   "venue": "Property is Theft",
+   "city": "Brooklyn",
+   "state": "NY",
+   "vkey": "NY|brooklyn|property is theft",
+   "time": "6:39 PM",
+   "start": 1119,
+   "door": "$10-20",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/yq8dSna.jpeg",
+   "link": ""
+  },
+  {
    "id": "sd58cb3e43a",
    "date": "2026-11-06",
    "bands": [
@@ -3103,6 +3127,29 @@
    "age": "unknown",
    "ageRaw": "",
    "flier": "https://i.imgur.com/YjRnyWL.jpeg",
+   "link": ""
+  },
+  {
+   "id": "sf82ca22888",
+   "date": "2026-11-06",
+   "bands": [
+    "Lazlo",
+    "Sophie Swanson",
+    "The Shriek",
+    "Jamurai Sack"
+   ],
+   "venue": "Mum's",
+   "city": "New Brunswick",
+   "state": "NJ",
+   "vkey": "NJ|new brunswick|mum's",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$10",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "notaflof",
+   "flier": "https://i.imgur.com/esSlVOk.jpeg",
    "link": ""
   },
   {
@@ -3149,6 +3196,51 @@
    "age": "unknown",
    "ageRaw": "",
    "flier": "https://i.imgur.com/nkbkCsV.jpeg",
+   "link": ""
+  },
+  {
+   "id": "sc62a3536fe",
+   "date": "2026-11-06",
+   "bands": [
+    "abbatia",
+    "lahnah",
+    "septic bath",
+    "alarm"
+   ],
+   "venue": "Minimart",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|minimart",
+   "time": "doors 7, music 8pm",
+   "start": 1200,
+   "door": "$10",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "notaflof",
+   "flier": "https://i.imgur.com/sZWvMKR.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s8823f45343",
+   "date": "2026-11-06",
+   "bands": [
+    "Regal 86",
+    "Cubby Nine of Wands",
+    "Dj Sylo"
+   ],
+   "venue": "601 Spring Garden St",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|601 spring garden st",
+   "time": "10:00 PM",
+   "start": 1320,
+   "door": "tickets online",
+   "price": null,
+   "priceKind": "unknown",
+   "age": "21+",
+   "ageRaw": "21+",
+   "flier": "https://i.imgur.com/rkCLVVr.jpeg",
    "link": ""
   },
   {
@@ -3246,6 +3338,29 @@
    "link": ""
   },
   {
+   "id": "s5c81528f5d",
+   "date": "2026-11-07",
+   "bands": [
+    "Drop!Dead!Gorgeous!",
+    "Bad Timing",
+    "Pwincess (cincinnati)",
+    "Partisan (cincinnati)"
+   ],
+   "venue": "64 Grove St",
+   "city": "Brooklyn",
+   "state": "NY",
+   "vkey": "NY|brooklyn|64 grove st",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$5-15",
+   "price": 5.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/0fUdsMA.jpeg",
+   "link": ""
+  },
+  {
    "id": "seb06c027a4",
    "date": "2026-11-07",
    "bands": [
@@ -3317,6 +3432,28 @@
    "link": ""
   },
   {
+   "id": "s70d2e5b983",
+   "date": "2026-11-07",
+   "bands": [
+    "coin-op",
+    "secondhandsilence",
+    "Tenfold"
+   ],
+   "venue": "Pineapple NY",
+   "city": "Manhattan",
+   "state": "NY",
+   "vkey": "NY|manhattan|pineapple ny",
+   "time": "doors 7 music 8pm",
+   "start": 1200,
+   "door": "free show with purchase of shirt or $15",
+   "price": 0,
+   "priceKind": "free",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/Dan1RuQ.jpeg",
+   "link": ""
+  },
+  {
    "id": "s1e98d70967",
    "date": "2026-11-08",
    "bands": [
@@ -3360,6 +3497,28 @@
    "age": "all ages",
    "ageRaw": "all ages",
    "flier": "https://i.imgur.com/3kXrBRK.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s44adfc14ea",
+   "date": "2026-11-09",
+   "bands": [
+    "Mar Stellium",
+    "Julia Kirk",
+    "Chiara Maria"
+   ],
+   "venue": "The Wonder Bar",
+   "city": "Asbury Park",
+   "state": "NJ",
+   "vkey": "NJ|asbury park|the wonder bar",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "free",
+   "price": 0,
+   "priceKind": "free",
+   "age": "21+",
+   "ageRaw": "21+",
+   "flier": "https://i.imgur.com/LvfkZAj.jpeg",
    "link": ""
   },
   {
@@ -3431,6 +3590,29 @@
    "link": ""
   },
   {
+   "id": "s34b7dab6a1",
+   "date": "2026-11-11",
+   "bands": [
+    "Spray Bottle Fever",
+    "Purity Filter",
+    "Nullifeye",
+    "AFK"
+   ],
+   "venue": "Orpheus Garden",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|orpheus garden",
+   "time": "doors 7 music 8pm",
+   "start": 1200,
+   "door": "$10",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "18+",
+   "ageRaw": "notaflof, 18+",
+   "flier": "https://i.imgur.com/F3M4Az7.jpeg",
+   "link": ""
+  },
+  {
    "id": "s79512ba5a6",
    "date": "2026-11-12",
    "bands": [
@@ -3498,6 +3680,28 @@
    "age": "21+",
    "ageRaw": "21+",
    "flier": "https://i.imgur.com/T3rCfbs.jpeg",
+   "link": ""
+  },
+  {
+   "id": "sacf8d2f804",
+   "date": "2026-11-12",
+   "bands": [
+    "Ruby Bones",
+    "Reese Van Riper",
+    "Hayworth"
+   ],
+   "venue": "Pet Shop",
+   "city": "Jersey City",
+   "state": "NJ",
+   "vkey": "NJ|jersey city|pet shop",
+   "time": "8:00 PM",
+   "start": 1200,
+   "door": "free",
+   "price": 0,
+   "priceKind": "free",
+   "age": "21+",
+   "ageRaw": "21+",
+   "flier": "https://i.imgur.com/ZRl2ycy.jpeg",
    "link": ""
   },
   {
@@ -3636,6 +3840,52 @@
    "age": "unknown",
    "ageRaw": "",
    "flier": "https://i.imgur.com/jyRRC52.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s25aef19435",
+   "date": "2026-11-13",
+   "bands": [
+    "Fake Pollocks",
+    "Gre/ay",
+    "Bad at Drawing",
+    "Prize"
+   ],
+   "venue": "Mud House",
+   "city": "Brooklyn",
+   "state": "NY",
+   "vkey": "NY|brooklyn|mud house",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$10-20",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "notaflof",
+   "flier": "https://i.imgur.com/3IPAFzh.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s0b0ea2f77e",
+   "date": "2026-11-13",
+   "bands": [
+    "Jewels and More",
+    "The Great Bard",
+    "Brian Dolphin Band",
+    "100 Watt Horse"
+   ],
+   "venue": "The Pouch",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|the pouch",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$10-15",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "notaflof",
+   "flier": "https://i.imgur.com/CytwFUr.jpeg",
    "link": ""
   },
   {
@@ -3828,6 +4078,29 @@
    "link": ""
   },
   {
+   "id": "s53cf21ef1c",
+   "date": "2026-11-14",
+   "bands": [
+    "The Great Depression",
+    "Watercoat",
+    "GreyMonitor",
+    "Acrobat"
+   ],
+   "venue": "Jelounge",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|jelounge",
+   "time": "8:00 PM",
+   "start": 1200,
+   "door": "$10",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/GrqUtLs.jpeg",
+   "link": ""
+  },
+  {
    "id": "s25eaeeba2c",
    "date": "2026-11-15",
    "bands": [
@@ -3848,6 +4121,30 @@
    "age": "all ages",
    "ageRaw": "all ages matinee",
    "flier": "https://i.imgur.com/t68hZor.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s7d20b8a5a3",
+   "date": "2026-11-15",
+   "bands": [
+    "Bitter Branches",
+    "Kirkby Kiss",
+    "Burn Barrel (kansas city)",
+    "Cryptic Swarm",
+    "direct order '82"
+   ],
+   "venue": "the 244 spot",
+   "city": "South Amboy",
+   "state": "NJ",
+   "vkey": "NJ|south amboy|the 244 spot",
+   "time": "3:00 PM",
+   "start": 900,
+   "door": "$15",
+   "price": 15.0,
+   "priceKind": "paid",
+   "age": "all ages",
+   "ageRaw": "all ages",
+   "flier": "https://i.imgur.com/mX6NoZu.jpeg",
    "link": ""
   },
   {
@@ -3872,6 +4169,29 @@
    "age": "18+",
    "ageRaw": "18+",
    "flier": "https://i.imgur.com/xfRgnYf.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s6ed1f80e5c",
+   "date": "2026-11-15",
+   "bands": [
+    "My Wife's An Angel",
+    "Gre/ay",
+    "Ouchie",
+    "Toads"
+   ],
+   "venue": "Ferren Mall",
+   "city": "New Brunswick",
+   "state": "NJ",
+   "vkey": "NJ|new brunswick|ferren mall",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$10",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/YLDULXu.jpeg",
    "link": ""
   },
   {
@@ -3944,6 +4264,29 @@
    "link": ""
   },
   {
+   "id": "s0b0e30516a",
+   "date": "2026-11-16",
+   "bands": [
+    "Love Canal (FL)",
+    "End State",
+    "Overture",
+    "Bo\u00efl"
+   ],
+   "venue": "The Broadway",
+   "city": "Brooklyn",
+   "state": "NY",
+   "vkey": "NY|brooklyn|the broadway",
+   "time": "8:00 PM",
+   "start": 1200,
+   "door": "$12 adv $15 atd",
+   "price": 12.0,
+   "priceKind": "paid",
+   "age": "21+",
+   "ageRaw": "21+",
+   "flier": "https://i.imgur.com/MiCAnW0.jpeg",
+   "link": ""
+  },
+  {
    "id": "s5c95203c38",
    "date": "2026-11-17",
    "bands": [
@@ -3966,6 +4309,28 @@
    "age": "unknown",
    "ageRaw": "",
    "flier": "https://i.imgur.com/5DJJmMl.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s276729e1fa",
+   "date": "2026-11-17",
+   "bands": [
+    "Auroch",
+    "Quiz",
+    "Absol\u00fcte Waste"
+   ],
+   "venue": "Ferren Mall",
+   "city": "New Brunswick",
+   "state": "NY",
+   "vkey": "NY|new brunswick|ferren mall",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$10",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/SGmT5m2.jpeg",
    "link": ""
   },
   {
@@ -4036,6 +4401,51 @@
    "age": "unknown",
    "ageRaw": "",
    "flier": "https://i.imgur.com/5QJxnqr.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s06e31c2968",
+   "date": "2026-11-20",
+   "bands": [
+    "warmachine",
+    "lahnah",
+    "iquan",
+    "microgoblet"
+   ],
+   "venue": "Minimart",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|minimart",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$15",
+   "price": 15.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/zWQ2mZ7.jpeg",
+   "link": ""
+  },
+  {
+   "id": "sefcf6f3efe",
+   "date": "2026-11-20",
+   "bands": [
+    "Ursa and the Major Key",
+    "The Jette Planes",
+    "Puddle"
+   ],
+   "venue": "1123 Walnut St Fl2",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|1123 walnut st fl2",
+   "time": "doors 7 music 8pm",
+   "start": 1200,
+   "door": "$15",
+   "price": 15.0,
+   "priceKind": "paid",
+   "age": "21+",
+   "ageRaw": "21+",
+   "flier": "https://i.imgur.com/XxJpVA5.jpeg",
    "link": ""
   },
   {
@@ -4158,6 +4568,59 @@
    "link": ""
   },
   {
+   "id": "s40984958b3",
+   "date": "2026-11-21",
+   "bands": [
+    "invertebrates",
+    "Electric Chair",
+    "Brainwash Victims",
+    "Early Grave",
+    "Public Acid",
+    "Crane",
+    "Nurse",
+    "Abism",
+    "Cross",
+    "Mercy",
+    "Aacon"
+   ],
+   "venue": "TV Eye",
+   "city": "Ridgewood",
+   "state": "NY",
+   "vkey": "NY|ridgewood|tv eye",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$20",
+   "price": 20.0,
+   "priceKind": "paid",
+   "age": "18+",
+   "ageRaw": "18+",
+   "flier": "https://i.imgur.com/nHzUWru.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s680657cdd2",
+   "date": "2026-11-21",
+   "bands": [
+    "Daniel Weaver",
+    "Horseshoe",
+    "forty winks",
+    "Cradle"
+   ],
+   "venue": "Minimart",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|minimart",
+   "time": "doors 7, music 8pm",
+   "start": 1200,
+   "door": "$10",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/ya3y0gR.jpeg",
+   "link": ""
+  },
+  {
    "id": "s6ac0243876",
    "date": "2026-11-21",
    "bands": [
@@ -4202,6 +4665,31 @@
    "age": "unknown",
    "ageRaw": "pwyc, matinee",
    "flier": "https://i.imgur.com/K4XqxJS.jpeg",
+   "link": ""
+  },
+  {
+   "id": "sa451eab18f",
+   "date": "2026-11-22",
+   "bands": [
+    "Coming Up Roses",
+    "Disobey",
+    "inevitable",
+    "Belligerent",
+    "Dystrophy",
+    "Warboy"
+   ],
+   "venue": "Cinco",
+   "city": "New Brunswick",
+   "state": "NJ",
+   "vkey": "NJ|new brunswick|cinco",
+   "time": "3:00 PM",
+   "start": 900,
+   "door": "$15",
+   "price": 15.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "matinee",
+   "flier": "https://i.imgur.com/RI4c1qA.jpeg",
    "link": ""
   },
   {
@@ -4278,21 +4766,50 @@
    "link": ""
   },
   {
-   "id": "sd2be9fc731",
+   "id": "s1b8503c2a6",
    "date": "2026-11-28",
-   "bands": [],
-   "venue": "",
-   "city": "",
-   "state": "",
-   "vkey": "||",
-   "time": "",
-   "start": null,
+   "bands": [
+    "Dark Surfers",
+    "Shampoo",
+    "Sappers",
+    "The Speed Dials",
+    "T.T.L.C"
+   ],
+   "venue": "Vox Populi",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|vox populi",
+   "time": "doors 6:30, music 7pm",
+   "start": 1140,
+   "door": "$10-15",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/FnsRVT1.jpeg",
+   "link": ""
+  },
+  {
+   "id": "sb85d3101ba",
+   "date": "2026-11-28",
+   "bands": [
+    "birthnight",
+    "off knowneous",
+    "robot alien human",
+    "zachthedigital band"
+   ],
+   "venue": "Mum's",
+   "city": "New Brunswick",
+   "state": "NJ",
+   "vkey": "NJ|new brunswick|mum's",
+   "time": "7:00 PM",
+   "start": 1140,
    "door": "",
    "price": null,
    "priceKind": "unknown",
    "age": "unknown",
    "ageRaw": "",
-   "flier": "https://i.imgur.com/FnsRVT1.jpeg",
+   "flier": "https://i.imgur.com/QDh0CZ7.jpeg",
    "link": ""
   },
   {
@@ -4316,6 +4833,215 @@
    "age": "unknown",
    "ageRaw": "",
    "flier": "https://i.imgur.com/o5ND6zQ.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s0d14e51846",
+   "date": "2026-12-03",
+   "bands": [
+    "Wholewheat",
+    "Human Adult band",
+    "Toads",
+    "evantr0nic"
+   ],
+   "venue": "Soupcon Salon",
+   "city": "Lambertville",
+   "state": "NJ",
+   "vkey": "NJ|lambertville|soupcon salon",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$10-20",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/N6IbOio.jpeg",
+   "link": ""
+  },
+  {
+   "id": "sd384e5e846",
+   "date": "2026-12-04",
+   "bands": [
+    "Blank Chrome",
+    "Worldsucks",
+    "Khankhuuluu",
+    "Panic Park",
+    "Church Wig"
+   ],
+   "venue": "The Pouch",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|the pouch",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$15",
+   "price": 15.0,
+   "priceKind": "paid",
+   "age": "all ages",
+   "ageRaw": "notaflof, all ages, all proceeds go to Philly Bully Team https://phillybullyteam.org/",
+   "flier": "https://i.imgur.com/krgDPUO.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s324aeb01eb",
+   "date": "2026-12-04",
+   "bands": [
+    "Log Flume",
+    "Labrador",
+    "Looser",
+    "Me At The Zoo"
+   ],
+   "venue": "Abyssinia",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|abyssinia",
+   "time": "8:00 PM",
+   "start": 1200,
+   "door": "$10-20",
+   "price": 10.0,
+   "priceKind": "paid",
+   "age": "21+",
+   "ageRaw": "21+",
+   "flier": "https://i.imgur.com/5l5hJwt.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s1a7689de8a",
+   "date": "2026-12-05",
+   "bands": [
+    "Nylon",
+    "The ER Band",
+    "Candybar",
+    "Civil Rats"
+   ],
+   "venue": "Jt's Burgers and Brews",
+   "city": "Philadelphia",
+   "state": "PA",
+   "vkey": "PA|philadelphia|jt's burgers and brews",
+   "time": "-",
+   "start": null,
+   "door": "donations accepted",
+   "price": null,
+   "priceKind": "donation",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/aaUfWm6.jpeg",
+   "link": ""
+  },
+  {
+   "id": "sf8a2ba68db",
+   "date": "2026-12-05",
+   "bands": [
+    "Unsheathed Glory",
+    "Shantidas",
+    "Ruined Castle Wall",
+    "izolat"
+   ],
+   "venue": "Fringe Records",
+   "city": "Ridgewood",
+   "state": "NY",
+   "vkey": "NY|ridgewood|fringe records",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$15",
+   "price": 15.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/BlDzwmm.jpeg",
+   "link": ""
+  },
+  {
+   "id": "sdfcd1203f9",
+   "date": "2026-12-05",
+   "bands": [
+    "L.O.T.I.O.N.",
+    "Brain Tourniquet",
+    "No Idols",
+    "Early Grave",
+    "Blacksite"
+   ],
+   "venue": "Market Hotel",
+   "city": "Brooklyn",
+   "state": "NY",
+   "vkey": "NY|brooklyn|market hotel",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$15",
+   "price": 15.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/T6Dg4sv.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s6d0fefca0d",
+   "date": "2026-12-12",
+   "bands": [
+    "Duel",
+    "Defy You",
+    "Pound for Pound",
+    "Manik"
+   ],
+   "venue": "Cinco",
+   "city": "New Brunswick",
+   "state": "NJ",
+   "vkey": "NJ|new brunswick|cinco",
+   "time": "doors 6 music7pm",
+   "start": 1140,
+   "door": "$15",
+   "price": 15.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "notaflof",
+   "flier": "https://i.imgur.com/knANnMy.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s914b62cf14",
+   "date": "2026-12-13",
+   "bands": [
+    "Kim & Dro (Montreal)",
+    "Tonsil Hockey",
+    "Lizrd Women",
+    "Look At The Bones"
+   ],
+   "venue": "Hart Bar",
+   "city": "Brooklyn",
+   "state": "NY",
+   "vkey": "NY|brooklyn|hart bar",
+   "time": "6:30 PM",
+   "start": 1110,
+   "door": "$15",
+   "price": 15.0,
+   "priceKind": "paid",
+   "age": "21+",
+   "ageRaw": "21+",
+   "flier": "https://i.imgur.com/4BLIDkm.jpeg",
+   "link": ""
+  },
+  {
+   "id": "s247606b7e7",
+   "date": "2026-12-19",
+   "bands": [
+    "No Knock",
+    "Blu Anxxiety",
+    "Kortex",
+    "Take Care Of My Bones"
+   ],
+   "venue": "King Killer",
+   "city": "Brooklyn",
+   "state": "NY",
+   "vkey": "NY|brooklyn|king killer",
+   "time": "7:00 PM",
+   "start": 1140,
+   "door": "$12",
+   "price": 12.0,
+   "priceKind": "paid",
+   "age": "unknown",
+   "ageRaw": "",
+   "flier": "https://i.imgur.com/f66gY26.jpeg",
    "link": ""
   }
  ],
@@ -4475,6 +5201,39 @@
    "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
   },
   {
+   "key": "NJ|new brunswick|mum's",
+   "state": "NJ",
+   "city": "New Brunswick",
+   "venue": "Mum's",
+   "hidden": false,
+   "lat": 40.4936119,
+   "lng": -74.4436416,
+   "precision": "city",
+   "match": "New Brunswick, Middlesex County, New Jersey, United States"
+  },
+  {
+   "key": "NY|brooklyn|property is theft",
+   "state": "NY",
+   "city": "Brooklyn",
+   "venue": "Property is Theft",
+   "hidden": false,
+   "lat": 40.6526006,
+   "lng": -73.9497211,
+   "precision": "city",
+   "match": "Brooklyn, Kings County, New York, United States"
+  },
+  {
+   "key": "PA|philadelphia|601 spring garden st",
+   "state": "PA",
+   "city": "Philadelphia",
+   "venue": "601 Spring Garden St",
+   "hidden": false,
+   "lat": 39.961508,
+   "lng": -75.148334,
+   "precision": "venue",
+   "match": "601, Spring Garden Street, Poplar, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19123, United States"
+  },
+  {
    "key": "NJ|new brunswick|ferren mall",
    "state": "NJ",
    "city": "New Brunswick",
@@ -4552,6 +5311,28 @@
    "match": "TV Eye NYC, 16-47, Weirfield Street, Ridgewood, Queens, Queens County, New York, 11385, United States"
   },
   {
+   "key": "NY|brooklyn|64 grove st",
+   "state": "NY",
+   "city": "Brooklyn",
+   "venue": "64 Grove St",
+   "hidden": false,
+   "lat": 40.6526006,
+   "lng": -73.9497211,
+   "precision": "city",
+   "match": "Brooklyn, Kings County, New York, United States"
+  },
+  {
+   "key": "NY|manhattan|pineapple ny",
+   "state": "NY",
+   "city": "Manhattan",
+   "venue": "Pineapple NY",
+   "hidden": false,
+   "lat": 40.7579554,
+   "lng": -73.9855319,
+   "precision": "city",
+   "match": "Manhattan, New York County, New York, United States"
+  },
+  {
    "key": "NY|brooklyn|352 troutman st",
    "state": "NY",
    "city": "Brooklyn",
@@ -4572,6 +5353,28 @@
    "lng": -74.2210643,
    "precision": "city",
    "match": "Montclair, Essex County, New Jersey, United States"
+  },
+  {
+   "key": "NJ|asbury park|the wonder bar",
+   "state": "NJ",
+   "city": "Asbury Park",
+   "venue": "The Wonder Bar",
+   "hidden": false,
+   "lat": 40.2203907,
+   "lng": -74.0120817,
+   "precision": "city",
+   "match": "Asbury Park, Monmouth County, New Jersey, 07711, United States"
+  },
+  {
+   "key": "PA|philadelphia|orpheus garden",
+   "state": "PA",
+   "city": "Philadelphia",
+   "venue": "Orpheus Garden",
+   "hidden": false,
+   "lat": 39.9527237,
+   "lng": -75.1635262,
+   "precision": "city",
+   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
   },
   {
    "key": "NY|brooklyn|cobra club",
@@ -4616,6 +5419,17 @@
    "lng": -74.8591333,
    "precision": "city",
    "match": "Flemington, Hunterdon County, New Jersey, United States"
+  },
+  {
+   "key": "NY|brooklyn|mud house",
+   "state": "NY",
+   "city": "Brooklyn",
+   "venue": "Mud House",
+   "hidden": false,
+   "lat": 40.6526006,
+   "lng": -73.9497211,
+   "precision": "city",
+   "match": "Brooklyn, Kings County, New York, United States"
   },
   {
    "key": "PA|philadelphia|philly salt office",
@@ -4706,6 +5520,17 @@
    "match": "Brooklyn, Kings County, New York, United States"
   },
   {
+   "key": "PA|philadelphia|jelounge",
+   "state": "PA",
+   "city": "Philadelphia",
+   "venue": "Jelounge",
+   "hidden": false,
+   "lat": 39.9527237,
+   "lng": -75.1635262,
+   "precision": "city",
+   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
+  },
+  {
    "key": "NY|brooklyn|erf",
    "state": "NY",
    "city": "Brooklyn",
@@ -4739,6 +5564,17 @@
    "match": "Waretown, Barnegat Beach, Waretown, Ocean Township, Ocean County, New Jersey, 08758, United States"
   },
   {
+   "key": "NJ|south amboy|the 244 spot",
+   "state": "NJ",
+   "city": "South Amboy",
+   "venue": "the 244 spot",
+   "hidden": false,
+   "lat": 40.4821114,
+   "lng": -74.2828828,
+   "precision": "city",
+   "match": "South Amboy, Middlesex County, New Jersey, United States"
+  },
+  {
    "key": "PA|philadelphia|the palace",
    "state": "PA",
    "city": "Philadelphia",
@@ -4748,6 +5584,17 @@
    "lng": -75.1635262,
    "precision": "city",
    "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
+  },
+  {
+   "key": "NY|new brunswick|ferren mall",
+   "state": "NY",
+   "city": "New Brunswick",
+   "venue": "Ferren Mall",
+   "hidden": false,
+   "lat": 40.5024568,
+   "lng": -74.4629259,
+   "precision": "city",
+   "match": "New York Avenue, New Brunswick, Middlesex County, New Jersey, 08901, United States"
   },
   {
    "key": "NJ|teaneck|debonair music hall",
@@ -4794,6 +5641,17 @@
    "match": "Union Pool, 484, Union Avenue, Williamsburg, Brooklyn, Kings County, New York, 11211, United States"
   },
   {
+   "key": "PA|philadelphia|1123 walnut st fl2",
+   "state": "PA",
+   "city": "Philadelphia",
+   "venue": "1123 Walnut St Fl2",
+   "hidden": false,
+   "lat": 39.9527237,
+   "lng": -75.1635262,
+   "precision": "city",
+   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
+  },
+  {
    "key": "NY|brooklyn|hart bar",
    "state": "NY",
    "city": "Brooklyn",
@@ -4827,17 +5685,6 @@
    "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
   },
   {
-   "key": "NY|brooklyn|property is theft",
-   "state": "NY",
-   "city": "Brooklyn",
-   "venue": "Property is Theft",
-   "hidden": false,
-   "lat": 40.6526006,
-   "lng": -73.9497211,
-   "precision": "city",
-   "match": "Brooklyn, Kings County, New York, United States"
-  },
-  {
    "key": "NJ|belmar|vintage on ninth",
    "state": "NJ",
    "city": "Belmar",
@@ -4847,6 +5694,17 @@
    "lng": -74.0218037,
    "precision": "city",
    "match": "Belmar, Monmouth County, New Jersey, United States"
+  },
+  {
+   "key": "NY|ridgewood|tv eye",
+   "state": "NY",
+   "city": "Ridgewood",
+   "venue": "TV Eye",
+   "hidden": false,
+   "lat": 40.6978683,
+   "lng": -73.9052427,
+   "precision": "venue",
+   "match": "TV Eye NYC, 16-47, Weirfield Street, Ridgewood, Queens, Queens County, New York, 11385, United States"
   },
   {
    "key": "PA|reading|pleasuretone",
@@ -4860,15 +5718,70 @@
    "match": "Reading, Berks County, Pennsylvania, United States"
   },
   {
-   "key": "||",
-   "state": "",
-   "city": "",
-   "venue": "",
+   "key": "PA|philadelphia|vox populi",
+   "state": "PA",
+   "city": "Philadelphia",
+   "venue": "Vox Populi",
    "hidden": false,
-   "lat": null,
-   "lng": null,
-   "precision": "none",
-   "match": ""
+   "lat": 39.9527237,
+   "lng": -75.1635262,
+   "precision": "city",
+   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
+  },
+  {
+   "key": "NJ|lambertville|soupcon salon",
+   "state": "NJ",
+   "city": "Lambertville",
+   "venue": "Soupcon Salon",
+   "hidden": false,
+   "lat": 40.3656188,
+   "lng": -74.9454055,
+   "precision": "city",
+   "match": "Lambertville, Hunterdon County, New Jersey, 08530, United States"
+  },
+  {
+   "key": "PA|philadelphia|abyssinia",
+   "state": "PA",
+   "city": "Philadelphia",
+   "venue": "Abyssinia",
+   "hidden": false,
+   "lat": 39.9541784,
+   "lng": -75.2117749,
+   "precision": "venue",
+   "match": "Abyssinia, 229, South 45th Street, Southwest Schuylkill, West Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19104, United States"
+  },
+  {
+   "key": "PA|philadelphia|jt's burgers and brews",
+   "state": "PA",
+   "city": "Philadelphia",
+   "venue": "Jt's Burgers and Brews",
+   "hidden": false,
+   "lat": 39.9527237,
+   "lng": -75.1635262,
+   "precision": "city",
+   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
+  },
+  {
+   "key": "NY|ridgewood|fringe records",
+   "state": "NY",
+   "city": "Ridgewood",
+   "venue": "Fringe Records",
+   "hidden": false,
+   "lat": 40.7080556,
+   "lng": -73.9141667,
+   "precision": "city",
+   "match": "Ridgewood, Queens, Queens County, New York, 11385, United States"
+  },
+  {
+   "key": "NY|brooklyn|king killer",
+   "state": "NY",
+   "city": "Brooklyn",
+   "venue": "King Killer",
+   "hidden": false,
+   "lat": 40.6526006,
+   "lng": -73.9497211,
+   "precision": "city",
+   "match": "Brooklyn, Kings County, New York, United States"
   },
   {
    "key": "NJ|new brunswick|the room",
@@ -5124,17 +6037,6 @@
    "match": "Mount Holly Township, Burlington County, New Jersey, 08060, United States"
   },
   {
-   "key": "NY|ridgewood|fringe records",
-   "state": "NY",
-   "city": "Ridgewood",
-   "venue": "Fringe Records",
-   "hidden": false,
-   "lat": 40.7080556,
-   "lng": -73.9141667,
-   "precision": "city",
-   "match": "Ridgewood, Queens, Queens County, New York, 11385, United States"
-  },
-  {
    "key": "PA|philadelphia|philly style pizza",
    "state": "PA",
    "city": "Philadelphia",
@@ -5309,17 +6211,6 @@
    "lng": -74.0120817,
    "precision": "city",
    "match": "Asbury Park, Monmouth County, New Jersey, 07711, United States"
-  },
-  {
-   "key": "PA|philadelphia|orpheus garden",
-   "state": "PA",
-   "city": "Philadelphia",
-   "venue": "Orpheus Garden",
-   "hidden": false,
-   "lat": 39.9527237,
-   "lng": -75.1635262,
-   "precision": "city",
-   "match": "Philadelphia, Philadelphia County, Pennsylvania, United States"
   },
   {
    "key": "NJ|butler|drop wire",

@@ -406,5 +406,52 @@
   "Teaneck Township, Bergen County, New Jersey, United States"
  ],
  "Debonair Music Hall, Teaneck, New Jersey": null,
- ", ": null
+ ", ": null,
+ "Mum's, New Brunswick, New Jersey": null,
+ "601 Spring Garden St, Philadelphia, Pennsylvania": [
+  39.961508,
+  -75.148334,
+  "601, Spring Garden Street, Poplar, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19123, United States"
+ ],
+ "64 Grove St, Brooklyn, New York": [
+  40.7103121,
+  -73.8987409,
+  "61-64, Grove Street, Ridgewood, Bushwick, Queens, Queens County, New York, 11385, United States"
+ ],
+ "Pineapple NY, Manhattan, New York": null,
+ "The Wonder Bar, Asbury Park, New Jersey": null,
+ "Mud House, Brooklyn, New York": null,
+ "Jelounge, Philadelphia, Pennsylvania": null,
+ "South Amboy, New Jersey": [
+  40.4821114,
+  -74.2828828,
+  "South Amboy, Middlesex County, New Jersey, United States"
+ ],
+ "the 244 spot, South Amboy, New Jersey": null,
+ "New Brunswick, New York": [
+  40.5024568,
+  -74.4629259,
+  "New York Avenue, New Brunswick, Middlesex County, New Jersey, 08901, United States"
+ ],
+ "Ferren Mall, New Brunswick, New York": null,
+ "1123 Walnut St Fl2, Philadelphia, Pennsylvania": null,
+ "TV Eye, Ridgewood, New York": [
+  40.6978683,
+  -73.9052427,
+  "TV Eye NYC, 16-47, Weirfield Street, Ridgewood, Queens, Queens County, New York, 11385, United States"
+ ],
+ "Vox Populi, Philadelphia, Pennsylvania": null,
+ "Lambertville, New Jersey": [
+  40.3656188,
+  -74.9454055,
+  "Lambertville, Hunterdon County, New Jersey, 08530, United States"
+ ],
+ "Soupcon Salon, Lambertville, New Jersey": null,
+ "Abyssinia, Philadelphia, Pennsylvania": [
+  39.9541784,
+  -75.2117749,
+  "Abyssinia, 229, South 45th Street, Southwest Schuylkill, West Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19104, United States"
+ ],
+ "Jt's Burgers and Brews, Philadelphia, Pennsylvania": null,
+ "King Killer, Brooklyn, New York": null
 }
