@@ -1,7 +1,7 @@
-# Runs entirely on GitHub: rescrapes coolshows, looks up new venues, keeps past
-# shows in data/, rebuilds the page and deploys it to GitHub Pages.
-# The page also reads the live sheet on every visit, so this mainly maintains
-# the archive and exact venue spots.
+# Runs entirely on GitHub. Reads coolshows.life (including its archive tabs) and the
+# venue calendars in data/sources.json, cleans the listings, places new venues on the
+# map, saves everything to data/, rebuilds the site and deploys it to GitHub Pages.
+# The page also re-reads the coolshows sheet on every visit for same-day changes.
 name: Refresh shows
 
 on:
@@ -23,6 +23,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
@@ -33,21 +34,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Scrape coolshows.life
-        run: python3 -I tools/scrape.py data || echo "::warning::Scrape failed; deploying the last saved data"
+      - name: Read all sources
+        run: python3 -I tools/scrape.py data || echo "::warning::coolshows could not be read; deploying the last saved data"
 
       - name: Save the archive back to the repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data
-          git diff --cached --quiet || { git commit -m "Refresh shows $(date -u +%F)"; git push; }
+          git diff --cached --quiet || { git commit -q -m "Refresh shows $(date -u +%F)"; git pull -q --rebase && git push -q; }
 
       - name: Build the page
         run: |
           mkdir -p site
-          python3 -I tools/build.py tools/template.html tools/leaflet.css data/shows.json data/basemap.json site/index.html
-          cp data/shows.json site/shows.json
+          python3 -I tools/build.py tools/template.html tools/leaflet.css data/shows.json data/basemap.json site
           touch site/.nojekyll
 
       - uses: actions/configure-pages@v5

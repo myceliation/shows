@@ -1,0 +1,72 @@
+{
+  "_help": "Places the atlas reads listings from. Types: coolshows (the coolshows Google Sheet), squarespace (a venue's Squarespace events page), ics (any public iCalendar feed). For a single-venue calendar, give venue, city and state. Set \"enabled\": false to switch a source off. The scraper obeys each site's robots.txt.",
+  "sources": [
+    {
+      "id": "coolshows",
+      "name": "coolshows.life",
+      "type": "coolshows",
+      "home": "https://coolshows.life/",
+      "sheet": "1vkGXNAsJAb4BDYOHGgpi-HAydM7RVgssoBZfFsH0ark",
+      "tabs": "^(current|upcoming|\\d{4}Past)$"
+    },
+    {
+      "id": "abcnorio",
+      "name": "ABC No Rio",
+      "type": "ics",
+      "home": "https://www.abcnorio.org/events/",
+      "url": "https://www.abcnorio.org/events.ics",
+      "city": "New York City",
+      "state": "NY"
+    },
+    {
+      "id": "the-broadway",
+      "name": "The Broadway",
+      "type": "squarespace",
+      "home": "https://www.thebroadway.nyc/",
+      "url": "https://www.thebroadway.nyc/showcalendar",
+      "venue": "The Broadway",
+      "city": "Brooklyn",
+      "state": "NY"
+    },
+    {
+      "id": "mama-tried",
+      "name": "Mama Tried",
+      "type": "squarespace",
+      "home": "https://mamatriedbk.com/",
+      "url": "https://mamatriedbk.com/upcoming-events",
+      "venue": "Mama Tried",
+      "city": "Brooklyn",
+      "state": "NY"
+    },
+    {
+      "id": "pit",
+      "name": "Property Is Theft",
+      "type": "squarespace",
+      "home": "https://www.propertyistheft.org/",
+      "url": "https://www.propertyistheft.org/events",
+      "venue": "Property Is Theft (P.I.T.)",
+      "city": "Brooklyn",
+      "state": "NY"
+    },
+    {
+      "id": "khyber-pass",
+      "name": "Khyber Pass",
+      "type": "squarespace",
+      "home": "https://www.khyberpasspub.com/",
+      "url": "https://www.khyberpasspub.com/events",
+      "venue": "Khyber Pass",
+      "city": "Philadelphia",
+      "state": "PA"
+    },
+    {
+      "id": "prototype-237",
+      "name": "Prototype 237",
+      "type": "squarespace",
+      "home": "https://www.prototype237.com/",
+      "url": "https://www.prototype237.com/events",
+      "venue": "Prototype 237",
+      "city": "Paterson",
+      "state": "NJ"
+    }
+  ]
+}

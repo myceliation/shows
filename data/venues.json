@@ -1,0 +1,86 @@
+{
+  "_help": "Venue fixes. 'aliases' are other spellings that mean this venue. Give an 'address' (or 'lat'/'lng') only for public places that publish their address; never add a private home. Spellings are matched without case, punctuation or a leading 'The'.",
+  "venues": [
+    {
+      "name": "Property Is Theft (P.I.T.)",
+      "city": "Brooklyn",
+      "state": "NY",
+      "address": "411 S 5th St, Brooklyn, NY 11211",
+      "aliases": [
+        "P.I.T.",
+        "The P.I.T.",
+        "PIT",
+        "Property is Theft",
+        "P.I.T (Property is Theft)",
+        "411 S 5th St",
+        "411 South 5th St"
+      ]
+    },
+    {
+      "name": "Khyber Pass",
+      "city": "Philadelphia",
+      "state": "PA",
+      "address": "54 S 2nd St, Philadelphia, PA 19106",
+      "aliases": [
+        "Khyber Pass Pub",
+        "The Khyber"
+      ]
+    },
+    {
+      "name": "Mama Tried",
+      "city": "Brooklyn",
+      "state": "NY",
+      "address": "787 3rd Ave, Brooklyn, NY 11232",
+      "aliases": []
+    },
+    {
+      "name": "Prototype 237",
+      "city": "Paterson",
+      "state": "NJ",
+      "address": "237 River St, Paterson, NJ 07501",
+      "aliases": []
+    },
+    {
+      "name": "God's Automatic Body",
+      "city": "Philadelphia",
+      "state": "PA",
+      "aliases": [
+        "God's Auto Body",
+        "God's Automatic Body and Spa"
+      ]
+    },
+    {
+      "name": "The Barge",
+      "city": "Jersey City",
+      "state": "NJ",
+      "aliases": [
+        "Barge Inn"
+      ]
+    },
+    {
+      "name": "Gold Sounds",
+      "city": "Brooklyn",
+      "state": "NY",
+      "aliases": [
+        "Gold Soudns",
+        "Gold Sounds Bar"
+      ]
+    },
+    {
+      "name": "Trans-Pecos",
+      "city": "Queens",
+      "state": "NY",
+      "aliases": [
+        "Trans Pecos",
+        "The Trans-Pecos"
+      ]
+    },
+    {
+      "name": "The Attic",
+      "city": "Brooklyn",
+      "state": "NY",
+      "address": "20 Meadows St, Brooklyn, NY",
+      "aliases": []
+    }
+  ]
+}

@@ -1,206 +1,281 @@
 <title>Coolshows Atlas</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Map and calendar of DIY shows in New Jersey, New York and Pennsylvania, from coolshows.life and venue calendars.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,600;1,400&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>/*__LEAFLET_CSS__*/</style>
 <style>
-/* Layout: one-screen app on desktop — controls strip over a map with a calendar+list rail; stacks on phones.
-   Look: risograph flier on cool newsprint — ink, fluorescent pink, and a hot→cold distance ramp. */
+/* Layout: plain early-web document. Title and one paragraph, a row of form controls,
+   then the map beside a calendar and list. Stacks to one column on phones. */
 :root {
-  --paper: #e8eaee; --panel: #f6f7f9; --ink: #16171c; --ink-2: #4b4f5a; --ink-3: #7c818d;
-  --rule: #c9cdd5; --accent: #d4146f; --accent-ink: #ffffff; --focus: #2a5bd7;
-  --land: #f3f4f6; --land-far: #dde0e5; --border: #6f7480; --county: #c6cad2; --water: #cfd6df;
-  --r0: #d4146f; --r1: #e8542f; --r2: #e39a12; --r3: #3f9a8f; --r4: #4f72b5; --r5: #a2a8b4;
-  --nj: #d4146f; --ny: #2f6fd0; --pa: #d98a07;
-  --f-display: "Bowlby One", "Arial Black", Impact, sans-serif;
-  --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
-  --s-1: 0.75rem; --s0: 0.875rem; --s1: 1rem; --s2: 1.25rem; --s3: 1.75rem;
+  --paper: #fbfbf8; --panel: #ffffff; --ink: #1c1c1a; --ink-2: #55554f; --ink-3: #86867f;
+  --rule: #d6d6cf; --rule-2: #ececE6; --link: #0b4fb3; --visited: #5b3a9b; --focus: #0b4fb3; --hl: #fff2b8;
+  --warn: #8a4b00; --warn-bg: #fff1d6; --bad: #b3261e; --bad-bg: #fde7e4;
+  --r0: #c8102e; --r1: #e0601e; --r2: #c99600; --r3: #2b8a57; --r4: #2a6fb0; --r5: #9b9b94;
+  --nj: #b5179e; --ny: #2a6fb0; --pa: #c97a00; --water: #e9edf0; --land: #f6f6f2; --land-far: #ebebe5; --border: #9a9a92;
+  --f-head: "Gelasio", Georgia, "Times New Roman", serif;
+  --f-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --paper: #101115; --panel: #17191e; --ink: #ebecef; --ink-2: #b2b6c0; --ink-3: #80858f;
-  --rule: #2d3038; --accent: #ff4a9b; --accent-ink: #16171c; --focus: #8fb0ff;
-  --land: #1d2026; --land-far: #15171b; --border: #8a909c; --county: #2e323a; --water: #0c0d10;
-  --r0: #ff4a9b; --r1: #ff7a4f; --r2: #f2b33a; --r3: #4fc2b3; --r4: #7d9ee6; --r5: #5d626d;
-  --nj: #ff4a9b; --ny: #6c9cf0; --pa: #f2b33a; color-scheme: dark } }
+  --paper: #151514; --panel: #1c1c1a; --ink: #eaeae5; --ink-2: #b6b6ae; --ink-3: #85857e;
+  --rule: #3a3a35; --rule-2: #272724; --link: #8ab4f8; --visited: #c3a6f5; --focus: #8ab4f8; --hl: #3d3517;
+  --warn: #f2b65c; --warn-bg: #33270f; --bad: #ff8a80; --bad-bg: #3b1714;
+  --r0: #ff5c6c; --r1: #ff8a4c; --r2: #f0c23a; --r3: #4cc28a; --r4: #6aa7ec; --r5: #6d6d67;
+  --nj: #e45ad3; --ny: #6aa7ec; --pa: #f0b35a; --water: #0f1113; --land: #1f1f1d; --land-far: #191918; --border: #6f6f68;
+  color-scheme: dark } }
 :root[data-theme="dark"] {
-  --paper: #101115; --panel: #17191e; --ink: #ebecef; --ink-2: #b2b6c0; --ink-3: #80858f;
-  --rule: #2d3038; --accent: #ff4a9b; --accent-ink: #16171c; --focus: #8fb0ff;
-  --land: #1d2026; --land-far: #15171b; --border: #8a909c; --county: #2e323a; --water: #0c0d10;
-  --r0: #ff4a9b; --r1: #ff7a4f; --r2: #f2b33a; --r3: #4fc2b3; --r4: #7d9ee6; --r5: #5d626d;
-  --nj: #ff4a9b; --ny: #6c9cf0; --pa: #f2b33a; color-scheme: dark }
+  --paper: #151514; --panel: #1c1c1a; --ink: #eaeae5; --ink-2: #b6b6ae; --ink-3: #85857e;
+  --rule: #3a3a35; --rule-2: #272724; --link: #8ab4f8; --visited: #c3a6f5; --focus: #8ab4f8; --hl: #3d3517;
+  --warn: #f2b65c; --warn-bg: #33270f; --bad: #ff8a80; --bad-bg: #3b1714;
+  --r0: #ff5c6c; --r1: #ff8a4c; --r2: #f0c23a; --r3: #4cc28a; --r4: #6aa7ec; --r5: #6d6d67;
+  --nj: #e45ad3; --ny: #6aa7ec; --pa: #f0b35a; --water: #0f1113; --land: #1f1f1d; --land-far: #191918; --border: #6f6f68;
+  color-scheme: dark }
 
-html, body { height: 100%; }
-body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: var(--s0); line-height: 1.45; }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+a { color: var(--link); text-underline-offset: 2px; }
+a:visited { color: var(--visited); }
 button, select, input { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-a { color: inherit; }
+.mono { font-family: var(--f-mono); font-size: 0.86em; font-variant-numeric: tabular-nums; }
 
-.app { height: 100%; display: grid; grid-template-rows: auto auto 1fr; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 12px; gap: 10px; }
-header.top { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
-header.top h1 { font-family: var(--f-display); font-weight: 400; font-size: var(--s3); line-height: 1; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
-header.top h1 span { color: var(--accent); }
-.src { color: var(--ink-2); font-size: var(--s-1); flex: 1 1 280px; min-width: 0; }
-.src a { color: var(--ink); }
-.stat { font-family: var(--f-mono); font-size: var(--s-1); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.app { min-height: 100%; display: flex; flex-direction: column; gap: 14px; padding-block: 18px 24px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); max-width: 1500px; margin: 0 auto; }
+header.top { display: grid; gap: 4px; max-width: 72ch; }
+header.top h1 { font-family: var(--f-head); font-weight: 400; font-size: 2.1rem; line-height: 1.1; margin: 0; letter-spacing: -0.005em; }
+.lede { margin: 0; color: var(--ink-2); }
+.nav { margin: 0; font-size: 0.93rem; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
+.stat { color: var(--ink-3); font-size: 0.86rem; }
 
-.controls { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); padding-block: 8px; }
-.ctl { display: flex; align-items: center; gap: 6px; min-width: 0; }
-.ctl > .lab { font-size: var(--s-1); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); font-weight: 700; }
-.seg { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 3px; overflow: hidden; }
-.seg button { background: transparent; border: 0; padding: 4px 9px; cursor: pointer; font-size: var(--s-1); font-weight: 700; }
-.seg button + button { border-left: 1.5px solid var(--ink); }
+details.about { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding-block: 6px; max-width: 80ch; }
+details.about[open] { padding-bottom: 14px; }
+details.about summary { cursor: pointer; font-weight: 600; }
+details.about h2 { font-family: var(--f-head); font-weight: 400; font-size: 1.2rem; margin: 14px 0 4px; }
+details.about p, details.about li { margin: 4px 0; color: var(--ink-2); }
+.srctable { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+.srctable th, .srctable td { text-align: left; padding: 4px 10px 4px 0; border-bottom: 1px solid var(--rule-2); vertical-align: top; }
+.srctable th { font-weight: 600; color: var(--ink-2); }
+.tablewrap { overflow-x: auto; }
+
+form.controls { display: grid; gap: 8px; border-top: 1px solid var(--ink); padding-top: 10px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+.ctl { display: flex; align-items: center; gap: 6px; min-width: 0; flex-wrap: wrap; }
+.lab { font-size: 0.82rem; color: var(--ink-2); }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 2px; overflow: hidden; background: var(--panel); }
+.seg button { background: transparent; border: 0; padding: 3px 9px; cursor: pointer; font-size: 0.86rem; }
+.seg button + button { border-left: 1px solid var(--rule); }
 .seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
-select, input[type="search"] { background: var(--panel); border: 1.5px solid var(--rule); border-radius: 3px; padding: 4px 6px; font-size: var(--s-1); max-width: 100%; }
-input[type="search"] { width: 170px; }
-.chk { display: inline-flex; align-items: center; gap: 4px; font-size: var(--s-1); cursor: pointer; }
-.chk input { accent-color: var(--accent); }
-.btn { background: transparent; border: 1.5px solid var(--ink); border-radius: 3px; padding: 4px 9px; cursor: pointer; font-size: var(--s-1); font-weight: 700; }
-.btn.hot { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-.btn:disabled { opacity: 0.45; cursor: default; }
+select, input[type="search"] { background: var(--panel); border: 1px solid var(--rule); border-radius: 2px; padding: 3px 6px; font-size: 0.88rem; max-width: 100%; }
+input[type="search"] { width: 210px; }
+.chk { display: inline-flex; align-items: center; gap: 4px; font-size: 0.88rem; cursor: pointer; }
+.btn { background: var(--panel); border: 1px solid var(--rule); border-radius: 2px; padding: 3px 9px; cursor: pointer; font-size: 0.86rem; color: var(--ink); text-decoration: none; display: inline-block; }
+.btn:hover { border-color: var(--ink-3); }
+.btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+details.more summary { cursor: pointer; font-size: 0.88rem; color: var(--link); text-decoration: underline; text-underline-offset: 2px; width: max-content; }
+details.more[open] summary { margin-bottom: 6px; }
+details.more .row { padding: 8px 0 2px; border-top: 1px dotted var(--rule); }
 
-main.stage { display: grid; grid-template-columns: minmax(0, 1fr) 410px; gap: 12px; min-height: 0; }
-.mapwrap { position: relative; min-height: 0; border: 1.5px solid var(--ink); border-radius: 3px; overflow: hidden; background: var(--water); }
+main.stage { display: grid; grid-template-columns: minmax(0, 1fr) 430px; gap: 18px; height: min(78vh, 900px); min-height: 520px; }
+.mapwrap { position: relative; min-height: 0; border: 1px solid var(--rule); background: var(--water); }
 #map { position: absolute; inset: 0; background: var(--water); }
-.legend { position: absolute; left: 10px; bottom: 10px; z-index: 500; background: var(--panel); border: 1.5px solid var(--ink); border-radius: 3px; padding: 6px 8px; font-size: var(--s-1); display: grid; gap: 4px; max-width: calc(100% - 20px); }
-.legend .t { font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.68rem; color: var(--ink-2); }
-.legend .row { display: flex; flex-wrap: wrap; gap: 4px 10px; }
-.legend .k { display: inline-flex; align-items: center; gap: 4px; font-family: var(--f-mono); font-size: 0.7rem; }
+.legend { position: absolute; left: 8px; bottom: 8px; z-index: 500; background: var(--panel); border: 1px solid var(--rule); padding: 5px 8px; font-size: 0.78rem; display: grid; gap: 3px; max-width: calc(100% - 16px); }
+.legend .t { color: var(--ink-2); }
+.legend .row { gap: 3px 10px; }
+.legend .k { display: inline-flex; align-items: center; gap: 4px; }
 .sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; border: 1px solid var(--ink); }
 .sw.approx { border-style: dashed; background: transparent !important; }
-.pickhint { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 600; background: var(--accent); color: var(--accent-ink); font-weight: 700; padding: 5px 12px; border-radius: 3px; font-size: var(--s-1); }
+.pickhint { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); z-index: 600; background: var(--ink); color: var(--paper); padding: 4px 12px; font-size: 0.86rem; }
 
-.rail { display: grid; grid-template-rows: auto auto 1fr; gap: 10px; min-height: 0; min-width: 0; }
-.cal { background: var(--panel); border: 1.5px solid var(--ink); border-radius: 3px; padding: 8px; }
-.calhead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
-.calhead h2 { font-family: var(--f-display); font-weight: 400; font-size: var(--s1); margin: 0; letter-spacing: 0.01em; }
-.calhead button { background: transparent; border: 1.5px solid var(--rule); border-radius: 3px; width: 28px; height: 26px; cursor: pointer; font-weight: 700; }
-.grid7 { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px; }
-.dow { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); text-align: center; font-weight: 700; }
-.day { position: relative; min-height: 46px; border: 1px solid var(--rule); border-radius: 2px; background: var(--paper); padding: 2px 3px; cursor: pointer; text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
-.day.out { opacity: 0.35; }
-.day .n { font-family: var(--f-mono); font-size: 0.72rem; font-weight: 500; font-variant-numeric: tabular-nums; display: flex; justify-content: space-between; }
-.day .n b { font-weight: 600; color: var(--ink-2); font-size: 0.66rem; }
-.day.today .n span { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
-.day.inwin { background: var(--land); border-color: var(--ink-3); }
-.day.sel { outline: 2.5px solid var(--ink); outline-offset: -1px; }
+.rail { display: grid; grid-template-rows: auto auto minmax(0, 1fr); gap: 10px; min-height: 0; min-width: 0; }
+.cal { border: 1px solid var(--rule); background: var(--panel); padding: 8px 10px 10px; }
+.calhead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; gap: 6px; }
+.calhead h2 { font-family: var(--f-head); font-weight: 400; font-size: 1.15rem; margin: 0; }
+.calhead button { background: transparent; border: 1px solid var(--rule); width: 28px; height: 26px; cursor: pointer; }
+.grid7 { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 2px; }
+.dow { font-size: 0.72rem; color: var(--ink-3); text-align: center; }
+.day { min-height: 44px; border: 1px solid var(--rule-2); background: var(--paper); padding: 2px 3px; cursor: pointer; text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
+.day.out { opacity: 0.4; }
+.day .n { font-family: var(--f-mono); font-size: 0.74rem; display: flex; justify-content: space-between; font-variant-numeric: tabular-nums; }
+.day .n b { font-weight: 500; color: var(--ink-2); font-size: 0.68rem; }
+.day.today .n span { color: var(--link); font-weight: 600; text-decoration: underline; }
+.day.inwin { background: var(--hl); }
+.day.sel { outline: 2px solid var(--ink); outline-offset: -2px; }
 .day.past .n span { color: var(--ink-3); }
 .dots { display: flex; flex-wrap: wrap; gap: 2px; }
 .dots i { width: 6px; height: 6px; border-radius: 50%; display: block; }
-.calfoot { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; font-size: var(--s-1); color: var(--ink-2); flex-wrap: wrap; }
+.calfoot { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; font-size: 0.84rem; color: var(--ink-2); flex-wrap: wrap; align-items: center; }
 
-.tabs { display: flex; gap: 0; border-bottom: 2px solid var(--ink); }
-.tabs button { background: transparent; border: 0; padding: 6px 12px; font-weight: 700; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; font-size: var(--s0); }
-.tabs button[aria-selected="true"] { border-bottom-color: var(--accent); }
-.tabs .count { font-family: var(--f-mono); font-size: 0.7rem; color: var(--ink-2); margin-left: 4px; }
-.pane { overflow-y: auto; min-height: 0; padding-right: 2px; }
+.tabs { display: flex; border-bottom: 1px solid var(--ink); }
+.tabs button { background: transparent; border: 1px solid transparent; border-bottom: 0; padding: 5px 12px; cursor: pointer; font-size: 0.95rem; margin-bottom: -1px; }
+.tabs button[aria-selected="true"] { border-color: var(--ink); background: var(--paper); font-weight: 600; }
+.tabs .count { color: var(--ink-3); margin-left: 4px; font-weight: 400; font-size: 0.85em; }
+.pane { overflow-y: auto; min-height: 0; padding-right: 4px; }
 
-.dgroup + .dgroup { margin-top: 12px; }
+.dgroup + .dgroup { margin-top: 14px; }
 .dhead { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; position: sticky; top: 0; background: var(--paper); padding-block: 4px; z-index: 2; border-bottom: 1px solid var(--rule); }
-.dhead h3 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: var(--s1); }
-.dhead .rel { font-family: var(--f-mono); font-size: 0.7rem; color: var(--ink-2); }
-.show { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto; gap: 4px 10px; padding: 8px 0; border-bottom: 1px dashed var(--rule); align-items: start; }
-.show .sw { margin-top: 5px; }
-.show .bands { font-weight: 700; line-height: 1.3; cursor: pointer; }
-.show .bands:hover { text-decoration: underline; }
-.meta { color: var(--ink-2); font-size: var(--s-1); display: flex; flex-wrap: wrap; gap: 2px 8px; margin-top: 2px; }
-.meta .mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
-.tag { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; border: 1px solid var(--ink-3); border-radius: 2px; padding: 0 4px; color: var(--ink-2); }
-.tag.free { border-color: var(--r3); color: var(--r3); }
-.tag.aa { border-color: var(--ink); color: var(--ink); }
-.links { display: flex; gap: 8px; font-size: var(--s-1); margin-top: 3px; }
-.star { background: transparent; border: 1.5px solid var(--ink); border-radius: 3px; cursor: pointer; font-size: var(--s-1); font-weight: 700; padding: 2px 7px; white-space: nowrap; }
-.star[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-.empty { color: var(--ink-2); padding: 14px 2px; }
-.empty b { color: var(--ink); }
+.dhead h3 { margin: 0; font-family: var(--f-head); font-weight: 600; font-size: 1.02rem; }
+.dhead .rel { color: var(--ink-3); font-size: 0.82rem; }
+.show { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--rule-2); }
+.show.cancelled .bands { text-decoration: line-through; color: var(--ink-3); }
+.thumb { width: 64px; height: 80px; border: 1px solid var(--rule); background: var(--rule-2); padding: 0; cursor: zoom-in; overflow: hidden; display: block; position: relative; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb .sw { position: absolute; left: 3px; top: 3px; width: 11px; height: 11px; }
+.thumb.none { cursor: default; display: grid; place-items: center; color: var(--ink-3); font-size: 0.7rem; text-align: center; }
+.body { min-width: 0; display: grid; gap: 2px; }
+.bands { font-weight: 700; line-height: 1.3; overflow-wrap: anywhere; }
+.where { overflow-wrap: anywhere; }
+.where a { color: inherit; }
+.meta { color: var(--ink-2); font-size: 0.86rem; display: flex; flex-wrap: wrap; gap: 0 10px; }
+.notes { color: var(--ink-2); font-size: 0.84rem; overflow-wrap: anywhere; }
+.tag { display: inline-block; font-size: 0.74rem; border: 1px solid var(--ink-3); padding: 0 5px; color: var(--ink-2); border-radius: 2px; line-height: 1.5; }
+.tag.warn { color: var(--warn); background: var(--warn-bg); border-color: var(--warn); }
+.tag.bad { color: var(--bad); background: var(--bad-bg); border-color: var(--bad); font-weight: 600; }
+.tag.good { color: var(--r3); border-color: var(--r3); }
+.addr { font-size: 0.86rem; }
+.addr.warn { color: var(--warn); }
+.src { font-size: 0.8rem; color: var(--ink-3); }
+.src a { color: var(--ink-3); }
+.acts { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 0.84rem; margin-top: 3px; align-items: center; }
+.acts button.linkish { background: none; border: 0; padding: 0; color: var(--link); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; font-size: inherit; }
+.star { background: var(--panel); border: 1px solid var(--rule); cursor: pointer; font-size: 0.82rem; padding: 1px 8px; }
+.star[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.empty { color: var(--ink-2); padding: 14px 0; }
+.loading { color: var(--ink-3); font-style: italic; padding: 8px 0; }
 
-.plan .leg { font-family: var(--f-mono); font-size: 0.7rem; color: var(--ink-2); padding: 2px 0 2px 22px; border-left: 2px dotted var(--ink-3); margin-left: 5px; }
-.plan .warn { color: var(--accent); font-weight: 700; }
-.plansum { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--rule); }
-.plansum .tot { font-family: var(--f-mono); font-size: var(--s-1); margin-right: auto; }
-.toast { position: fixed; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--paper); padding: 6px 14px; border-radius: 3px; z-index: 2000; font-weight: 700; font-size: var(--s-1); }
+.plan .leg { font-size: 0.8rem; color: var(--ink-2); padding: 3px 0 3px 18px; border-left: 2px dotted var(--ink-3); margin-left: 30px; }
+.plan .leg .warn { color: var(--warn); font-weight: 600; }
+.plansum { display: grid; gap: 6px; padding: 8px 0; border-bottom: 1px solid var(--rule); }
+.plansum .tot { font-size: 0.88rem; }
+.plansum .row { gap: 6px; }
+.banner { background: var(--hl); padding: 8px 10px; font-size: 0.88rem; display: grid; gap: 6px; margin-top: 8px; }
+.toast { position: fixed; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--paper); padding: 6px 14px; z-index: 3000; font-size: 0.88rem; }
 
-/* map bits */
+footer { color: var(--ink-3); font-size: 0.82rem; border-top: 1px solid var(--rule); padding-top: 10px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+footer a { color: var(--ink-3); }
+
+.viewer { position: fixed; inset: 0; z-index: 4000; background: rgba(0,0,0,0.88); display: grid; grid-template-rows: auto minmax(0,1fr) auto;
+  padding: calc(10px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); color: #f2f2ee; }
+.viewer .vtop { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+.viewer .vtop button, .viewer .vnav button { background: transparent; border: 1px solid #77776f; color: #f2f2ee; padding: 4px 12px; cursor: pointer; }
+.viewer figure { margin: 0; min-height: 0; display: grid; place-items: center; }
+.viewer img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.viewer .vcap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 14px; align-items: center; font-size: 0.9rem; }
+.viewer .vcap a { color: #a9c7ff; }
+.viewer .vnav { display: flex; gap: 6px; }
+
 .leaflet-container { font-family: var(--f-body); background: var(--water); }
-.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--panel); color: var(--ink); border-radius: 3px; box-shadow: 0 2px 0 var(--ink); border: 1.5px solid var(--ink); }
-.leaflet-popup-content { margin: 10px 12px; font-size: var(--s-1); width: 260px !important; max-width: 70vw; }
+.osm-tiles { filter: saturate(0.35) contrast(0.95) brightness(1.03); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .osm-tiles { filter: invert(1) hue-rotate(180deg) saturate(0.3) brightness(0.8) contrast(0.9); } }
+:root[data-theme="dark"] .osm-tiles { filter: invert(1) hue-rotate(180deg) saturate(0.3) brightness(0.8) contrast(0.9); }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--panel); color: var(--ink); border-radius: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+.leaflet-popup-content { margin: 10px 12px; font-size: 0.86rem; width: 280px !important; max-width: 70vw; line-height: 1.4; }
 .leaflet-container a.leaflet-popup-close-button { color: var(--ink-2); }
 .leaflet-bar a, .leaflet-bar a:hover { background: var(--panel); color: var(--ink); border-bottom-color: var(--rule); }
-.leaflet-bar { border: 1.5px solid var(--ink) !important; }
-.leaflet-control-attribution { background: var(--panel) !important; color: var(--ink-2) !important; font-size: 0.62rem; }
-.pop h4 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: var(--s1); line-height: 1.15; }
+.leaflet-control-attribution { background: color-mix(in srgb, var(--panel) 85%, transparent) !important; color: var(--ink-2) !important; font-size: 0.66rem; }
+.leaflet-control-attribution a { color: var(--ink-2) !important; }
+.pop h4 { margin: 0; font-family: var(--f-head); font-weight: 600; font-size: 1rem; line-height: 1.2; }
 .pop .sub { color: var(--ink-2); margin: 2px 0 6px; }
-.pop .ps { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 4px 8px; padding: 5px 0; border-top: 1px dashed var(--rule); align-items: start; }
-.pop .ps .d { font-family: var(--f-mono); font-size: 0.7rem; color: var(--ink-2); }
+.pop .ps { display: grid; grid-template-columns: 44px minmax(0,1fr) auto; gap: 4px 8px; padding: 6px 0; border-top: 1px solid var(--rule-2); align-items: start; }
+.pop .ps img { width: 44px; height: 55px; object-fit: cover; border: 1px solid var(--rule); cursor: zoom-in; }
+.pop .ps .ph { width: 44px; height: 55px; border: 1px solid var(--rule-2); }
+.pop .ps .d { font-size: 0.78rem; color: var(--ink-2); }
 .pop .ps.dim { opacity: 0.5; }
-.pop .acts { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
-.citylab { font-family: var(--f-mono); font-size: 0.66rem; font-weight: 600; color: var(--ink-2); white-space: nowrap; text-shadow: 0 0 3px var(--land), 0 0 3px var(--land); pointer-events: none; }
-.citylab.big { font-size: 0.74rem; color: var(--ink); }
-.origin-pin { width: 22px; height: 22px; border: 2.5px solid var(--ink); border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--paper); }
-.ringlab { font-family: var(--f-mono); font-size: 0.62rem; color: var(--ink-2); white-space: nowrap; pointer-events: none; text-shadow: 0 0 3px var(--land), 0 0 3px var(--land); }
+.pop .more { font-size: 0.8rem; color: var(--ink-3); padding-top: 4px; }
+.pop .acts { margin-top: 6px; }
+.citylab { font-size: 0.7rem; font-weight: 600; color: var(--ink-2); white-space: nowrap; text-shadow: 0 0 3px var(--paper), 0 0 3px var(--paper); pointer-events: none; }
+.origin-pin { width: 20px; height: 20px; border: 3px solid var(--paper); border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
+.ringlab { font-size: 0.66rem; color: var(--ink-2); white-space: nowrap; pointer-events: none; text-shadow: 0 0 3px var(--paper), 0 0 3px var(--paper); }
 
-@media (max-width: 900px) {
-  html, body { height: auto; }
-  .app { height: auto; grid-template-rows: auto; }
-  main.stage { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 960px) {
+  main.stage { grid-template-columns: minmax(0, 1fr); height: auto; }
   .mapwrap { height: 62vh; min-height: 340px; }
   .rail { grid-template-rows: auto; }
   .pane { overflow: visible; }
-  input[type="search"] { width: 140px; }
+  input[type="search"] { width: 160px; }
+  header.top h1 { font-size: 1.7rem; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 
 <div class="app">
   <header class="top">
-    <h1>Coolshows <span>Atlas</span></h1>
-    <p class="src">DIY shows across NJ, NY and PA, mapped from the calendar at <a href="https://coolshows.life/" target="_blank" rel="noopener">coolshows.life</a>. <span id="scraped"></span>. Know a show that's missing? <a href="https://docs.google.com/forms/d/e/1FAIpQLSeENHJJNiIKnaRZvx4sDGcTFX6e2BoymIY1XrXe9YuDyB_tUg/viewform" target="_blank" rel="noopener">Submit it to coolshows</a>.</p>
-    <span class="stat" id="stat"></span>
+    <h1>Coolshows Atlas</h1>
+    <p class="lede">A map and calendar of DIY shows in New Jersey, New York and Pennsylvania. Listings come from <a href="https://coolshows.life/" target="_blank" rel="noopener">coolshows.life</a> and several venue calendars, and are checked every morning.</p>
+    <p class="nav"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeENHJJNiIKnaRZvx4sDGcTFX6e2BoymIY1XrXe9YuDyB_tUg/viewform" target="_blank" rel="noopener">Submit a show to coolshows</a><span class="stat" id="stat"></span></p>
   </header>
 
-  <div class="controls" role="toolbar" aria-label="Filters and coloring">
-    <div class="ctl"><span class="lab">Color by</span>
-      <div class="seg" id="colorBy">
-        <button type="button" data-v="days" aria-pressed="true">Days from date</button>
-        <button type="button" data-v="miles" aria-pressed="false">Miles from start</button>
-        <button type="button" data-v="state" aria-pressed="false">State</button>
+  <details class="about" id="about">
+    <summary>How it works and sources</summary>
+    <h2>Using the atlas</h2>
+    <p>Pick a date on the calendar. The map and list show what is on around that date. Marker colors show how many days each show is from that date. Set a starting point to color shows by distance from you instead.</p>
+    <p>A dashed marker means the exact spot is not known or not public, so the marker sits at the center of the town. Many DIY shows happen in homes; when a listing says to message the organizer for the address, the atlas says so and does not guess a location.</p>
+    <p>Add shows to <b>My plan</b> to see the distance between them and to save them to your own calendar. The page address always links to what you are looking at, including your plan, so you can copy it from the address bar or with <b>Copy link</b> and send it to someone.</p>
+    <h2>Sources</h2>
+    <div class="tablewrap"><table class="srctable" id="srctable"></table></div>
+    <p>coolshows.life is the main source. Venue calendars add shows that were not sent to coolshows; when the same show appears in more than one place it is listed once with links to each. Distances are straight-line miles, not driving distance.</p>
+  </details>
+
+  <form class="controls" id="controls" aria-label="Filters" onsubmit="return false">
+    <div class="row">
+      <div class="ctl"><span class="lab">Color by</span>
+        <div class="seg" id="colorBy">
+          <button type="button" data-v="days" aria-pressed="true">Days from date</button>
+          <button type="button" data-v="miles" aria-pressed="false">Miles from start</button>
+          <button type="button" data-v="state" aria-pressed="false">State</button>
+        </div>
       </div>
-    </div>
-    <div class="ctl"><span class="lab">Show</span>
-      <div class="seg" id="win">
-        <button type="button" data-v="day" aria-pressed="false">That day</button>
-        <button type="button" data-v="3" aria-pressed="false">±3 days</button>
-        <button type="button" data-v="week" aria-pressed="true">Week ahead</button>
-        <button type="button" data-v="all" aria-pressed="false">All</button>
+      <div class="ctl"><span class="lab">Show</span>
+        <div class="seg" id="win">
+          <button type="button" data-v="day" aria-pressed="false">That day</button>
+          <button type="button" data-v="3" aria-pressed="false">±3 days</button>
+          <button type="button" data-v="week" aria-pressed="true">Next 7 days</button>
+          <button type="button" data-v="month" aria-pressed="false">Month</button>
+        </div>
       </div>
+      <div class="ctl"><label class="lab" for="origin">Start from</label>
+        <select id="origin"></select>
+        <button type="button" class="btn" id="pick">Pick on map</button>
+      </div>
+      <div class="ctl"><label class="lab" for="maxmi">Within</label>
+        <select id="maxmi"><option value="">any distance</option><option value="10">10 mi</option><option value="25">25 mi</option><option value="50">50 mi</option><option value="100">100 mi</option></select>
+      </div>
+      <div class="ctl"><input type="search" id="q" placeholder="Band, venue or town" aria-label="Search bands, venues and towns"></div>
+      <div class="ctl"><button type="button" class="btn" id="copyLink">Copy link</button></div>
     </div>
-    <div class="ctl"><label class="lab" for="origin">Start from</label>
-      <select id="origin"></select>
-      <button type="button" class="btn" id="pick">Pick on map</button>
-    </div>
-    <div class="ctl"><label class="lab" for="maxmi">Within</label>
-      <select id="maxmi"><option value="">any distance</option><option value="10">10 mi</option><option value="25">25 mi</option><option value="50">50 mi</option><option value="100">100 mi</option></select>
-    </div>
-    <div class="ctl"><label class="lab" for="age">Age</label>
-      <select id="age"><option value="">any</option><option value="aa">all ages only</option><option value="u21">under-21 friendly</option></select>
-    </div>
-    <div class="ctl"><label class="lab" for="price">Door</label>
-      <select id="price"><option value="">any</option><option value="0">free only</option><option value="10">≤ $10</option><option value="15">≤ $15</option><option value="20">≤ $20</option></select>
-    </div>
-    <div class="ctl" id="states">
-      <label class="chk"><input type="checkbox" id="st-NJ" value="NJ" checked> NJ</label>
-      <label class="chk"><input type="checkbox" id="st-NY" value="NY" checked> NY</label>
-      <label class="chk"><input type="checkbox" id="st-PA" value="PA" checked> PA</label>
-      <label class="chk"><input type="checkbox" id="past"> past shows</label>
-    </div>
-    <div class="ctl"><input type="search" id="q" placeholder="Band, venue, city…" aria-label="Search bands, venues and cities"></div>
-  </div>
+    <details class="more" id="more">
+      <summary>More filters</summary>
+      <div class="row">
+        <div class="ctl"><label class="lab" for="age">Age</label>
+          <select id="age"><option value="">any</option><option value="aa">all ages only</option><option value="u21">under 21 can go</option></select>
+        </div>
+        <div class="ctl"><label class="lab" for="price">Door</label>
+          <select id="price"><option value="">any</option><option value="0">free or donation</option><option value="10">$10 or less</option><option value="15">$15 or less</option><option value="20">$20 or less</option></select>
+        </div>
+        <div class="ctl" id="states"><span class="lab">States</span>
+          <label class="chk"><input type="checkbox" id="st-NJ" value="NJ" checked> NJ</label>
+          <label class="chk"><input type="checkbox" id="st-NY" value="NY" checked> NY</label>
+          <label class="chk"><input type="checkbox" id="st-PA" value="PA" checked> PA</label>
+        </div>
+        <div class="ctl" id="srcs"><span class="lab">Sources</span>
+          <label class="chk"><input type="checkbox" id="src-cool" checked> coolshows</label>
+          <label class="chk"><input type="checkbox" id="src-venue" checked> venue calendars</label>
+        </div>
+        <div class="ctl">
+          <label class="chk"><input type="checkbox" id="other"> non-music events</label>
+          <label class="chk"><input type="checkbox" id="hidecx"> hide cancelled</label>
+          <label class="chk"><input type="checkbox" id="past"> past shows</label>
+        </div>
+      </div>
+    </details>
+  </form>
 
   <main class="stage">
     <div class="mapwrap">
-      <div id="map" aria-label="Map of show venues"></div>
+      <div id="map" aria-label="Map of venues"></div>
       <div class="legend" id="legend"></div>
       <div class="pickhint" id="pickhint" hidden>Click the map to set your starting point</div>
     </div>
@@ -212,17 +287,29 @@ main.stage { display: grid; grid-template-columns: minmax(0, 1fr) 410px; gap: 12
           <button type="button" id="nextM" aria-label="Next month">›</button>
         </div>
         <div class="grid7" id="dows"></div>
-        <div class="grid7" id="days" style="margin-top:3px"></div>
+        <div class="grid7" id="days" style="margin-top:2px"></div>
         <div class="calfoot"><span id="selinfo"></span><button type="button" class="btn" id="goToday">Today</button></div>
       </section>
       <div class="tabs" role="tablist">
-        <button type="button" role="tab" id="tab-list" aria-selected="true">Shows<span class="count" id="c-list"></span></button>
-        <button type="button" role="tab" id="tab-plan" aria-selected="false">My plan<span class="count" id="c-plan"></span></button>
+        <button type="button" role="tab" id="tab-list" aria-selected="true" aria-controls="pane-list">Shows<span class="count" id="c-list"></span></button>
+        <button type="button" role="tab" id="tab-plan" aria-selected="false" aria-controls="pane-plan">My plan<span class="count" id="c-plan"></span></button>
       </div>
       <div class="pane" id="pane-list" role="tabpanel" aria-labelledby="tab-list"></div>
       <div class="pane plan" id="pane-plan" role="tabpanel" aria-labelledby="tab-plan" hidden></div>
     </aside>
   </main>
+
+  <footer>
+    <span id="fresh"></span>
+    <span>Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</span>
+    <span>Show data: <a href="https://coolshows.life/" target="_blank" rel="noopener">coolshows.life</a> and the venues listed under Sources</span>
+  </footer>
+</div>
+
+<div class="viewer" id="viewer" hidden role="dialog" aria-modal="true" aria-label="Flier">
+  <div class="vtop"><span id="vcount" class="mono"></span><button type="button" id="vclose">Close</button></div>
+  <figure><img id="vimg" alt="" referrerpolicy="no-referrer"></figure>
+  <div class="vcap"><span id="vtext"></span><span class="vnav"><a id="vopen" href="#" target="_blank" rel="noopener">Open original</a><button type="button" id="vprev">Previous</button><button type="button" id="vnext">Next</button></span></div>
 </div>
 <div class="toast" id="toast" hidden></div>
 
@@ -231,165 +318,192 @@ main.stage { display: grid; grid-template-columns: minmax(0, 1fr) 410px; gap: 12
 let DATA = /*__DATA__*/null;
 const BASE = /*__BASE__*/null;
 
-// ---------- utils ----------
+// ---------- small helpers ----------
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const dn = iso => { const [y,m,d] = iso.split("-").map(Number); return Math.round(Date.UTC(y,m-1,d)/864e5); };
 const isoOf = n => new Date(n*864e5).toISOString().slice(0,10);
-const localToday = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; };
+const ET = "America/New_York";
+const todayET = () => new Intl.DateTimeFormat("en-CA", { timeZone: ET, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
 const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], MO = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const fmtDay = iso => { const d = new Date(dn(iso)*864e5); return `${WD[d.getUTCDay()]} ${MO[d.getUTCMonth()].slice(0,3)} ${d.getUTCDate()}`; };
-const fmtTime = m => m == null ? "" : `${((Math.floor(m/60)+11)%12)+1}${m%60 ? ":"+String(m%60).padStart(2,"0") : ""}${m >= 720 ? "pm" : "am"}`;
+const fmtDayY = iso => fmtDay(iso) + (iso.slice(0,4) !== TODAY.slice(0,4) ? ", " + iso.slice(0,4) : "");
+const fmtTime = m => m == null ? "" : `${((Math.floor(m/60)+11)%12)+1}${m%60 ? ":"+String(m%60).padStart(2,"0") : ""}${m % 1440 >= 720 ? "pm" : "am"}`;
 const miles = (a, b) => { const R = 3958.8, r = Math.PI/180; const dLat = (b[0]-a[0])*r, dLng = (b[1]-a[1])*r;
   const x = Math.sin(dLat/2)**2 + Math.cos(a[0]*r)*Math.cos(b[0]*r)*Math.sin(dLng/2)**2; return 2*R*Math.asin(Math.sqrt(x)); };
 const store = { get(k, d) { try { const v = localStorage.getItem("csatlas:"+k); return v == null ? d : JSON.parse(v); } catch { return d; } },
                 set(k, v) { try { localStorage.setItem("csatlas:"+k, JSON.stringify(v)); } catch {} } };
-function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => t.hidden = true, 1800); }
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => t.hidden = true, 2200); }
 const tok = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const isDark = () => { const t = document.documentElement.dataset.theme; return t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+const inClaude = typeof window.claude?.use === "function";
+let downloads = null;
 
-// ---------- data prep ----------
-const TODAY = localToday(), TODAYN = dn(TODAY);
+function thumb(url, big) {
+  if (!url) return "";
+  let m = url.match(/^https?:\/\/i\.imgur\.com\/([A-Za-z0-9]{5,8})\.(jpe?g|png|gif|webp)$/i);
+  if (m) return `https://i.imgur.com/${m[1]}${big ? "h" : "m"}.${m[2] === "gif" ? "jpg" : m[2]}`;
+  if (/squarespace-cdn\.com/.test(url)) return url.split("?")[0] + (big ? "?format=1500w" : "?format=300w");
+  return url;
+}
+
+// ---------- data ----------
+const TODAY = todayET(), TODAYN = dn(TODAY);
+const SRC_NAMES = Object.fromEntries((DATA.sources || []).map(s => [s.id, s]));
 let venues, shows, showById, cityCenters;
-function prep(data) {
-venues = new Map(data.venues.map(v => [v.key, {...v}]));
-// City-level (approximate) venues fan out in rings around the city center so they don't stack.
-const byCity = {};
-for (const v of venues.values()) if (v.precision === "city" && v.lat != null) (byCity[v.state+v.city] ||= []).push(v);
-for (const list of Object.values(byCity)) {
-  list.sort((a,b) => a.venue.localeCompare(b.venue));
-  list.forEach((v, i) => { const ring = Math.floor(i/8), k = i%8, n = Math.min(8, list.length - ring*8);
-    const r = 0.010 * (1 + ring*0.7), a = (k/n)*2*Math.PI + ring*0.4;
-    v.cLat = v.lat; v.cLng = v.lng;
-    if (list.length > 1) { v.lat += r*Math.sin(a); v.lng += r*Math.cos(a)/Math.cos(v.lat*Math.PI/180); } });
-}
-shows = data.shows.map(s => ({...s, n: dn(s.date), v: venues.get(s.vkey) || {key: s.vkey, venue: s.venue, city: s.city, state: s.state, lat: null, lng: null, precision: "none"}}));
-showById = new Map(shows.map(s => [s.id, s]));
-cityCenters = (() => { const m = new Map();
+const loadedYears = new Set(DATA.embeddedYears || []);
+function prep() {
+  venues = new Map(DATA.venues.map(v => [v.key, { ...v }]));
+  // Approximate markers in one town fan out in a small ring so they don't sit on top of each other.
+  const byTown = {};
+  for (const v of venues.values()) if (v.precision === "city" && v.lat != null) (byTown[v.state + v.city] ||= []).push(v);
+  for (const list of Object.values(byTown)) {
+    list.sort((a,b) => a.key.localeCompare(b.key));
+    list.forEach((v, i) => { v.cLat = v.lat; v.cLng = v.lng; if (list.length < 2) return;
+      const ring = Math.floor(i/8), k = i%8, n = Math.min(8, list.length - ring*8), r = 0.009 * (1 + ring*0.7), a = (k/n)*2*Math.PI + ring*0.4;
+      v.lat += r*Math.sin(a); v.lng += r*Math.cos(a)/Math.cos(v.lat*Math.PI/180); });
+  }
+  const unknown = k => ({ key: k, name: "Unknown venue", city: "", state: "", lat: null, lng: null, precision: "none", hidden: true });
+  shows = DATA.shows.map(s => ({ ...s, n: dn(s.date), v: venues.get(s.vkey) || unknown(s.vkey) }));
+  showById = new Map(shows.map(s => [s.id, s]));
+  const m = new Map();
   for (const v of venues.values()) { if (v.lat == null || !v.city) continue; const k = `${v.city}, ${v.state}`;
-    const lat = v.cLat ?? v.lat, lng = v.cLng ?? v.lng; if (!m.has(k) || v.precision === "city") m.set(k, {label: k, lat, lng, n: 0}); }
-  for (const s of shows) { const k = `${s.city}, ${s.state}`; if (m.has(k)) m.get(k).n++; }
-  return [...m.values()].sort((a,b) => a.label.localeCompare(b.label)); })();
+    if (!m.has(k) || v.precision === "city") m.set(k, { label: k, lat: v.cLat ?? v.lat, lng: v.cLng ?? v.lng, n: 0 }); }
+  for (const s of shows) { const k = `${s.v.city}, ${s.v.state}`; if (m.has(k) && s.n >= TODAYN) m.get(k).n++; }
+  cityCenters = [...m.values()].sort((a,b) => a.label.localeCompare(b.label));
 }
-prep(DATA);
+prep();
+const pos = v => [v.cLat ?? v.lat, v.cLng ?? v.lng];
+const exact = v => v.precision === "venue" || v.precision === "address";
 
 // ---------- state ----------
-const firstUpcoming = shows.find(s => s.n >= TODAYN);
 const st = {
   sel: TODAY, month: TODAY.slice(0,7), colorBy: "days", win: "week",
   origin: store.get("origin", null), maxMi: null, age: "", price: "", states: new Set(["NJ","NY","PA"]),
-  past: false, q: "", plan: new Set(store.get("plan", [])), tab: "list", picking: false,
+  srcCool: true, srcVenue: true, other: false, hidecx: false, past: false, q: "",
+  plan: new Set(store.get("plan", [])), shared: null, tab: "list", picking: false,
 };
-if (!firstUpcoming) st.past = true;
 
 // ---------- coloring ----------
 const BUCKETS = {
-  days: { title: "Days from selected date", stops: [[0,"same day"],[1,"±1"],[3,"±2–3"],[7,"±4–7"],[14,"±8–14"],[Infinity,"15+"]] },
-  miles: { title: "Miles from start (straight line)", stops: [[5,"<5"],[15,"5–15"],[30,"15–30"],[60,"30–60"],[100,"60–100"],[Infinity,"100+"]] },
+  days: { title: "Days from the selected date", stops: [[0,"same day"],[1,"1"],[3,"2–3"],[7,"4–7"],[14,"8–14"],[Infinity,"15+"]] },
+  miles: { title: "Miles from your starting point", stops: [[5,"under 5"],[15,"5–15"],[30,"15–30"],[60,"30–60"],[100,"60–100"],[Infinity,"100+"]] },
 };
-const showMiles = s => (st.origin && s.v.lat != null) ? miles([st.origin.lat, st.origin.lng], [s.v.cLat ?? s.v.lat, s.v.cLng ?? s.v.lng]) : null;
-function metric(s) {
-  if (st.colorBy === "days") return Math.abs(s.n - dn(st.sel));
-  if (st.colorBy === "miles") return showMiles(s);
-  return null;
-}
+const showMiles = s => (st.origin && s.v.lat != null) ? miles([st.origin.lat, st.origin.lng], pos(s.v)) : null;
+const metric = s => st.colorBy === "days" ? Math.abs(s.n - dn(st.sel)) : st.colorBy === "miles" ? showMiles(s) : null;
 function bucketOf(val) { const stops = BUCKETS[st.colorBy].stops; for (let i = 0; i < stops.length; i++) if (val <= stops[i][0]) return i; return stops.length-1; }
 function colorOf(s) {
-  if (st.colorBy === "state" || (st.colorBy === "miles" && !st.origin)) return tok("--" + s.state.toLowerCase()) || tok("--ink-3");
+  if (st.colorBy === "state" || (st.colorBy === "miles" && !st.origin)) return tok("--" + (s.v.state || s.state || "").toLowerCase()) || tok("--r5");
   const m = metric(s); return m == null ? tok("--r5") : tok("--r" + bucketOf(m));
 }
 
 // ---------- filtering ----------
 function passesBase(s) {
-  if (!st.states.has(s.state)) return false;
+  if (!st.states.has(s.v.state || s.state)) return false;
   if (!st.past && s.n < TODAYN) return false;
+  const fromCool = s.src === "coolshows" || (s.also || []).some(a => a.src === "coolshows");
+  const fromVenue = s.src !== "coolshows" || (s.also || []).some(a => a.src !== "coolshows");
+  if (!((st.srcCool && fromCool) || (st.srcVenue && fromVenue))) return false;
+  if (!st.other && s.kind === "other") return false;
+  if (st.hidecx && s.status) return false;
   if (st.age === "aa" && s.age !== "all ages") return false;
   if (st.age === "u21" && s.age === "21+") return false;
-  if (st.price !== "") { const p = +st.price; if (p === 0 ? s.priceKind !== "free" : !(s.priceKind === "free" || (s.price != null && s.price <= p))) return false; }
+  if (st.price !== "") { const p = +st.price;
+    if (p === 0 ? !(s.priceKind === "free" || s.priceKind === "donation" || s.notaflof) : !(s.priceKind === "free" || s.priceKind === "donation" || (s.price != null && s.price <= p))) return false; }
   if (st.maxMi && st.origin) { const m = showMiles(s); if (m == null || m > st.maxMi) return false; }
-  if (st.q) { const q = st.q.toLowerCase(); if (!(s.bands.join(" ") + " " + s.venue + " " + s.city).toLowerCase().includes(q)) return false; }
+  if (st.q) { const q = st.q.toLowerCase(); if (!(s.bands.join(" ") + " " + (s.title || "") + " " + s.v.name + " " + (s.v.aliases || []).join(" ") + " " + s.v.city).toLowerCase().includes(q)) return false; }
   return true;
 }
-function inWindow(s) { const d = s.n - dn(st.sel);
-  return st.win === "day" ? d === 0 : st.win === "3" ? Math.abs(d) <= 3 : st.win === "week" ? d >= 0 && d <= 6 : true; }
-const visible = () => shows.filter(s => passesBase(s) && inWindow(s));
+function inWindow(n) { const d = n - dn(st.sel);
+  return st.win === "day" ? d === 0 : st.win === "3" ? Math.abs(d) <= 3 : st.win === "week" ? d >= 0 && d <= 6 : isoOf(n).slice(0,7) === st.sel.slice(0,7); }
+const visible = () => shows.filter(s => inWindow(s.n) && passesBase(s));
 
 // ---------- map ----------
-const map = L.map("map", { zoomControl: true, attributionControl: true, minZoom: 6, maxZoom: 16, zoomSnap: 0.5,
-  maxBounds: [[37.5,-82.5],[44.5,-69.5]], preferCanvas: false }).setView([40.45,-74.9], 8);
-map.attributionControl.setPrefix(false).addAttribution("Boundaries: US Census via us-atlas · Venues: OpenStreetMap Nominatim");
+const map = L.map("map", { zoomControl: true, minZoom: 6, maxZoom: 18, zoomSnap: 0.5, maxBounds: [[37.5,-82.5],[44.8,-69.5]] }).setView([40.45,-74.9], 8);
+map.attributionControl.setPrefix(false);
+map.createPane("outline"); map.getPane("outline").style.zIndex = 150;
 const TRI = new Set(["34","36","42"]);
-const statesLayer = L.geoJSON(BASE.states, { interactive: false, style: f => ({ fillColor: TRI.has(f.properties.id) ? tok("--land") : tok("--land-far"), fillOpacity: 1, color: tok("--border"), weight: 1.4 }) }).addTo(map);
-const countyLayer = L.geoJSON(BASE.counties, { interactive: false, style: () => ({ color: tok("--county"), weight: 0.7, fill: false }) }).addTo(map);
-statesLayer.bringToBack();
-const labelLayer = L.layerGroup().addTo(map);
-const ringLayer = L.layerGroup().addTo(map);
-const venueLayer = L.layerGroup().addTo(map);
-let originMarker = null;
-const markers = new Map();
+const outline = L.geoJSON(BASE.states, { pane: "outline", interactive: false, style: f => ({ fillColor: TRI.has(f.properties.id) ? tok("--land") : tok("--land-far"), fillOpacity: 1, color: tok("--border"), weight: 1 }) }).addTo(map);
+// Standard OpenStreetMap tiles (free with attribution, no key). Dark mode darkens them with a CSS filter.
+const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, className: "osm-tiles",
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+const labelLayer = L.layerGroup().addTo(map), ringLayer = L.layerGroup().addTo(map), venueLayer = L.layerGroup().addTo(map);
+let originMarker = null; const markers = new Map();
 
+let tilesOk = false; // once the street map loads, it supplies town names; these labels are the fallback
+tiles.once("tileload", () => { tilesOk = true; drawLabels(); });
 function drawLabels() {
-  labelLayer.clearLayers(); const z = map.getZoom();
-  for (const c of cityCenters) { if (z < 9 && c.n < 5) continue; if (z < 8 && c.n < 10) continue;
-    L.marker([c.lat, c.lng], { interactive: false, keyboard: false,
-      icon: L.divIcon({ className: "", html: `<div class="citylab ${c.n >= 10 ? "big" : ""}">${esc(c.label.replace(/, ..$/, ""))}</div>`, iconSize: [0,0], iconAnchor: [-8, 6] }) }).addTo(labelLayer); }
+  labelLayer.clearLayers(); if (tilesOk || map.getZoom() >= 10) return;
+  for (const c of cityCenters) { if (c.n < 4) continue;
+    L.marker([c.lat, c.lng], { interactive: false, keyboard: false, icon: L.divIcon({ className: "", html: `<div class="citylab">${esc(c.label.replace(/, ..$/, ""))}</div>`, iconSize: [0,0], iconAnchor: [-8, 6] }) }).addTo(labelLayer); }
 }
 map.on("zoomend", drawLabels);
 
-function popupHtml(v, vis) {
-  const all = shows.filter(s => s.vkey === v.key && (st.past || s.n >= TODAYN));
-  const visIds = new Set(vis.map(s => s.id));
-  const approx = v.hidden ? "Address shared by DM; pinned at the city center." : v.precision === "city" ? "Exact spot not found; pinned near the city center." : "";
-  const m = st.origin ? miles([st.origin.lat, st.origin.lng], [v.cLat ?? v.lat, v.cLng ?? v.lng]) : null;
-  return `<div class="pop"><h4>${esc(v.venue)}</h4><div class="sub">${esc(v.city || "")}${v.city ? ", " : ""}${esc(v.state)}${m != null ? ` · ${m.toFixed(1)} mi from start` : ""}${approx ? `<br><i>${approx}</i>` : ""}</div>
-    ${all.map(s => `<div class="ps ${visIds.has(s.id) ? "" : "dim"}"><div><div class="d">${fmtDay(s.date)}${s.start != null ? " · " + fmtTime(s.start) : ""}</div><div>${esc(s.bands.join(", "))}</div></div>
-      <button type="button" class="star" data-star="${s.id}" aria-pressed="${st.plan.has(s.id)}">${st.plan.has(s.id) ? "★ In plan" : "☆ Plan"}</button></div>`).join("")}
-    <div class="acts"><button type="button" class="btn" data-origin-venue="${esc(v.key)}">Start from here</button>
-    <a class="btn" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=${encodeURIComponent((v.hidden ? "" : v.venue + ", ") + (v.city || "") + ", " + v.state)}">Look up ↗</a></div></div>`;
+function placeLine(v, s) {
+  if (v.hidden && v.name === "Venue not listed") return `<span class="addr warn">Venue not listed.</span>`;
+  if (v.hidden) return `<span class="addr warn">Address not public.${s?.locNote ? ` Listing says “${esc(s.locNote)}”.` : ""}</span>`;
+  if (s?.loc === "ask" || v.private) return `<span class="addr warn">Address not public.${s?.locNote ? ` Listing says “${esc(s.locNote)}”.` : " Ask the organizer."}</span>`;
+  if (v.precision === "city") return `<span class="addr">Exact spot unknown; marker at town center.</span>`;
+  if (v.address && v.address !== v.name) return `<span class="addr">${esc(v.address.replace(/, (NJ|NY|PA)( \d{5})?$/, ""))}</span>`;
+  return "";
 }
-
+function dirLinks(v) {
+  if (!exact(v) || v.hidden) return "";
+  const dest = `${v.lat.toFixed(5)},${v.lng.toFixed(5)}`;
+  return `<a href="https://www.openstreetmap.org/directions?to=${dest}" target="_blank" rel="noopener">Directions (OSM)</a><a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(v.address || dest)}" target="_blank" rel="noopener">Google Maps</a>`;
+}
+function popupHtml(v, vis) {
+  const visIds = new Set(vis.map(s => s.id));
+  const all = shows.filter(s => s.vkey === v.key && (st.past || s.n >= TODAYN) && passesBase(s)).sort((a,b) => a.n - b.n);
+  const near = all.filter(s => visIds.has(s.id)), rest = all.filter(s => !visIds.has(s.id)).slice(0, Math.max(0, 6 - near.length));
+  const m = st.origin && v.lat != null ? miles([st.origin.lat, st.origin.lng], pos(v)) : null;
+  const row = s => `<div class="ps ${visIds.has(s.id) ? "" : "dim"}">${s.flier ? `<img src="${esc(thumb(s.flier))}" alt="Flier" loading="lazy" referrerpolicy="no-referrer" data-flier="${s.id}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph'}))">` : `<div class="ph"></div>`}
+    <div><div class="d">${fmtDayY(s.date)}${s.start != null ? " · " + fmtTime(s.start) : ""}${s.status ? ` · <b>${s.status}</b>` : ""}</div><div>${esc(s.bands.join(", ") || s.title || "TBA")}</div></div>
+    <button type="button" class="star" data-star="${s.id}" aria-pressed="${st.plan.has(s.id)}">${st.plan.has(s.id) ? "In plan" : "Plan"}</button></div>`;
+  const hiddenCount = all.length - near.length - rest.length;
+  return `<div class="pop"><h4>${esc(v.name)}</h4><div class="sub">${esc(v.city || "")}${v.city ? ", " : ""}${esc(v.state)}${m != null ? ` · ${m.toFixed(1)} mi from start` : ""}<br>${placeLine(v, all[0])}</div>
+    ${near.map(row).join("")}${rest.map(row).join("")}${hiddenCount > 0 ? `<div class="more">${hiddenCount} more ${hiddenCount === 1 ? "show" : "shows"} here on other dates.</div>` : ""}
+    <div class="acts">${dirLinks(v)}${st.origin ? "" : `<button type="button" class="linkish" data-origin-venue="${esc(v.key)}">Start from here</button>`}</div></div>`;
+}
 function drawMap(vis) {
   venueLayer.clearLayers(); markers.clear();
   const byV = new Map(); for (const s of vis) { if (s.v.lat == null) continue; (byV.get(s.vkey) || byV.set(s.vkey, []).get(s.vkey)).push(s); }
-  const ink = tok("--ink");
-  // draw far/least-relevant first so the hottest markers sit on top
+  const ink = tok("--ink"), accent = tok("--link");
   const entries = [...byV.entries()].map(([k, list]) => { list.sort((a,b) => (metric(a) ?? 1e9) - (metric(b) ?? 1e9) || a.n - b.n); return [k, list]; })
     .sort((a,b) => (metric(b[1][0]) ?? 1e9) - (metric(a[1][0]) ?? 1e9));
   for (const [k, list] of entries) {
-    const v = venues.get(k), best = list[0], planned = list.some(s => st.plan.has(s.id));
-    const mk = L.circleMarker([v.lat, v.lng], { radius: 6 + 2.2*Math.sqrt(list.length), color: planned ? tok("--accent") : ink,
-      weight: planned ? 3.5 : 1.5, dashArray: v.precision === "venue" ? null : "3 3", fillColor: colorOf(best), fillOpacity: 0.92 });
-    mk.bindPopup(() => popupHtml(v, list), { maxWidth: 300 });
-    mk.bindTooltip(`${esc(v.venue)} · ${list.length} show${list.length > 1 ? "s" : ""}`, { direction: "top", offset: [0, -6] });
+    const v = venues.get(k), best = list[0], planned = list.some(s => st.plan.has(s.id)), allCx = list.every(s => s.status);
+    const mk = L.circleMarker([v.lat, v.lng], { radius: 6 + 2.2*Math.sqrt(list.length), color: planned ? accent : ink, weight: planned ? 3.5 : 1.3,
+      dashArray: exact(v) && !v.private ? null : "3 3", fillColor: colorOf(best), fillOpacity: allCx ? 0.25 : 0.9 });
+    mk.bindPopup(() => popupHtml(v, list), { maxWidth: 320 });
+    mk.bindTooltip(`${esc(v.name)}, ${list.length} ${list.length > 1 ? "shows" : "show"}`, { direction: "top", offset: [0, -6] });
     mk.addTo(venueLayer); markers.set(k, mk);
   }
 }
-
 function drawOrigin() {
   ringLayer.clearLayers(); if (originMarker) { originMarker.remove(); originMarker = null; }
   if (!st.origin) return;
-  originMarker = L.marker([st.origin.lat, st.origin.lng], { icon: L.divIcon({ className: "", html: '<div class="origin-pin" title="Starting point"></div>', iconSize: [22,22], iconAnchor: [11,11] }), zIndexOffset: 1000, keyboard: false })
+  originMarker = L.marker([st.origin.lat, st.origin.lng], { icon: L.divIcon({ className: "", html: '<div class="origin-pin"></div>', iconSize: [20,20], iconAnchor: [10,10] }), zIndexOffset: 1000, keyboard: false })
     .bindTooltip("Start: " + esc(st.origin.label)).addTo(map);
   if (st.colorBy !== "miles") return;
   for (const mi of [5, 15, 30, 60, 100]) {
     L.circle([st.origin.lat, st.origin.lng], { radius: mi*1609.34, color: tok("--ink-3"), weight: 1, dashArray: "2 5", fill: false, interactive: false }).addTo(ringLayer);
-    const lat = st.origin.lat + mi/69.0;
-    L.marker([lat, st.origin.lng], { interactive: false, keyboard: false, icon: L.divIcon({ className: "", html: `<div class="ringlab">${mi} mi</div>`, iconSize: [0,0], iconAnchor: [10, 6] }) }).addTo(ringLayer);
+    L.marker([st.origin.lat + mi/69.0, st.origin.lng], { interactive: false, keyboard: false, icon: L.divIcon({ className: "", html: `<div class="ringlab">${mi} mi</div>`, iconSize: [0,0], iconAnchor: [10, 6] }) }).addTo(ringLayer);
   }
 }
-
 map.on("click", e => { if (!st.picking) return;
-  setOrigin({ lat: e.latlng.lat, lng: e.latlng.lng, label: `${e.latlng.lat.toFixed(3)}, ${e.latlng.lng.toFixed(3)}` });
+  setOrigin({ lat: +e.latlng.lat.toFixed(4), lng: +e.latlng.lng.toFixed(4), label: `${e.latlng.lat.toFixed(3)}, ${e.latlng.lng.toFixed(3)}` });
   st.picking = false; $("#pickhint").hidden = true; map.getContainer().style.cursor = ""; });
+map.on("popupopen", e => e.popup.getElement()?.querySelectorAll("[data-flier]").forEach(img => img.addEventListener("click", () => openViewer(img.dataset.flier, "popup"))));
 
-// ---------- legend ----------
 function drawLegend() {
-  const L_ = $("#legend");
+  const el = $("#legend");
   if (st.colorBy === "state" || (st.colorBy === "miles" && !st.origin)) {
-    L_.innerHTML = `<div class="t">${st.colorBy === "miles" ? "Set a starting point to color by miles · showing state" : "State"}</div><div class="row">${["NJ","NY","PA"].map(s => `<span class="k"><span class="sw" style="background:var(--${s.toLowerCase()})"></span>${s}</span>`).join("")}<span class="k"><span class="sw approx"></span>approx. spot</span></div>`;
+    el.innerHTML = `<div class="t">${st.colorBy === "miles" ? "Set a starting point to color by miles. Showing state." : "State"}</div><div class="row">${["NJ","NY","PA"].map(s => `<span class="k"><span class="sw" style="background:var(--${s.toLowerCase()})"></span>${s}</span>`).join("")}<span class="k"><span class="sw approx"></span>approximate</span></div>`;
     return;
   }
   const b = BUCKETS[st.colorBy];
-  L_.innerHTML = `<div class="t">${b.title}${st.colorBy === "days" ? " · " + fmtDay(st.sel) : ""}</div><div class="row">${b.stops.map((s,i) => `<span class="k"><span class="sw" style="background:var(--r${i})"></span>${s[1]}</span>`).join("")}<span class="k"><span class="sw approx"></span>approx. spot</span></div>`;
+  el.innerHTML = `<div class="t">${b.title}${st.colorBy === "days" ? " (" + fmtDay(st.sel) + ")" : ""}</div><div class="row">${b.stops.map((s,i) => `<span class="k"><span class="sw" style="background:var(--r${i})"></span>${s[1]}</span>`).join("")}<span class="k"><span class="sw approx"></span>approximate</span></div>`;
 }
 
 // ---------- calendar ----------
@@ -397,231 +511,426 @@ $("#dows").innerHTML = WD.map(d => `<div class="dow">${d.slice(0,2)}</div>`).joi
 function drawCal() {
   const [y, m] = st.month.split("-").map(Number);
   $("#mlabel").textContent = `${MO[m-1]} ${y}`;
-  const first = dn(`${st.month}-01`), startDow = new Date(first*864e5).getUTCDay();
-  const gridStart = first - startDow, selN = dn(st.sel);
-  const base = shows.filter(passesBase);
-  const byDay = new Map(); for (const s of base) (byDay.get(s.n) || byDay.set(s.n, []).get(s.n)).push(s);
-  let html = "";
+  const first = dn(`${st.month}-01`), startDow = new Date(first*864e5).getUTCDay(), gridStart = first - startDow, selN = dn(st.sel);
+  const byDay = new Map(); for (const s of shows) { if (s.n < gridStart || s.n > gridStart + 42) continue; if (!passesBaseNoPast(s)) continue; (byDay.get(s.n) || byDay.set(s.n, []).get(s.n)).push(s); }
   const weeks = Math.ceil((startDow + new Date(Date.UTC(y, m, 0)).getUTCDate()) / 7);
+  let html = "";
   for (let i = 0; i < weeks*7; i++) {
-    const n = gridStart + i, iso = isoOf(n), list = byDay.get(n) || [];
-    const fake = { n, state: "NJ" }; // for in-window test only
-    const inWin = (st.win === "day" ? n === selN : st.win === "3" ? Math.abs(n - selN) <= 3 : st.win === "week" ? n >= selN && n <= selN + 6 : true);
-    const cls = ["day", iso.slice(0,7) !== st.month ? "out" : "", n === TODAYN ? "today" : "", n === selN ? "sel" : "", n < TODAYN ? "past" : "", inWin && st.win !== "all" ? "inwin" : ""].join(" ");
-    const sorted = list.slice().sort((a,b) => (metric(a) ?? 1e9) - (metric(b) ?? 1e9));
-    const dots = sorted.slice(0, 12).map(s => `<i style="background:${colorOf(s)}"></i>`).join("");
-    html += `<button type="button" class="${cls}" data-day="${iso}" aria-label="${fmtDay(iso)}, ${list.length} show${list.length === 1 ? "" : "s"}" aria-pressed="${n === selN}"><span class="n"><span>${Number(iso.slice(8))}</span>${list.length ? `<b>${list.length}</b>` : ""}</span><span class="dots">${dots}</span></button>`;
+    const n = gridStart + i, iso = isoOf(n), list = (byDay.get(n) || []).sort((a,b) => (metric(a) ?? 1e9) - (metric(b) ?? 1e9));
+    const cls = ["day", iso.slice(0,7) !== st.month ? "out" : "", n === TODAYN ? "today" : "", n === selN ? "sel" : "", n < TODAYN ? "past" : "", inWindow(n) && st.win !== "month" ? "inwin" : ""].join(" ");
+    html += `<button type="button" class="${cls}" data-day="${iso}" aria-label="${fmtDay(iso)}, ${list.length} ${list.length === 1 ? "show" : "shows"}" aria-pressed="${n === selN}"><span class="n"><span>${Number(iso.slice(8))}</span>${list.length ? `<b>${list.length}</b>` : ""}</span><span class="dots">${list.slice(0, 12).map(s => `<i style="background:${colorOf(s)}"></i>`).join("")}</span></button>`;
   }
   $("#days").innerHTML = html;
   const vis = visible().length;
-  $("#selinfo").innerHTML = `<b>${fmtDay(st.sel)}</b>${st.sel === TODAY ? " (today)" : ""} · ${vis} show${vis === 1 ? "" : "s"} in view`;
+  $("#selinfo").innerHTML = `<b>${fmtDayY(st.sel)}</b>${st.sel === TODAY ? " (today)" : ""}: ${vis} ${vis === 1 ? "show" : "shows"} in view`;
 }
+// The calendar always counts past days too, so you can see what happened.
+function passesBaseNoPast(s) { const p = st.past; st.past = true; const ok = passesBase(s); st.past = p; return ok; }
 
-// ---------- list ----------
-function rowHtml(s, opts = {}) {
-  const m = showMiles(s);
-  const price = s.priceKind === "free" ? `<span class="tag free">free</span>` : s.door && s.door !== "-" ? `<span class="mono">${esc(s.door)}</span>` : "";
-  const age = s.age === "all ages" ? `<span class="tag aa">all ages</span>` : s.age !== "unknown" ? `<span class="tag">${esc(s.age)}</span>` : "";
-  const approx = s.v.hidden ? " · address by DM" : s.v.precision !== "venue" ? " · approx." : "";
-  return `<div class="show"><span class="sw ${s.v.precision === "venue" ? "" : ""}" style="background:${colorOf(s)}"></span>
-    <div style="min-width:0"><div class="bands" data-fly="${esc(s.vkey)}" role="button" tabindex="0">${esc(s.bands.join(" · ") || "TBA")}</div>
-      <div class="meta"><span>${esc(s.venue)}, ${esc(s.city || s.state)}${s.city ? " " + esc(s.state) : ""}${approx}</span>${opts.date ? `<span class="mono">${fmtDay(s.date)}</span>` : ""}${s.time ? `<span class="mono">${esc(s.time)}</span>` : ""}${price}${age}${m != null ? `<span class="mono">${m.toFixed(1)} mi</span>` : ""}</div>
-      <div class="links">${s.flier ? `<a href="${esc(s.flier)}" target="_blank" rel="noopener">Flier ↗</a>` : ""}${s.link ? `<a href="${esc(s.link)}" target="_blank" rel="noopener">Link ↗</a>` : ""}</div></div>
-    <button type="button" class="star" data-star="${s.id}" aria-pressed="${st.plan.has(s.id)}">${st.plan.has(s.id) ? "★ In plan" : "☆ Plan"}</button></div>`;
+// ---------- list rows ----------
+function priceText(s) {
+  if (s.door && s.door !== "-" && s.src === "coolshows") return esc(s.door);
+  if (s.priceKind === "free") return "Free";
+  if (s.priceKind === "donation") return "Donation";
+  if (s.price != null) return "$" + s.price;
+  return "";
 }
+function sourceLine(s) {
+  const all = [{ src: s.src, url: s.url }, ...(s.also || [])];
+  const parts = all.map(a => { const n = SRC_NAMES[a.src]?.name || a.src; return a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(n)}</a>` : esc(n); });
+  return `Listed on ${parts.join(" and ")}`;
+}
+function rowHtml(s, opts = {}) {
+  const m = showMiles(s), v = s.v;
+  const tags = [];
+  if (s.status) tags.push(`<span class="tag bad">${s.status === "postponed" ? "Postponed" : "Cancelled"}</span>`);
+  if (s.age === "all ages") tags.push(`<span class="tag">All ages</span>`); else if (s.age !== "unknown") tags.push(`<span class="tag">${esc(s.age)}</span>`);
+  if (s.priceKind === "free") tags.push(`<span class="tag good">Free</span>`);
+  if (s.notaflof) tags.push(`<span class="tag good" title="No one turned away for lack of funds">No one turned away</span>`);
+  if (s.kind === "other") tags.push(`<span class="tag">Not a music show</span>`);
+  const price = priceText(s);
+  const venueLink = v.lat != null ? `<a href="#" data-fly="${esc(s.vkey)}">${esc(v.name)}</a>` : esc(v.name);
+  const where = v.hidden ? `${esc(v.city || v.state)}, ${esc(v.state)}` : `${venueLink}, ${esc(v.city || "")}${v.city ? " " : ""}${esc(v.state)}`;
+  const notes = s.notes && s.notes.replace(/notaflof|all ages|21\s*\+|18\s*\+|pwyc|free/gi, "").replace(/[\s,.;:&+\/-]+/g, "") ? s.notes : "";
+  return `<div class="show${s.status ? " cancelled" : ""}" data-id="${s.id}">
+    ${s.flier ? `<button type="button" class="thumb" data-flier="${s.id}" aria-label="Open flier"><img src="${esc(thumb(s.flier))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('none');this.parentNode.innerHTML='No image'"><span class="sw" style="background:${colorOf(s)}"></span></button>`
+      : `<div class="thumb none"><span class="sw" style="background:${colorOf(s)}"></span>No flier</div>`}
+    <div class="body">
+      <div class="bands">${esc(s.bands.join(" · ") || s.title || "Bands not listed")}</div>
+      <div class="where">${where}</div>
+      ${placeLine(v, s)}
+      <div class="meta">${opts.date ? `<span class="mono">${fmtDayY(s.date)}</span>` : ""}${s.start != null ? `<span class="mono">${fmtTime(s.start)}</span>` : s.time ? `<span>${esc(s.time)}</span>` : ""}${price ? `<span>${price}</span>` : ""}${m != null ? `<span class="mono">${m.toFixed(1)} mi${exact(v) ? "" : " (approx.)"}</span>` : ""}${tags.join(" ")}</div>
+      ${notes ? `<div class="notes">${esc(notes)}</div>` : ""}
+      <div class="src">${sourceLine(s)}${s.link ? ` · <a href="${esc(s.link)}" target="_blank" rel="noopener">Event link</a>` : ""}</div>
+      <div class="acts"><button type="button" class="star" data-star="${s.id}" aria-pressed="${st.plan.has(s.id)}">${st.plan.has(s.id) ? "In plan" : "Add to plan"}</button>
+        <button type="button" class="linkish" data-ics="${s.id}">Add to calendar</button>${dirLinks(v)}</div>
+    </div></div>`;
+}
+let listOrder = [];
 function drawList(vis) {
   const pane = $("#pane-list");
   $("#c-list").textContent = vis.length;
   if (!vis.length) {
-    const any = shows.filter(passesBase);
-    const next = any.find(s => s.n > dn(st.sel));
-    pane.innerHTML = `<div class="empty"><b>No shows match in this window.</b><br>${next ? `Next match: <a href="#" data-jump="${next.date}">${fmtDay(next.date)}</a>. ` : ""}Widen the window, loosen a filter, or turn on past shows.</div>`;
-    return;
+    const next = shows.filter(s => s.n > dn(st.sel) && passesBase(s)).sort((a,b) => a.n - b.n)[0];
+    pane.innerHTML = `<div class="empty"><b>No shows match.</b><br>${next ? `The next match is on <a href="#" data-jump="${next.date}">${fmtDayY(next.date)}</a>. ` : ""}Widen the date range, clear a filter, or turn on past shows under More filters.</div>`;
+    listOrder = []; return;
   }
   const sel = dn(st.sel), groups = new Map();
-  const sorted = vis.slice().sort((a,b) => a.n - b.n || (st.colorBy === "miles" ? (showMiles(a) ?? 1e9) - (showMiles(b) ?? 1e9) : (a.start ?? 0) - (b.start ?? 0)));
+  const sorted = vis.slice().sort((a,b) => a.n - b.n || (st.colorBy === "miles" ? (showMiles(a) ?? 1e9) - (showMiles(b) ?? 1e9) : (a.start ?? 2000) - (b.start ?? 2000)));
+  listOrder = sorted.map(s => s.id);
   for (const s of sorted) (groups.get(s.date) || groups.set(s.date, []).get(s.date)).push(s);
   pane.innerHTML = [...groups.entries()].map(([d, list]) => { const off = dn(d) - sel;
-    const rel = off === 0 ? "selected day" : off > 0 ? `+${off} day${off > 1 ? "s" : ""}` : `${off} day${off < -1 ? "s" : ""}`;
-    return `<div class="dgroup"><div class="dhead"><h3>${fmtDay(d)}</h3><span class="rel">${rel} · ${list.length}</span></div>${list.map(s => rowHtml(s)).join("")}</div>`; }).join("");
+    const rel = off === 0 ? "selected day" : off > 0 ? `${off} ${off > 1 ? "days" : "day"} later` : `${-off} ${off < -1 ? "days" : "day"} earlier`;
+    return `<div class="dgroup"><div class="dhead"><h3>${fmtDayY(d)}</h3><span class="rel">${rel} · ${list.length}</span></div>${list.map(s => rowHtml(s)).join("")}</div>`; }).join("");
 }
 
 // ---------- plan ----------
-function planShows() { return [...st.plan].map(id => showById.get(id)).filter(Boolean).sort((a,b) => a.n - b.n || (a.start ?? 0) - (b.start ?? 0)); }
+const planShows = () => [...st.plan].map(id => showById.get(id)).filter(Boolean).sort((a,b) => a.n - b.n || (a.start ?? 2000) - (b.start ?? 2000));
 function drawPlan() {
   const list = planShows(), pane = $("#pane-plan");
   $("#c-plan").textContent = list.length || "";
-  if (!list.length) { pane.innerHTML = `<div class="empty"><b>Your plan is empty.</b><br>Tap ☆ Plan on any show, in the list or a map popup. Picks stay in this browser.</div>`; return; }
+  const banner = st.shared ? `<div class="banner"><span>You are looking at a plan someone shared (${st.plan.size} ${st.plan.size === 1 ? "show" : "shows"}). Your own saved plan is unchanged.</span><span class="row"><button type="button" class="btn primary" id="keepShared">Save as my plan</button><button type="button" class="btn" id="dropShared">Back to my plan</button></span></div>` : "";
+  if (!list.length) { pane.innerHTML = banner + `<div class="empty"><b>Your plan is empty.</b><br>Choose “Add to plan” on any show in the list or on the map. Your plan is saved in this browser, and the page address carries it so you can share it.</div>`; return; }
   let total = 0, html = "", prev = null;
-  if (st.origin && list[0].v.lat != null) { const m = miles([st.origin.lat, st.origin.lng], [list[0].v.cLat ?? list[0].v.lat, list[0].v.cLng ?? list[0].v.lng]); total += m;
-    html += `<div class="leg">from ${esc(st.origin.label)} → ${m.toFixed(1)} mi</div>`; }
+  if (st.origin && list[0].v.lat != null) { const m = miles([st.origin.lat, st.origin.lng], pos(list[0].v)); total += m; html += `<div class="leg">From ${esc(st.origin.label)}: ${m.toFixed(1)} mi</div>`; }
   for (const s of list) {
     if (prev && prev.v.lat != null && s.v.lat != null) {
-      const m = miles([prev.v.cLat ?? prev.v.lat, prev.v.cLng ?? prev.v.lng], [s.v.cLat ?? s.v.lat, s.v.cLng ?? s.v.lng]); total += m;
+      const m = miles(pos(prev.v), pos(s.v)); total += m;
       const same = prev.n === s.n, gap = s.n - prev.n;
-      html += `<div class="leg">${same ? `<span class="${m > 15 ? "warn" : ""}">same night${m > 15 ? ", far apart" : ""}</span> · ` : gap > 1 ? `${gap} days later · ` : "next day · "}${m.toFixed(1)} mi${prev.v.precision !== "venue" || s.v.precision !== "venue" ? " (approx.)" : ""}</div>`;
+      html += `<div class="leg">${same ? `<span class="${m > 15 ? "warn" : ""}">Same night${m > 15 ? ", far apart" : ""}</span>` : gap > 1 ? `${gap} days later` : "Next day"}: ${m.toFixed(1)} mi${exact(prev.v) && exact(s.v) ? "" : " (approx.)"}</div>`;
     }
     html += rowHtml(s, { date: true }); prev = s;
   }
-  pane.innerHTML = `<div class="plansum"><span class="tot">${list.length} show${list.length > 1 ? "s" : ""} · ${fmtDay(list[0].date)} → ${fmtDay(list.at(-1).date)} · ~${total.toFixed(0)} mi hopping</span>
-    <button type="button" class="btn" id="copyPlan">Copy as text</button><button type="button" class="btn" id="csvPlan" hidden>Save CSV</button><button type="button" class="btn" id="mapPlan">Fit on map</button><button type="button" class="btn" id="clearPlan">Clear</button></div>
-    <div id="clearConfirm" class="empty" hidden>Remove all ${list.length} shows from your plan? <button type="button" class="btn hot" id="clearYes">Remove</button> <button type="button" class="btn" id="clearNo">Keep</button></div>${html}`;
-  if (downloads || !inClaude) $("#csvPlan").hidden = false;
+  pane.innerHTML = banner + `<div class="plansum"><span class="tot">${list.length} ${list.length > 1 ? "shows" : "show"}, ${fmtDayY(list[0].date)} to ${fmtDayY(list.at(-1).date)}, about ${total.toFixed(0)} miles between them (straight line).</span>
+    <span class="row"><button type="button" class="btn" id="icsPlan">Add all to calendar</button><button type="button" class="btn" id="sharePlan">Copy link to plan</button><button type="button" class="btn" id="copyPlan">Copy as text</button><button type="button" class="btn" id="csvPlan">Save as CSV</button><button type="button" class="btn" id="mapPlan">Show on map</button><button type="button" class="btn" id="clearPlan">Clear</button></span>
+    <span id="clearConfirm" class="row" hidden>Remove all ${list.length} shows from your plan? <button type="button" class="btn primary" id="clearYes">Remove</button><button type="button" class="btn" id="clearNo">Keep</button></span></div>${html}`;
 }
-function planText() { return planShows().map(s => `${fmtDay(s.date)}${s.time ? " (" + s.time + ")" : ""} — ${s.bands.join(", ")} @ ${s.venue}, ${s.city || ""} ${s.state}${s.door && s.door !== "-" ? " · " + s.door : ""}${s.age !== "unknown" ? " · " + s.age : ""}${s.link ? " · " + s.link : ""}`).join("\n") + "\n\nvia coolshows.life"; }
-function planCsv() { const q = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
-  return ["date,time,bands,venue,city,state,door,age,flier,link", ...planShows().map(s => [s.date, s.time, s.bands.join(", "), s.venue, s.city, s.state, s.door, s.ageRaw, s.flier, s.link].map(q).join(","))].join("\n"); }
+const planText = () => planShows().map(s => `${fmtDayY(s.date)}${s.start != null ? ", " + fmtTime(s.start) : ""}: ${s.bands.join(", ") || s.title} at ${s.v.name}, ${s.v.city || ""} ${s.v.state}${s.door && s.door !== "-" ? " · " + s.door : ""}${s.age !== "unknown" ? " · " + s.age : ""}${s.status ? " · " + s.status.toUpperCase() : ""}`).join("\n") + "\n\n" + shareUrl({ planOnly: true });
+const planCsv = () => { const q = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
+  return ["date,start,bands,venue,city,state,address,door,age,status,flier,source,link", ...planShows().map(s => [s.date, fmtTime(s.start), s.bands.join(", ") || s.title, s.v.name, s.v.city, s.v.state, s.v.hidden || s.v.private ? "not public" : (s.v.address || ""), s.door, s.age, s.status || "", s.flier, s.url, s.link].map(q).join(","))].join("\n"); };
+
+// ---------- calendar files (.ics) ----------
+function etOffsetMin(y, mo, d, h, mi) {
+  const guess = Date.UTC(y, mo-1, d, h, mi);
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: ET, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" }).formatToParts(new Date(guess)).map(x => [x.type, x.value]));
+  return (guess - Date.UTC(+p.year, +p.month-1, +p.day, +p.hour % 24, +p.minute)) / 60000;
+}
+const icsEsc = t => String(t ?? "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+const fold = line => { const out = []; while (line.length > 74) { out.push(line.slice(0, 74)); line = " " + line.slice(74); } out.push(line); return out.join("\r\n"); };
+function icsFor(list) {
+  const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d+/, "");
+  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Coolshows Atlas//EN", "CALSCALE:GREGORIAN", "X-WR-CALNAME:Coolshows plan"];
+  for (const s of list) {
+    const [y, mo, d] = s.date.split("-").map(Number);
+    lines.push("BEGIN:VEVENT", `UID:${s.id}@coolshows-atlas`, `DTSTAMP:${stamp}`);
+    if (s.start != null) {
+      const h = Math.floor(s.start/60), mi = s.start % 60, t = new Date(Date.UTC(y, mo-1, d, h, mi) + etOffsetMin(y, mo, d, h, mi)*60000);
+      const z = x => x.toISOString().replace(/[-:]/g, "").replace(/\.\d+/, "");
+      lines.push(`DTSTART:${z(t)}`, `DTEND:${z(new Date(t.getTime() + 3*3600e3))}`);
+    } else {
+      const nx = isoOf(dn(s.date) + 1).replace(/-/g, "");
+      lines.push(`DTSTART;VALUE=DATE:${s.date.replace(/-/g, "")}`, `DTEND;VALUE=DATE:${nx}`);
+    }
+    const where = s.v.hidden || s.v.private || s.loc === "ask" ? `${s.v.city || ""} ${s.v.state} (address not public${s.locNote ? ": " + s.locNote : ""})` : [s.v.name, s.v.address || `${s.v.city}, ${s.v.state}`].filter(Boolean).join(", ");
+    const desc = [s.status ? s.status.toUpperCase() : "", s.time && "Time: " + s.time, s.door && s.door !== "-" ? "Door: " + s.door : "", s.age !== "unknown" ? "Age: " + s.age : "", s.notes, s.flier && "Flier: " + s.flier, s.link && "Link: " + s.link, "Listing: " + (s.url || "https://coolshows.life/")].filter(Boolean).join("\n");
+    lines.push(fold("SUMMARY:" + icsEsc(`${s.status ? "[" + s.status.toUpperCase() + "] " : ""}${s.bands.join(", ") || s.title} at ${s.v.hidden ? "secret location" : s.v.name}`)),
+      fold("LOCATION:" + icsEsc(where)), fold("DESCRIPTION:" + icsEsc(desc)));
+    if (s.url) lines.push(fold("URL:" + s.url));
+    if (exact(s.v) && !s.v.hidden && !s.v.private) lines.push(`GEO:${s.v.lat.toFixed(5)};${s.v.lng.toFixed(5)}`);
+    lines.push("END:VEVENT");
+  }
+  lines.push("END:VCALENDAR");
+  return lines.join("\r\n") + "\r\n";
+}
+async function saveFile(filename, text, mime) {
+  if (downloads) { try { await downloads.save({ filename, data: text }); toast("Saved"); } catch (err) { if (err?.code !== "declined") toast("Couldn't save the file here"); } return; }
+  if (inClaude) { toast("Saving files isn't available here"); return; }
+  const url = URL.createObjectURL(new Blob([text], { type: mime })); const a = Object.assign(document.createElement("a"), { href: url, download: filename });
+  document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 3000);
+}
+const slug = s => (s.bands[0] || s.title || "show").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40);
+
+// ---------- flier viewer ----------
+let vList = [], vIdx = 0, vReturn = null;
+function openViewer(id, from) {
+  vList = (from === "plan" ? planShows().map(s => s.id) : from === "popup" ? [id] : listOrder).filter(x => showById.get(x)?.flier);
+  if (!vList.includes(id)) vList = [id];
+  vIdx = vList.indexOf(id); vReturn = document.activeElement; $("#viewer").hidden = false; showViewer(); $("#vclose").focus();
+}
+function showViewer() {
+  const s = showById.get(vList[vIdx]); if (!s) return;
+  const img = $("#vimg"); img.src = thumb(s.flier, true); img.alt = `Flier: ${s.bands.join(", ") || s.title}`;
+  img.onerror = () => { if (img.src !== s.flier) img.src = s.flier; };
+  $("#vtext").textContent = `${fmtDayY(s.date)} · ${s.bands.join(", ") || s.title} · ${s.v.name}${s.v.city ? ", " + s.v.city : ""}`;
+  $("#vopen").href = s.flier; $("#vcount").textContent = vList.length > 1 ? `${vIdx + 1} of ${vList.length}` : "";
+  $("#vprev").hidden = $("#vnext").hidden = vList.length < 2;
+}
+function closeViewer() { $("#viewer").hidden = true; $("#vimg").src = ""; vReturn?.focus?.(); }
+$("#vclose").addEventListener("click", closeViewer);
+$("#vprev").addEventListener("click", () => { vIdx = (vIdx - 1 + vList.length) % vList.length; showViewer(); });
+$("#vnext").addEventListener("click", () => { vIdx = (vIdx + 1) % vList.length; showViewer(); });
+$("#viewer").addEventListener("click", e => { if (e.target.id === "viewer" || e.target.tagName === "FIGURE") closeViewer(); });
+document.addEventListener("keydown", e => { if ($("#viewer").hidden) return;
+  if (e.key === "Escape") closeViewer(); else if (e.key === "ArrowLeft") $("#vprev").click(); else if (e.key === "ArrowRight") $("#vnext").click(); });
+
+// ---------- shareable address ----------
+function stateParams(planOnly) {
+  const p = new URLSearchParams();
+  if (planOnly) { p.set("plan", [...st.plan].join(".")); return p; }
+  if (st.sel !== TODAY) p.set("d", st.sel);
+  if (st.win !== "week") p.set("w", st.win);
+  if (st.colorBy !== "days") p.set("c", st.colorBy);
+  if (st.origin) p.set("o", `${(+st.origin.lat).toFixed(4)},${(+st.origin.lng).toFixed(4)},${st.origin.label}`);
+  if (st.maxMi) p.set("mi", st.maxMi);
+  if (st.age) p.set("age", st.age);
+  if (st.price !== "") p.set("door", st.price);
+  if (st.states.size < 3) p.set("st", [...st.states].join("."));
+  if (!st.srcCool || !st.srcVenue) p.set("src", [st.srcCool && "cool", st.srcVenue && "venue"].filter(Boolean).join(".") || "none");
+  if (st.other) p.set("other", "1");
+  if (st.hidecx) p.set("hidecx", "1");
+  if (st.past) p.set("past", "1");
+  if (st.q) p.set("q", st.q);
+  if (st.plan.size && (st.shared || st.tab === "plan")) p.set("plan", [...st.plan].join("."));
+  if (st.tab === "plan") p.set("tab", "plan");
+  return p;
+}
+const baseUrl = () => location.href.split("#")[0];
+const shareUrl = (o = {}) => { const q = stateParams(o.planOnly).toString(); return baseUrl() + (q ? "#" + q : ""); };
+function writeHash() { if (inClaude) return; const q = stateParams().toString(); try { history.replaceState(null, "", q ? "#" + q : location.pathname + location.search); } catch {} }
+function readHash() {
+  const raw = location.hash.slice(1); if (!raw || !raw.includes("=")) return;
+  const p = new URLSearchParams(raw);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(p.get("d") || "")) { st.sel = p.get("d"); st.month = st.sel.slice(0,7); if (dn(st.sel) < TODAYN) st.past = true; }
+  if (["day","3","week","month"].includes(p.get("w"))) st.win = p.get("w");
+  if (["days","miles","state"].includes(p.get("c"))) st.colorBy = p.get("c");
+  const o = (p.get("o") || "").match(/^(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?),(.*)$/); if (o) st.origin = { lat: +o[1], lng: +o[2], label: o[3] || "Shared point" };
+  if (p.get("mi")) st.maxMi = +p.get("mi") || null;
+  if (["aa","u21"].includes(p.get("age"))) st.age = p.get("age");
+  if (p.has("door")) st.price = p.get("door");
+  if (p.get("st")) st.states = new Set(p.get("st").split(".").filter(x => ["NJ","NY","PA"].includes(x)));
+  if (p.get("src")) { const s = p.get("src").split("."); st.srcCool = s.includes("cool"); st.srcVenue = s.includes("venue"); }
+  st.other = p.get("other") === "1"; st.hidecx = p.get("hidecx") === "1"; if (p.get("past") === "1") st.past = true;
+  if (p.get("q")) st.q = p.get("q");
+  if (p.get("plan")) { const ids = p.get("plan").split(".").filter(Boolean); const mine = [...st.plan].sort().join(".");
+    if (ids.slice().sort().join(".") !== mine) { st.shared = { mine: [...st.plan] }; st.plan = new Set(ids); } }
+  if (p.get("tab") === "plan" || p.get("plan")) st.tab = "plan";
+}
+
+// ---------- archive years ----------
+async function ensureYear(y) {
+  if (loadedYears.has(y) || !(DATA.years || []).includes(y) || inClaude) return false;
+  loadedYears.add(y);
+  try {
+    const r = await fetch(`archive/${y}.json`); if (!r.ok) throw new Error(r.status);
+    const extra = await r.json(), have = new Set(DATA.shows.map(s => s.id));
+    DATA.shows = DATA.shows.concat(extra.shows.filter(s => !have.has(s.id)));
+    prep(); return true;
+  } catch { loadedYears.delete(y); toast(`Couldn't load the ${y} archive`); return false; }
+}
+async function ensureYearsFor(iso) {
+  const y = +iso.slice(0,4), want = [y];
+  if (st.win === "3" || st.win === "week") { want.push(+isoOf(dn(iso) - 3).slice(0,4), +isoOf(dn(iso) + 7).slice(0,4)); }
+  let changed = false; for (const yy of new Set(want)) changed = (await ensureYear(yy)) || changed;
+  if (changed) { buildOrigins(); syncOrigin(); render(); }
+}
 
 // ---------- render ----------
 function render() {
   const vis = visible();
   drawCal(); drawList(vis); drawPlan(); drawMap(vis); drawOrigin(); drawLegend();
-  $("#stat").textContent = `${shows.filter(s => s.n >= TODAYN).length} upcoming · ${new Set(shows.map(s => s.vkey)).size} venues`;
-  store.set("plan", [...st.plan]); store.set("origin", st.origin);
+  const up = shows.filter(s => s.n >= TODAYN && s.kind !== "other" && !s.status).length;
+  $("#stat").textContent = `${up} upcoming shows at ${new Set(shows.filter(s => s.n >= TODAYN).map(s => s.vkey)).size} venues`;
+  if (!st.shared) store.set("plan", [...st.plan]);
+  store.set("origin", st.origin);
+  writeHash();
 }
-function restyleBase() { statesLayer.setStyle(f => ({ fillColor: TRI.has(f.properties.id) ? tok("--land") : tok("--land-far"), color: tok("--border") })); countyLayer.setStyle({ color: tok("--county") }); }
+function restyleBase() {
+  outline.setStyle(f => ({ fillColor: TRI.has(f.properties.id) ? tok("--land") : tok("--land-far"), color: tok("--border") }));
+}
+function syncControls() {
+  for (const [id, key] of [["#colorBy","colorBy"],["#win","win"]]) $(id).querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x.dataset.v === st[key]));
+  $("#maxmi").value = st.maxMi || ""; $("#age").value = st.age; $("#price").value = st.price; $("#q").value = st.q;
+  for (const s of ["NJ","NY","PA"]) $("#st-" + s).checked = st.states.has(s);
+  $("#src-cool").checked = st.srcCool; $("#src-venue").checked = st.srcVenue;
+  $("#other").checked = st.other; $("#hidecx").checked = st.hidecx; $("#past").checked = st.past;
+  if (st.age || st.price !== "" || st.states.size < 3 || !st.srcCool || !st.srcVenue || st.other || st.hidecx || st.past) $("#more").open = true;
+  tab(st.tab);
+}
 
 // ---------- controls ----------
-function seg(id, key) { const el = $(id); el.addEventListener("click", e => { const b = e.target.closest("button[data-v]"); if (!b) return;
-  st[key] = b.dataset.v; el.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); if (key === "colorBy" && st[key] === "miles" && !st.origin) toast("Pick a starting point to color by miles"); render(); }); }
+function seg(id, key) { $(id).addEventListener("click", e => { const b = e.target.closest("button[data-v]"); if (!b) return;
+  st[key] = b.dataset.v; syncControls(); if (key === "colorBy" && st[key] === "miles" && !st.origin) toast("Set a starting point to color by miles"); render(); if (key === "win") ensureYearsFor(st.sel); }); }
 seg("#colorBy", "colorBy"); seg("#win", "win");
-function syncSeg() { for (const [id, key] of [["#colorBy","colorBy"],["#win","win"]]) $(id).querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x.dataset.v === st[key])); }
-
 const oSel = $("#origin");
-function buildOrigins() { oSel.innerHTML = `<option value="">— none —</option>` + cityCenters.map((c, i) => `<option value="${i}">${esc(c.label)}</option>`).join("") + `<option value="custom" hidden>Custom point</option>`; }
-buildOrigins();
-function syncOrigin() { if (!st.origin) { oSel.value = ""; return; } const i = cityCenters.findIndex(c => c.label === st.origin.label); oSel.value = i >= 0 ? String(i) : "custom";
-  oSel.querySelector('option[value="custom"]').hidden = i >= 0; oSel.querySelector('option[value="custom"]').textContent = i >= 0 ? "Custom point" : st.origin.label; }
-function setOrigin(o) { st.origin = o; if (o && st.colorBy !== "miles") { st.colorBy = "miles"; syncSeg(); } syncOrigin(); render(); }
-oSel.addEventListener("change", () => { const v = oSel.value; if (v === "") { st.origin = null; st.maxMi = null; $("#maxmi").value = ""; syncOrigin(); render(); return; }
-  if (v === "custom") return; const c = cityCenters[+v]; setOrigin({ lat: c.lat, lng: c.lng, label: c.label }); });
+function buildOrigins() { oSel.innerHTML = `<option value="">none</option>` + cityCenters.filter(c => c.n > 0 || st.origin?.label === c.label).map(c => `<option value="${esc(c.label)}">${esc(c.label)}</option>`).join("") + `<option value="__custom" hidden>Custom point</option>`; }
+function syncOrigin() { if (!st.origin) { oSel.value = ""; return; } const has = [...oSel.options].some(o => o.value === st.origin.label && o.value !== "__custom");
+  const c = oSel.querySelector('option[value="__custom"]'); c.hidden = has; c.textContent = has ? "Custom point" : st.origin.label; oSel.value = has ? st.origin.label : "__custom"; }
+function setOrigin(o) { st.origin = o; if (o && st.colorBy !== "miles") { st.colorBy = "miles"; syncControls(); } syncOrigin(); render(); }
+oSel.addEventListener("change", () => { const v = oSel.value; if (!v) { st.origin = null; st.maxMi = null; syncControls(); syncOrigin(); render(); return; }
+  if (v === "__custom") return; const c = cityCenters.find(x => x.label === v); setOrigin({ lat: +c.lat.toFixed(4), lng: +c.lng.toFixed(4), label: c.label }); });
 $("#pick").addEventListener("click", () => { st.picking = !st.picking; $("#pickhint").hidden = !st.picking; map.getContainer().style.cursor = st.picking ? "crosshair" : ""; });
-$("#maxmi").addEventListener("change", e => { st.maxMi = e.target.value ? +e.target.value : null; if (st.maxMi && !st.origin) toast("Distance filter needs a starting point"); render(); });
+$("#maxmi").addEventListener("change", e => { st.maxMi = e.target.value ? +e.target.value : null; if (st.maxMi && !st.origin) toast("Set a starting point first"); render(); });
 $("#age").addEventListener("change", e => { st.age = e.target.value; render(); });
 $("#price").addEventListener("change", e => { st.price = e.target.value; render(); });
-$("#states").addEventListener("change", e => { if (e.target.id === "past") st.past = e.target.checked; else e.target.checked ? st.states.add(e.target.value) : st.states.delete(e.target.value); render(); });
-let qT; $("#q").addEventListener("input", e => { clearTimeout(qT); qT = setTimeout(() => { st.q = e.target.value.trim(); render(); }, 150); });
-$("#prevM").addEventListener("click", () => { const [y,m] = st.month.split("-").map(Number); const d = new Date(Date.UTC(y, m-2, 1)); st.month = d.toISOString().slice(0,7); drawCal(); });
-$("#nextM").addEventListener("click", () => { const [y,m] = st.month.split("-").map(Number); const d = new Date(Date.UTC(y, m, 1)); st.month = d.toISOString().slice(0,7); drawCal(); });
+$("#more").addEventListener("change", e => {
+  const t = e.target; if (t.id.startsWith("st-")) t.checked ? st.states.add(t.value) : st.states.delete(t.value);
+  else if (t.id === "src-cool") st.srcCool = t.checked; else if (t.id === "src-venue") st.srcVenue = t.checked;
+  else if (t.id === "other") st.other = t.checked; else if (t.id === "hidecx") st.hidecx = t.checked; else if (t.id === "past") st.past = t.checked;
+  render(); });
+let qT; $("#q").addEventListener("input", e => { clearTimeout(qT); qT = setTimeout(() => { st.q = e.target.value.trim(); render(); }, 160); });
+function moveMonth(k) { const [y,m] = st.month.split("-").map(Number); st.month = new Date(Date.UTC(y, m-1+k, 1)).toISOString().slice(0,7); drawCal(); ensureYearsFor(st.month + "-15"); }
+$("#prevM").addEventListener("click", () => moveMonth(-1)); $("#nextM").addEventListener("click", () => moveMonth(1));
 $("#goToday").addEventListener("click", () => { st.sel = TODAY; st.month = TODAY.slice(0,7); render(); });
-$("#days").addEventListener("click", e => { const b = e.target.closest("[data-day]"); if (!b) return; selectDay(b.dataset.day); });
-function selectDay(iso) { st.sel = iso; st.month = iso.slice(0,7); if (dn(iso) < TODAYN && !st.past) { st.past = true; $("#past").checked = true; } render(); }
+$("#days").addEventListener("click", e => { const b = e.target.closest("[data-day]"); if (b) selectDay(b.dataset.day); });
+function selectDay(iso) { st.sel = iso; st.month = iso.slice(0,7); if (dn(iso) < TODAYN && !st.past) { st.past = true; syncControls(); } render(); ensureYearsFor(iso); }
 function tab(which) { st.tab = which; $("#tab-list").setAttribute("aria-selected", which === "list"); $("#tab-plan").setAttribute("aria-selected", which === "plan");
   $("#pane-list").hidden = which !== "list"; $("#pane-plan").hidden = which !== "plan"; }
-$("#tab-list").addEventListener("click", () => tab("list")); $("#tab-plan").addEventListener("click", () => tab("plan"));
+$("#tab-list").addEventListener("click", () => { tab("list"); writeHash(); }); $("#tab-plan").addEventListener("click", () => { tab("plan"); writeHash(); });
+async function copy(text, okMsg) {
+  try { await navigator.clipboard.writeText(text); toast(okMsg); }
+  catch { const ta = Object.assign(document.createElement("textarea"), { value: text, rows: 4 }); ta.style.width = "100%"; $("#controls").append(ta); ta.select(); toast("Select the text above and copy it"); setTimeout(() => ta.remove(), 15000); }
+}
+$("#copyLink").addEventListener("click", () => copy(shareUrl(), "Link copied"));
 
-function fly(vkey) { const v = venues.get(vkey); if (!v || v.lat == null) return; map.flyTo([v.lat, v.lng], Math.max(map.getZoom(), 13), { duration: matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 0.6 });
-  const mk = markers.get(vkey); if (mk) setTimeout(() => mk.openPopup(), 650); if (innerWidth <= 900) document.querySelector(".mapwrap").scrollIntoView({ block: "start" }); }
+function fly(vkey) { const v = venues.get(vkey); if (!v || v.lat == null) return;
+  map.flyTo([v.lat, v.lng], Math.max(map.getZoom(), exact(v) ? 15 : 12), { duration: matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 0.6 });
+  const mk = markers.get(vkey); if (mk) setTimeout(() => mk.openPopup(), 650); if (innerWidth <= 960) document.querySelector(".mapwrap").scrollIntoView({ block: "start" }); }
 
 document.addEventListener("click", async e => {
   const star = e.target.closest("[data-star]");
   if (star) { const id = star.dataset.star; st.plan.has(id) ? st.plan.delete(id) : st.plan.add(id);
-    const on = st.plan.has(id); document.querySelectorAll(`[data-star="${id}"]`).forEach(b => { b.setAttribute("aria-pressed", on); b.textContent = on ? "★ In plan" : "☆ Plan"; });
-    store.set("plan", [...st.plan]); drawPlan(); const vis = visible(); drawMap(vis); toast(on ? "Added to plan" : "Removed from plan"); return; }
-  const f = e.target.closest("[data-fly]"); if (f) { fly(f.dataset.fly); return; }
+    const on = st.plan.has(id); document.querySelectorAll(`[data-star="${id}"]`).forEach(b => { b.setAttribute("aria-pressed", on); b.textContent = on ? "In plan" : (b.closest(".pop") ? "Plan" : "Add to plan"); });
+    if (!st.shared) store.set("plan", [...st.plan]); drawPlan(); drawMap(visible()); writeHash(); toast(on ? "Added to plan" : "Removed from plan"); return; }
+  const fl = e.target.closest("[data-flier]"); if (fl && !fl.closest(".pop")) { openViewer(fl.dataset.flier, fl.closest("#pane-plan") ? "plan" : "list"); return; }
+  const f = e.target.closest("[data-fly]"); if (f) { e.preventDefault(); fly(f.dataset.fly); return; }
   const j = e.target.closest("[data-jump]"); if (j) { e.preventDefault(); selectDay(j.dataset.jump); return; }
-  const ov = e.target.closest("[data-origin-venue]"); if (ov) { const v = venues.get(ov.dataset.originVenue); setOrigin({ lat: v.cLat ?? v.lat, lng: v.cLng ?? v.lng, label: `${v.venue}, ${v.city || v.state}` }); map.closePopup(); return; }
-  if (e.target.id === "copyPlan") { const txt = planText(); try { await navigator.clipboard.writeText(txt); toast("Plan copied"); } catch { const ta = document.createElement("textarea"); ta.value = txt; ta.style.width = "100%"; ta.rows = 6; $("#pane-plan").prepend(ta); ta.select(); toast("Select and copy the text above"); } return; }
-  if (e.target.id === "csvPlan") {
-    if (downloads) { try { await downloads.save({ filename: "coolshows-plan.csv", data: planCsv() }); toast("Saved"); } catch (err) { if (err?.code !== "declined") toast("Couldn't save the file here"); } return; }
-    if (!inClaude) { const url = URL.createObjectURL(new Blob([planCsv()], { type: "text/csv" })); const a = Object.assign(document.createElement("a"), { href: url, download: "coolshows-plan.csv" });
-      document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 2000); }
-    return; }
-  if (e.target.id === "mapPlan") { const pts = planShows().filter(s => s.v.lat != null).map(s => [s.v.lat, s.v.lng]); if (st.origin) pts.push([st.origin.lat, st.origin.lng]); if (pts.length) map.fitBounds(pts, { padding: [40, 40], maxZoom: 13 }); if (innerWidth <= 900) document.querySelector(".mapwrap").scrollIntoView({ block: "start" }); return; }
-  if (e.target.id === "clearPlan") { $("#clearConfirm").hidden = false; return; }
-  if (e.target.id === "clearNo") { $("#clearConfirm").hidden = true; return; }
-  if (e.target.id === "clearYes") { st.plan.clear(); render(); toast("Plan cleared"); return; }
+  const ics = e.target.closest("[data-ics]"); if (ics) { const s = showById.get(ics.dataset.ics); saveFile(`${s.date}-${slug(s)}.ics`, icsFor([s]), "text/calendar"); return; }
+  const ov = e.target.closest("[data-origin-venue]"); if (ov) { const v = venues.get(ov.dataset.originVenue); setOrigin({ lat: +pos(v)[0].toFixed(4), lng: +pos(v)[1].toFixed(4), label: `${v.name}, ${v.city || v.state}` }); map.closePopup(); return; }
+  switch (e.target.id) {
+    case "copyPlan": return copy(planText(), "Plan copied");
+    case "sharePlan": return copy(shareUrl({ planOnly: true }), "Link to plan copied");
+    case "icsPlan": return saveFile("coolshows-plan.ics", icsFor(planShows()), "text/calendar");
+    case "csvPlan": return saveFile("coolshows-plan.csv", planCsv(), "text/csv");
+    case "mapPlan": { const pts = planShows().filter(s => s.v.lat != null).map(s => [s.v.lat, s.v.lng]); if (st.origin) pts.push([st.origin.lat, st.origin.lng]);
+      if (pts.length) map.fitBounds(pts, { padding: [40, 40], maxZoom: 14 }); if (innerWidth <= 960) document.querySelector(".mapwrap").scrollIntoView({ block: "start" }); return; }
+    case "clearPlan": $("#clearConfirm").hidden = false; return;
+    case "clearNo": $("#clearConfirm").hidden = true; return;
+    case "clearYes": st.plan.clear(); render(); toast("Plan cleared"); return;
+    case "keepShared": st.shared = null; store.set("plan", [...st.plan]); render(); toast("Saved as your plan"); return;
+    case "dropShared": st.plan = new Set(st.shared.mine); st.shared = null; render(); return;
+  }
 });
 document.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches("[data-fly]")) { e.preventDefault(); fly(e.target.dataset.fly); } });
-
-// theme changes: Leaflet paints with literal colors, so repaint from tokens
 const rethink = () => { restyleBase(); render(); };
 matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", rethink);
 new MutationObserver(rethink).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
+// ---------- sources table and freshness ----------
+function drawSources() {
+  const fmtWhen = iso => { if (!iso) return ""; const d = new Date(iso); return isNaN(d) ? iso : d.toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }); };
+  $("#srctable").innerHTML = `<tr><th>Source</th><th>Upcoming</th><th>Last checked</th></tr>` + (DATA.sources || []).map(s =>
+    `<tr><td><a href="${esc(s.home || "#")}" target="_blank" rel="noopener">${esc(s.name)}</a></td><td class="mono">${s.ok ? s.upcoming : "–"}</td><td>${s.ok ? fmtWhen(s.checked) : `Could not be read on ${fmtWhen(s.checked)}${s.lastGood ? `; last read ${fmtWhen(s.lastGood)}` : ""}`}</td></tr>`).join("");
+  $("#fresh").textContent = `Listings last gathered ${fmtWhen(DATA.generated)}.`;
+}
 
-// ---------- live refresh ----------
-// On a normal site the page reads the coolshows sheet itself on every visit, using the same
-// cleanup rules as tools/scrape.py. Claude's viewer blocks outside requests, so there the
-// built-in snapshot stays. Exact venue spots for brand-new venues come from the repo's
-// scheduled GitHub Action; until then they sit at their city center.
-const SHEET = "https://opensheet.elk.sh/1vkGXNAsJAb4BDYOHGgpi-HAydM7RVgssoBZfFsH0ark/current";
-const CITY_ALIASES = { nb: "New Brunswick", philly: "Philadelphia", phila: "Philadelphia", jc: "Jersey City", bk: "Brooklyn", "-": "", "": "" };
-const VENUE_ALIASES = { "gold soudns": "Gold Sounds", "cousin dannys": "Cousin Danny's", "barge inn": "The Barge" };
-const HIDDEN = /dm for|figure it out|ask a punk|tba|secret/i;
-const STATE_NAMES = { NJ: "New Jersey", NY: "New York", PA: "Pennsylvania" };
+// ---------- live check of the coolshows sheet ----------
+// The page re-reads coolshows' current tab on each visit, using the same cleanup rules as tools/scrape.py,
+// so shows added since the morning run appear right away.
+const SHEET_CSV = "https://docs.google.com/spreadsheets/d/1vkGXNAsJAb4BDYOHGgpi-HAydM7RVgssoBZfFsH0ark/export?format=csv&gid=0";
 const clean = v => String(v ?? "").trim().replace(/\s+/g, " ");
-const asInt = v => /^\s*[+-]?\d+\s*$/.test(String(v ?? "")) ? parseInt(v, 10) : null;
-function inferYear(month, today) { let y = today.getFullYear(); const tm = today.getMonth() + 1;
-  if (month < tm - 2) y += 1; else if (month > tm + 2) y -= 1; return y; }
-function parsePrice(raw) { const s = String(raw ?? "").toLowerCase();
-  if (!s || ["-", "?", "tba"].includes(s)) return [null, "unknown"];
-  if (s.includes("free")) return [0, "free"];
-  const nums = [...s.matchAll(/\$?\s*(\d+(?:\.\d+)?)/g)].map(m => +m[1]);
-  if (nums.length) return [Math.min(...nums), "paid"];
-  if (/donat|pwyc|sliding/.test(s)) return [null, "donation"];
-  return [null, "unknown"]; }
-function parseAge(raw) { const s = String(raw ?? "").toLowerCase();
-  return s.includes("21") ? "21+" : s.includes("18") ? "18+" : s.includes("all") ? "all ages" : "unknown"; }
-function parseStart(raw) { const s = String(raw ?? "").toLowerCase().replace(/\$\s*\d+/g, "");
-  const times = [...s.matchAll(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)?/g)]; if (!times.length) return null;
-  const m = s.match(/(music|show|bands?)\D{0,6}(\d{1,2})(?::(\d{2}))?/);
-  let h, mm; if (m) { h = +m[2]; mm = +(m[3] || 0); } else { h = +times[0][1]; mm = +(times[0][2] || 0); }
-  if (h >= 1 && h <= 11 && !/\d\s*am\b/.test(s)) h += 12; return h*60 + mm; }
-async function sha10(str) { const b = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(str));
-  return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, "0")).join("").slice(0, 10); }
-
-async function normalizeRow(r, today) {
-  const m = asInt(r.month), d = asInt(r.day); if (m == null || d == null) return null;
-  const state = clean(r.state).toUpperCase(), cityRaw = clean(r.city);
-  let city = CITY_ALIASES[cityRaw.toLowerCase()] ?? cityRaw;
-  if (!city && state === "NY") city = String(r.venue ?? "").toLowerCase().includes("night club 101") ? "Manhattan" : "New York City";
-  const venueRaw = clean(r.venue), venue = VENUE_ALIASES[venueRaw.toLowerCase()] ?? venueRaw, hidden = HIDDEN.test(venue);
-  const y = inferYear(m, today), [price, priceKind] = parsePrice(r.door);
-  const vkey = `${state}|${city.toLowerCase()}|${hidden ? "~hidden" : venue.toLowerCase()}`;
-  return { venue: { key: vkey, state, city, venue: hidden ? "Address by DM" : venue, hidden },
-    show: { id: "s" + await sha10(`${y}-${m}-${d}|${vkey}|${r.bands ?? ""}`),
-      date: `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`,
-      bands: String(r.bands ?? "").split(/,|\s\/\s|\n/).map(b => b.trim()).filter(Boolean),
-      venue: hidden ? "Address by DM" : venue, city, state, vkey, time: clean(r.time), start: parseStart(r.time),
-      door: clean(r.door), price, priceKind, age: parseAge(r.accessability), ageRaw: clean(r.accessability),
-      flier: clean(r.flier), link: clean(r.IG) } };
+const L_CITY = { nb: "New Brunswick", philly: "Philadelphia", phila: "Philadelphia", jc: "Jersey City", bk: "Brooklyn", "-": "", "": "" };
+const L_VENUE = { "gold soudns": "Gold Sounds", "cousin dannys": "Cousin Danny's", "barge inn": "The Barge" };
+const L_HIDDEN = /dm for|figure it out|ask a punk|tba|secret/i;
+const CITY_ALIASES = { nb: "New Brunswick", "new bruns": "New Brunswick", philly: "Philadelphia", phila: "Philadelphia", phl: "Philadelphia", jc: "Jersey City", bk: "Brooklyn", bklyn: "Brooklyn", nyc: "New York City", ny: "New York City", "new york": "New York City", lic: "Long Island City", "the bronx": "Bronx", "-": "", "n/a": "", na: "" };
+const NYC = new Set(["new york city","manhattan","brooklyn","queens","bronx","staten island","ridgewood","astoria","long island city","jackson heights","flushing","bushwick","williamsburg","greenpoint","bed-stuy","crown heights","gowanus","sunset park","park slope","flatbush","red hook","east williamsburg","lower east side","east village"]);
+const CITY_STATE = { "new brunswick": "NJ", "jersey city": "NJ", "asbury park": "NJ", philadelphia: "PA" };
+const DM_RE = /\b(?:dm|d\.m\.|message|msg|text|email|e-mail|ask|hit (?:us|me|up)|inbox)\b[^.\n]{0,25}?\b(?:addy|address|addr|location|loc|deets)\b|\bdms?\b[^.\n]{0,10}\b(?:info|details)\b|\b(?:addy|address|location)\b[^.\n]{0,20}?\b(?:by|via|in|on|upon)\s+(?:dm|request|ig|instagram|insta|bio|rsvp)\b|\bfigure it out\b|\bask a punk\b|\bsecret (?:location|spot|show)\b|\bundisclosed\b|\b(?:location|address|venue)\s*(?:is\s*)?(?:tba|tbd|tbc)\b|^(?:tba|tbd|tbc)$/i;
+const NONE_RE = /^(?:|-+|n\/?a|none|\?+|unknown|venue)$/i;
+const CANCEL_RE = /\b(cancel+ed|postponed|rescheduled|called off)\b/i;
+const NOTAFLOF_RE = /notaflof|no ?one turned away|nobody turned away/i;
+function placeOf(city, state) { city = clean(city); city = CITY_ALIASES[city.toLowerCase()] ?? city; state = clean(state).toUpperCase();
+  if (CITY_STATE[city.toLowerCase()]) state = CITY_STATE[city.toLowerCase()]; if (NYC.has(city.toLowerCase())) state = "NY"; if (!city && state === "NY") city = "New York City"; return [city, state]; }
+const metroOf = (city = "", state = "") => state === "NY" && NYC.has(city.toLowerCase()) ? "nyc" : city.toLowerCase();
+function vnorm(name = "", city = "") {
+  city = city || ""; let s = String(name).normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/&/g, " and ").replace(/[’'`.]/g, "").replace(/[^a-z0-9]+/g, " ").trim()
+    .replace(/\bcoffee house\b/g, "coffeehouse").replace(/\bstreet\b/g, "st").replace(/\bavenue\b/g, "ave").replace(/\bsouth\b/g, "s").replace(/\bnorth\b/g, "n").replace(/^the\s+/, "");
+  const c = city.toLowerCase(); if (c && s.endsWith(" " + c) && s.length > c.length + 2) s = s.slice(0, -c.length - 1);
+  const t = s.replace(/\s+(?:bar and restaurant|bar and grill|restaurant|bar|pub|lounge|nyc|bk|philly|venue|space)$/, ""); return t.length >= 3 ? t : s; }
+function parsePriceJS(...texts) { const s = texts.filter(Boolean).join(" ").toLowerCase();
+  const a = [...s.matchAll(/\$\s*(\d{1,3}(?:\.\d{2})?)/g)].map(m => +m[1]); if (a.length) return [Math.min(...a), "paid"];
+  if (/\bfree\b/.test(s)) return [0, "free"]; if (/donat|pwyc|pay what|sliding|suggested/.test(s) || NOTAFLOF_RE.test(s)) return [null, "donation"]; return [null, "unknown"]; }
+function parseAgeJS(...t) { const s = t.filter(Boolean).join(" ").toLowerCase();
+  return /\b21\s*\+|\b21 and (?:up|over)|\b21\s*plus|\bover 21\b/.test(s) ? "21+" : /\b18\s*\+|\b18 and (?:up|over)|\b18\s*plus/.test(s) ? "18+" : /\ball\s*ages\b|\ba\/a\b/.test(s) ? "all ages" : "unknown"; }
+function parseStartJS(...t) { let s = t.filter(Boolean).join(" ").toLowerCase().replace(/\$\s*\d+(?:\.\d+)?/g, " ").replace(/\b\d{1,2}\/\d{1,2}(?:\/\d{2,4})?\b/g, " ").replace(/\b(1[0-9]|2[0-9])\s*\+/g, " ");
+  if (/\bnoon\b/.test(s) && !/\d/.test(s)) return 720; const T = "(\\d{1,2})(?::([0-5]\\d))?\\s*(a\\.?m\\.?|p\\.?m\\.?)?";
+  const m = s.match(new RegExp("(?:music|show|bands?|set|starts?|start time)\\D{0,8}" + T)) || s.match(new RegExp(T + "\\s*(?:music|show|bands?|start)")) || s.match(new RegExp("\\b" + T)); if (!m) return null;
+  let h = +m[1]; const mm = +(m[2] || 0), ap = (m[3] || "").replace(/\./g, ""); if (h > 23) return null;
+  if (ap === "pm" && h < 12) h += 12; else if (ap === "am" && h === 12) h = 0; else if (!ap && h >= 1 && h <= 11) h += 12; return h*60 + mm; }
+function inferYear(m) { let y = +TODAY.slice(0,4); const tm = +TODAY.slice(5,7); if (m < tm - 2) y += 1; else if (m > tm + 2) y -= 1; return y; }
+async function sha10(str) { const b = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(str)); return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, "0")).join("").slice(0, 10); }
+function parseCsv(text) { const rows = []; let row = [], cell = "", q = false;
+  for (let i = 0; i < text.length; i++) { const c = text[i];
+    if (q) { if (c === '"') { if (text[i+1] === '"') { cell += '"'; i++; } else q = false; } else cell += c; }
+    else if (c === '"') q = true; else if (c === ",") { row.push(cell); cell = ""; } else if (c === "\n" || c === "\r") { if (c === "\r" && text[i+1] === "\n") i++; row.push(cell); rows.push(row); row = []; cell = ""; } else cell += c; }
+  if (cell || row.length) { row.push(cell); rows.push(row); } return rows; }
+async function liveRow(r) {
+  const m = parseInt(r.month, 10), d = parseInt(r.day, 10); if (!(m >= 1 && m <= 12 && d >= 1 && d <= 31)) return null;
+  const y = inferYear(m), date = `${y}-${String(m).padStart(2,"0")}-${String(d).padStart(2,"0")}`; if (isoOf(dn(date)) !== date) return null;
+  const c = s => String(s ?? "").trim().replace(/\s+/g, " ");
+  const lState = c(r.state).toUpperCase(), lCityRaw = c(r.city); let lCity = L_CITY[lCityRaw.toLowerCase()] ?? lCityRaw;
+  if (!lCity && lState === "NY") lCity = String(r.venue ?? "").toLowerCase().includes("night club 101") ? "Manhattan" : "New York City";
+  const lVenueRaw = c(r.venue), lVenue = L_VENUE[lVenueRaw.toLowerCase()] ?? lVenueRaw;
+  const id = "s" + await sha10(`${y}-${m}-${d}|${lState}|${lCity.toLowerCase()}|${L_HIDDEN.test(lVenue) ? "~hidden" : lVenue.toLowerCase()}|${r.bands ?? ""}`);
+  const [city, state] = placeOf(r.city, r.state), venueRaw = clean(r.venue), other = [r.bands, r.time, r.door, r.accessability].map(clean).join(" ");
+  let loc = null, locNote = null;
+  if (DM_RE.test(venueRaw)) { loc = "hidden"; locNote = venueRaw; } else if (NONE_RE.test(venueRaw)) loc = "none"; else { const mm = other.match(DM_RE); if (mm) { loc = "ask"; locNote = mm[0]; } }
+  let [price, priceKind] = clean(r.door) ? parsePriceJS(clean(r.door)) : [null, "unknown"]; if (priceKind === "unknown") [price, priceKind] = parsePriceJS(clean(r.time), clean(r.accessability));
+  let start = /\d|noon/.test(clean(r.time)) ? parseStartJS(clean(r.time)) : null; if (start == null && /door|music|show|\d\s*(?:am|pm)/i.test(clean(r.door))) start = parseStartJS(clean(r.door));
+  const all = [venueRaw, r.bands, r.time, r.door, r.accessability].map(clean).join(" "), cx = all.match(CANCEL_RE);
+  const notes = ["all ages", "21+", "18+", "aa", "-"].includes(clean(r.accessability).toLowerCase()) ? "" : clean(r.accessability);
+  let flier = clean(r.flier).replace(/\s/g, ""); const im = flier.match(/^https?:\/\/(?:www\.)?imgur\.com\/([A-Za-z0-9]{5,8})$/); if (im) flier = `https://i.imgur.com/${im[1]}.jpeg`;
+  return { id, src: "coolshows", date, start, title: null, bands: clean(r.bands).split(/,|\s\/\s|\s\+\s|\n|\s•\s|\s\|\s/).map(b => b.trim()).filter(Boolean),
+    venueRaw, city, state, loc, locNote, time: clean(r.time), door: clean(r.door), price, priceKind, notaflof: NOTAFLOF_RE.test(all), age: parseAgeJS(r.accessability, r.door, r.time), notes,
+    status: cx ? (/postpon|reschedul/i.test(cx[0]) ? "postponed" : "cancelled") : null, kind: "show", flier: /^https?:/.test(flier) ? flier : "", link: clean(r.ig), url: "https://coolshows.life/" };
 }
-
-async function cityCenter(city, state) {
-  const label = `${city}, ${state}`.toLowerCase();
-  const known = cityCenters.find(c => c.label.toLowerCase() === label); if (known) return [known.lat, known.lng];
-  const cache = store.get("geo", {}); if (label in cache) return cache[label];
-  if (!city || (cityCenter.calls = (cityCenter.calls || 0) + 1) > 4) return null; // stay light on the free geocoder
-  await new Promise(r => setTimeout(r, 1100));
-  try { const q = new URLSearchParams({ q: `${city}, ${STATE_NAMES[state] || state}`, format: "json", limit: "1", countrycodes: "us", viewbox: "-80.6,42.6,-71.8,38.8", bounded: "1" });
-    const res = await (await fetch("https://nominatim.openstreetmap.org/search?" + q)).json();
-    const hit = res?.[0] ? [+res[0].lat, +res[0].lon] : null; cache[label] = hit; store.set("geo", cache); return hit; } catch { return null; }
-}
-
-async function liveRefresh() {
+async function liveCheck() {
   if (inClaude || !window.crypto?.subtle) return;
-  let rows; try { const r = await fetch(SHEET, { cache: "no-store" }); if (!r.ok) throw new Error(r.status); rows = await r.json(); } catch { return; }
-  if (!Array.isArray(rows) || !rows.length) return;
-  const today = new Date(), live = [], fresh = new Map();
-  for (const r of rows) { const n = await normalizeRow(r, today); if (!n) continue; live.push(n.show); if (!fresh.has(n.venue.key)) fresh.set(n.venue.key, n.venue); }
-  const ids = new Set(live.map(s => s.id));
-  const kept = DATA.shows.filter(s => !ids.has(s.id) && s.date < TODAY); // past shows the live calendar has dropped
-  const known = new Set(DATA.venues.map(v => v.key)), added = [];
-  for (const v of fresh.values()) { if (known.has(v.key)) continue;
-    const c = await cityCenter(v.city, v.state);
-    added.push({ ...v, lat: c ? c[0] : null, lng: c ? c[1] : null, precision: c ? "city" : "none", match: "" }); }
-  DATA = { ...DATA, shows: [...live, ...kept].sort((a, b) => a.date.localeCompare(b.date) || (a.start ?? 0) - (b.start ?? 0)), venues: [...DATA.venues, ...added] };
-  prep(DATA); buildOrigins(); syncOrigin(); drawLabels(); render();
-  const t = new Date(); $("#scraped").textContent = `Live listings, checked ${fmtTime(t.getHours()*60 + t.getMinutes())}`;
+  let text; try { const r = await fetch(SHEET_CSV, { cache: "no-store" }); if (!r.ok) throw 0; text = await r.text(); } catch { return; }
+  const rows = parseCsv(text); if (rows.length < 2) return;
+  const head = rows[0].map(h => h.trim().toLowerCase()); if (!head[0]) head[0] = "month";
+  const live = []; for (const raw of rows.slice(1)) { const r = Object.fromEntries(head.map((h, i) => [h, raw[i] ?? ""])); const s = await liveRow(r); if (s) live.push(s); }
+  if (live.length < 5) return; // something is off with the sheet; keep the morning's data
+  const alias = new Map(); for (const v of DATA.venues) for (const n of [v.name, ...(v.aliases || [])]) alias.set(`${v.state}|${metroOf(v.city, v.state)}|${vnorm(n, v.city)}`, v.key);
+  const liveIds = new Set(live.map(s => s.id)), known = new Map(DATA.shows.map(s => [s.id, s])), added = [];
+  for (const s of live) {
+    if (known.has(s.id)) { const k = known.get(s.id); Object.assign(k, { status: s.status, time: s.time, door: s.door, start: s.start ?? k.start, flier: s.flier || k.flier }); continue; }
+    const mk = metroOf(s.city, s.state);
+    let key = s.loc === "hidden" || s.loc === "none" ? `${s.state}|${mk}|~${s.loc}` : alias.get(`${s.state}|${mk}|${vnorm(s.venueRaw, s.city)}`);
+    if (!key || !DATA.venues.some(v => v.key === key)) {
+      key = key || `${s.state}|${mk}|${vnorm(s.venueRaw, s.city)}`;
+      const c = cityCenters.find(c => c.label.toLowerCase() === `${s.city}, ${s.state}`.toLowerCase());
+      DATA.venues.push({ key, name: s.loc === "hidden" ? "Address not public" : s.loc === "none" ? "Venue not listed" : s.venueRaw, city: s.city, state: s.state, hidden: !!(s.loc === "hidden" || s.loc === "none"), private: s.loc === "ask",
+        address: null, aliases: [], lat: c ? c.lat : null, lng: c ? c.lng : null, precision: c ? "city" : "none" });
+      alias.set(`${s.state}|${mk}|${vnorm(s.venueRaw, s.city)}`, key);
+    }
+    s.vkey = key; s.venue = DATA.venues.find(v => v.key === key).name; added.push(s);
+    // a venue calendar may already list this show: fold it in
+    const twin = DATA.shows.find(o => o.src !== "coolshows" && o.date === s.date && o.vkey === key && o.kind === "show");
+    if (twin) { s.also = [{ src: twin.src, url: twin.url }]; s.flier = s.flier || twin.flier; twin._drop = true; }
+  }
+  // Upcoming coolshows listings that are no longer on the sheet were removed by coolshows; drop them.
+  DATA.shows = DATA.shows.filter(s => !s._drop && !(s.src === "coolshows" && s.date >= TODAY && s.date <= live.reduce((a, b) => a > b.date ? a : b.date, TODAY) && !liveIds.has(s.id)));
+  DATA.shows = DATA.shows.concat(added);
+  prep(); buildOrigins(); syncOrigin(); drawLabels(); render();
+  const t = new Date(); $("#fresh").textContent += ` coolshows rechecked at ${fmtTime(t.getHours()*60 + t.getMinutes())}${added.length ? `; ${added.length} new since then` : ""}.`;
 }
 
-let downloads = null;
-// Inside Claude's viewer, saves go through its download prompt; on a normal site (GitHub Pages) a plain browser download works.
-const inClaude = typeof window.claude?.use === "function";
-$("#scraped").textContent = "Listings as of " + fmtDay(DATA.scraped) + ", " + DATA.scraped.slice(0,4);
-syncOrigin(); drawLabels(); render();
-if (st.plan.size) tab("list");
-liveRefresh();
-window.claude?.use?.("downloads").then(d => { downloads = d; if (d) drawPlan(); }).catch(() => {});
+// ---------- start ----------
+// Following a link to another view of this page changes only the part after #; apply it.
+addEventListener("hashchange", () => { readHash(); syncControls(); syncOrigin(); render(); ensureYearsFor(st.sel); });
+readHash();
+buildOrigins(); syncOrigin(); syncControls(); drawLabels(); drawSources(); render();
+if (st.sel < (DATA.embeddedFrom || "0")) ensureYearsFor(st.sel);
+liveCheck();
+window.claude?.use?.("downloads").then(d => { downloads = d; }).catch(() => {});
 </script>
