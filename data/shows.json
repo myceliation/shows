@@ -1,22 +1,22 @@
 {
-"generated": "2026-11-08T10:57-05:00",
-"scraped": "2026-11-08",
+"generated": "2026-11-09T14:46-05:00",
+"scraped": "2026-11-09",
 "sources": [
 {
 "id": "coolshows",
 "name": "coolshows.life",
 "home": "https://coolshows.life/",
 "ok": true,
-"checked": "2026-11-08T10:57-05:00",
+"checked": "2026-11-09T14:46-05:00",
 "count": 3510,
-"upcoming": 68
+"upcoming": 66
 },
 {
 "id": "abcnorio",
 "name": "ABC No Rio",
 "home": "https://www.abcnorio.org/events/",
 "ok": true,
-"checked": "2026-11-08T10:57-05:00",
+"checked": "2026-11-09T14:46-05:00",
 "count": 2,
 "upcoming": 2
 },
@@ -25,34 +25,34 @@
 "name": "The Broadway",
 "home": "https://www.thebroadway.nyc/",
 "ok": true,
-"checked": "2026-11-08T10:57-05:00",
-"count": 49,
-"upcoming": 19
+"checked": "2026-11-09T14:46-05:00",
+"count": 50,
+"upcoming": 20
 },
 {
 "id": "mama-tried",
 "name": "Mama Tried",
 "home": "https://mamatriedbk.com/",
 "ok": true,
-"checked": "2026-11-08T10:57-05:00",
-"count": 42,
-"upcoming": 12
+"checked": "2026-11-09T14:46-05:00",
+"count": 41,
+"upcoming": 11
 },
 {
 "id": "pit",
 "name": "Property Is Theft",
 "home": "https://www.propertyistheft.org/",
 "ok": true,
-"checked": "2026-11-08T10:57-05:00",
-"count": 43,
-"upcoming": 13
+"checked": "2026-11-09T14:46-05:00",
+"count": 42,
+"upcoming": 12
 },
 {
 "id": "khyber-pass",
 "name": "Khyber Pass",
 "home": "https://www.khyberpasspub.com/",
 "ok": true,
-"checked": "2026-11-08T10:57-05:00",
+"checked": "2026-11-09T14:46-05:00",
 "count": 36,
 "upcoming": 6
 },
@@ -61,7 +61,7 @@
 "name": "Prototype 237",
 "home": "https://www.prototype237.com/",
 "ok": true,
-"checked": "2026-11-08T10:57-05:00",
+"checked": "2026-11-09T14:46-05:00",
 "count": 17,
 "upcoming": 0
 }
@@ -121985,6 +121985,39 @@
 "flier": "https://images.squarespace-cdn.com/content/v1/62bb73eaae40d4671600d300/1793209001275-5538HWQIB4ZK422PXC9Y/6321+%281%29+%281%29.png",
 "link": "",
 "url": "https://www.thebroadway.nyc/showcalendar/answering-machine-cold-wrecks-warn-the-duke-warren-britt",
+"vkey": "NY|nyc|broadway",
+"venue": "The Broadway"
+},
+{
+"id": "v8934b877d9",
+"src": "the-broadway",
+"date": "2026-12-20",
+"start": 1140,
+"title": "Thaetas w/ Sarmat, Ventriloquist + Viserion",
+"bands": [
+"Thaetas",
+"Sarmat",
+"Ventriloquist",
+"Viserion"
+],
+"venueRaw": "The Broadway",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "",
+"door": "",
+"price": null,
+"priceKind": "unknown",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://images.squarespace-cdn.com/content/v1/62bb73eaae40d4671600d300/1793998347590-9JV5URME4ANKC14XZ903/1000149492+%281%29.png",
+"link": "",
+"url": "https://www.thebroadway.nyc/showcalendar/thaetas-w-sarmat-ventriloquist-viserion",
 "vkey": "NY|nyc|broadway",
 "venue": "The Broadway"
 },
