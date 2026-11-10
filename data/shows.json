@@ -1,22 +1,22 @@
 {
-"generated": "2026-11-09T14:46-05:00",
-"scraped": "2026-11-09",
+"generated": "2026-11-10T12:00-05:00",
+"scraped": "2026-11-10",
 "sources": [
 {
 "id": "coolshows",
 "name": "coolshows.life",
 "home": "https://coolshows.life/",
 "ok": true,
-"checked": "2026-11-09T14:46-05:00",
-"count": 3510,
-"upcoming": 66
+"checked": "2026-11-10T12:00-05:00",
+"count": 3525,
+"upcoming": 79
 },
 {
 "id": "abcnorio",
 "name": "ABC No Rio",
 "home": "https://www.abcnorio.org/events/",
 "ok": true,
-"checked": "2026-11-09T14:46-05:00",
+"checked": "2026-11-10T12:00-05:00",
 "count": 2,
 "upcoming": 2
 },
@@ -25,25 +25,25 @@
 "name": "The Broadway",
 "home": "https://www.thebroadway.nyc/",
 "ok": true,
-"checked": "2026-11-09T14:46-05:00",
-"count": 50,
-"upcoming": 20
+"checked": "2026-11-10T12:00-05:00",
+"count": 49,
+"upcoming": 19
 },
 {
 "id": "mama-tried",
 "name": "Mama Tried",
 "home": "https://mamatriedbk.com/",
 "ok": true,
-"checked": "2026-11-09T14:46-05:00",
-"count": 41,
-"upcoming": 11
+"checked": "2026-11-10T12:00-05:00",
+"count": 40,
+"upcoming": 10
 },
 {
 "id": "pit",
 "name": "Property Is Theft",
 "home": "https://www.propertyistheft.org/",
 "ok": true,
-"checked": "2026-11-09T14:46-05:00",
+"checked": "2026-11-10T12:00-05:00",
 "count": 42,
 "upcoming": 12
 },
@@ -52,7 +52,7 @@
 "name": "Khyber Pass",
 "home": "https://www.khyberpasspub.com/",
 "ok": true,
-"checked": "2026-11-09T14:46-05:00",
+"checked": "2026-11-10T12:00-05:00",
 "count": 36,
 "upcoming": 6
 },
@@ -61,7 +61,7 @@
 "name": "Prototype 237",
 "home": "https://www.prototype237.com/",
 "ok": true,
-"checked": "2026-11-09T14:46-05:00",
+"checked": "2026-11-10T12:00-05:00",
 "count": 17,
 "upcoming": 0
 }
@@ -60298,7 +60298,7 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "NJ|keyport|3br distillery",
-"venue": "3br Distillery"
+"venue": "3Br Distillery"
 },
 {
 "id": "s004d481fee",
@@ -63020,7 +63020,7 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "NJ|keyport|3br distillery",
-"venue": "3br Distillery"
+"venue": "3Br Distillery"
 },
 {
 "id": "s06f1c1722a",
@@ -69326,7 +69326,7 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "NJ|keyport|3br distillery",
-"venue": "3br Distillery"
+"venue": "3Br Distillery"
 },
 {
 "id": "sa9564d4537",
@@ -79322,7 +79322,7 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "NJ|keyport|3br distillery",
-"venue": "3br Distillery"
+"venue": "3Br Distillery"
 },
 {
 "id": "sac465a53c9",
@@ -85308,7 +85308,7 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "NJ|keyport|3br distillery",
-"venue": "3br Distillery"
+"venue": "3Br Distillery"
 },
 {
 "id": "sadfb695a22",
@@ -91364,7 +91364,7 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "NJ|keyport|3br distillery",
-"venue": "3br Distillery"
+"venue": "3Br Distillery"
 },
 {
 "id": "s0a2fa887e0",
@@ -97688,7 +97688,7 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "PA|phoenixville|polish club",
-"venue": "The Polish club"
+"venue": "The Polish Club"
 },
 {
 "id": "sc6382af636",
@@ -118573,6 +118573,38 @@
 "venue": "The Broadway"
 },
 {
+"id": "s9a5a99a4bf",
+"src": "coolshows",
+"date": "2026-11-10",
+"start": 1200,
+"title": null,
+"bands": [
+"Boyhood",
+"Milkspiller",
+"Laybrum"
+],
+"venueRaw": "Ortlieb's",
+"city": "Philadelphia",
+"state": "PA",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "8:00 PM",
+"door": "$15",
+"price": 15.0,
+"priceKind": "paid",
+"notaflof": true,
+"age": "unknown",
+"notes": "notaflof",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/TbJtydE.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "PA|philadelphia|ortliebs",
+"venue": "Ortlieb's"
+},
+{
 "id": "s0cc103fc05",
 "src": "coolshows",
 "date": "2026-11-11",
@@ -118958,6 +118990,39 @@
 "venue": "Property Is Theft (P.I.T.)"
 },
 {
+"id": "se4c99c395b",
+"src": "coolshows",
+"date": "2026-11-13",
+"start": 1020,
+"title": null,
+"bands": [
+"Spray Bottle Fever",
+"Latinacroft",
+"debbie cool",
+"ZAC-A-RAMA!"
+],
+"venueRaw": "dm for address",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": "hidden",
+"locNote": "dm for address",
+"time": "5:00 PM",
+"door": "$5",
+"price": 5.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "21+",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/JdJ52kR.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NY|nyc|~hidden",
+"venue": "Address not public"
+},
+{
 "id": "v20762d2e9f",
 "src": "khyber-pass",
 "date": "2026-11-13",
@@ -119017,6 +119082,39 @@
 "url": "https://coolshows.life/",
 "vkey": "NJ|milford|vault",
 "venue": "The Vault"
+},
+{
+"id": "sc290976b01",
+"src": "coolshows",
+"date": "2026-11-13",
+"start": 1080,
+"title": null,
+"bands": [
+"Hunchback",
+"Neon Rayon",
+"Shellshag",
+"Nervous Triggers"
+],
+"venueRaw": "3Br Distillery",
+"city": "Keyport",
+"state": "NJ",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "6:00 PM",
+"door": "free",
+"price": 0,
+"priceKind": "free",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/75ek53t.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NJ|keyport|3br distillery",
+"venue": "3Br Distillery"
 },
 {
 "id": "sdcd0a9884a",
@@ -119216,6 +119314,39 @@
 "url": "https://coolshows.life/",
 "vkey": "NY|nyc|attic",
 "venue": "The Attic"
+},
+{
+"id": "sc43035a15b",
+"src": "coolshows",
+"date": "2026-11-13",
+"start": 1140,
+"title": null,
+"bands": [
+"Admin",
+"Positronix",
+"Psychtooth",
+"Faux Fear"
+],
+"venueRaw": "The Polish Club",
+"city": "Phoenixville",
+"state": "PA",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "7:00 PM",
+"door": "$15 adv, $20 atd",
+"price": 15.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "all ages",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/Jr0Wbq1.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "PA|phoenixville|polish club",
+"venue": "The Polish Club"
 },
 {
 "id": "va077987d69",
@@ -120315,6 +120446,40 @@
 "venue": "The Broadway"
 },
 {
+"id": "s18559b1f55",
+"src": "coolshows",
+"date": "2026-11-19",
+"start": 1170,
+"title": null,
+"bands": [
+"Elegy for Lenore",
+"My Transparent Eye",
+"Ariadne's Thread",
+"Epoxy",
+"Brickarms"
+],
+"venueRaw": "Relax Lounge",
+"city": "Queens",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "7:30 PM",
+"door": "$10",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "21+",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/vOgUmgq.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NY|nyc|relax",
+"venue": "Relax Ridgewood"
+},
+{
 "id": "s2f56b17ba8",
 "src": "coolshows",
 "date": "2026-11-20",
@@ -120734,6 +120899,39 @@
 "url": "https://coolshows.life/",
 "vkey": "NJ|belmar|vintage on ninth",
 "venue": "Vintage on Ninth"
+},
+{
+"id": "s1096cd3cb1",
+"src": "coolshows",
+"date": "2026-11-21",
+"start": 1140,
+"title": null,
+"bands": [
+"Cave Paintings",
+"Prophet II",
+"April 1830",
+"Bloodshed"
+],
+"venueRaw": "The Kennel",
+"city": "Philadelphia",
+"state": "PA",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "doors 6, music 7pm",
+"door": "$10",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": true,
+"age": "unknown",
+"notes": "notaflof, wear a mask",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/MgymxJ8.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "PA|philadelphia|kennel",
+"venue": "The Kennel"
 },
 {
 "id": "s40984958b3",
@@ -121213,6 +121411,39 @@
 "venue": "Mama Tried"
 },
 {
+"id": "s13b3e0a9fd",
+"src": "coolshows",
+"date": "2026-11-27",
+"start": 1020,
+"title": null,
+"bands": [
+"Ravens",
+"Hole in the Earth",
+"Ewww!",
+"Cienna"
+],
+"venueRaw": "19 S 2nd Ave",
+"city": "Hightstown",
+"state": "NJ",
+"address": null,
+"loc": "address",
+"locNote": null,
+"time": "5:00 PM",
+"door": "$10",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "unknown",
+"notes": "mutual aid for Cosecha Nj's immigrant defense work",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/SHw520o.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NJ|hightstown|19 s 2nd ave",
+"venue": "19 S 2nd Ave"
+},
+{
 "id": "s508e4edbea",
 "src": "coolshows",
 "date": "2026-11-27",
@@ -121404,6 +121635,39 @@
 "venue": "Mama Tried"
 },
 {
+"id": "s0c73f91669",
+"src": "coolshows",
+"date": "2026-11-29",
+"start": 1020,
+"title": null,
+"bands": [
+"Cussing",
+"Beautiful Creatures",
+"Gabe Walters",
+"Pat Sullivan"
+],
+"venueRaw": "Yearbook Records",
+"city": "Lanoka Harbor",
+"state": "NJ",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "5:00 PM",
+"door": "$5",
+"price": 5.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/FehDXfK.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NJ|lanoka harbor|yearbook records",
+"venue": "Yearbook Records"
+},
+{
 "id": "s6999c9e1c4",
 "src": "coolshows",
 "date": "2026-11-29",
@@ -121565,6 +121829,39 @@
 "venue": "The Pouch"
 },
 {
+"id": "s42e6014d4d",
+"src": "coolshows",
+"date": "2026-12-04",
+"start": 1170,
+"title": null,
+"bands": [
+"Juniper!",
+"Magnolia",
+"Severed",
+"Until Then"
+],
+"venueRaw": "Social Club Records",
+"city": "Rutherford",
+"state": "NJ",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "7:30 PM",
+"door": "$10",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/4RdiYL5.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NJ|rutherford|social club records",
+"venue": "Social Club Records"
+},
+{
 "id": "s324aeb01eb",
 "src": "coolshows",
 "date": "2026-12-04",
@@ -121665,14 +121962,16 @@
 "venue": "Fringe Records"
 },
 {
-"id": "v124f8736f5",
-"src": "the-broadway",
+"id": "sc80d48e8a4",
+"src": "coolshows",
 "date": "2026-12-05",
-"start": 1200,
-"title": "Kontusion, Hedonist",
+"start": 1260,
+"title": null,
 "bands": [
 "Kontusion",
-"Hedonist"
+"Hedonist",
+"Love & Compassion",
+"Zone"
 ],
 "venueRaw": "The Broadway",
 "city": "Brooklyn",
@@ -121680,19 +121979,25 @@
 "address": null,
 "loc": null,
 "locNote": null,
-"time": "",
-"door": "",
-"price": null,
-"priceKind": "unknown",
+"time": "doors 8, music 9pm",
+"door": "$18 adv, $25 atd",
+"price": 18.0,
+"priceKind": "paid",
 "notaflof": false,
 "age": "unknown",
 "notes": "",
 "status": null,
 "kind": "show",
-"flier": "https://images.squarespace-cdn.com/content/v1/62bb73eaae40d4671600d300/1793995852492-X9Q4JSFLW8387I5T9KBG/IMG_3934.jpeg",
+"flier": "https://i.imgur.com/45c2Bsb.jpeg",
 "link": "",
-"url": "https://www.thebroadway.nyc/showcalendar/kontusion-hedonist",
+"url": "https://coolshows.life/",
 "vkey": "NY|nyc|broadway",
+"also": [
+{
+"src": "the-broadway",
+"url": "https://www.thebroadway.nyc/showcalendar/kontusion-hedonist"
+}
+],
 "venue": "The Broadway"
 },
 {
@@ -121729,6 +122034,39 @@
 "venue": "Jt's Burgers and Brews"
 },
 {
+"id": "sc870b4c694",
+"src": "coolshows",
+"date": "2026-12-06",
+"start": null,
+"title": null,
+"bands": [
+"Ugly Ones",
+"Lovervoid",
+"Psychic of Orange",
+"Figure of Fun"
+],
+"venueRaw": "Purgatory",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "",
+"door": "",
+"price": null,
+"priceKind": "unknown",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/IgKfF2Q.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NY|nyc|purgatory",
+"venue": "Purgatory"
+},
+{
 "id": "v4bb13e18fc",
 "src": "the-broadway",
 "date": "2026-12-10",
@@ -121759,6 +122097,39 @@
 "url": "https://www.thebroadway.nyc/showcalendar/prairie-princess-too-many-horses-zo-pete-ford",
 "vkey": "NY|nyc|broadway",
 "venue": "The Broadway"
+},
+{
+"id": "s9624266b6d",
+"src": "coolshows",
+"date": "2026-12-11",
+"start": 1110,
+"title": null,
+"bands": [
+"izolat",
+"Mistletoe",
+"Cementation Anxiety",
+"Pain Slave"
+],
+"venueRaw": "Flemington DIY",
+"city": "Flemington",
+"state": "NJ",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "6:30 PM",
+"door": "$10",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/aBbGf9V.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NJ|flemington|flemington diy",
+"venue": "Flemington DIY"
 },
 {
 "id": "v1ee2e8f6bd",
@@ -121917,6 +122288,73 @@
 "venue": "Mama Tried"
 },
 {
+"id": "s042016e53d",
+"src": "coolshows",
+"date": "2026-12-16",
+"start": 1200,
+"title": null,
+"bands": [
+"Kolb",
+"Katy Pinke",
+"Old Table Jogo"
+],
+"venueRaw": "Hart Bar",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "8:00 PM",
+"door": "$10",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "21+",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/aB4x7Ll.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NY|nyc|hart",
+"venue": "Hart Bar"
+},
+{
+"id": "sef5d518804",
+"src": "coolshows",
+"date": "2026-12-19",
+"start": 960,
+"title": null,
+"bands": [
+"Foxtails",
+"Static Brian",
+"Silverdollar",
+"Summers in Autumn",
+"Tearaway",
+"Casca"
+],
+"venueRaw": "Erf Studios",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "4:00 PM",
+"door": "$10",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "unknown",
+"notes": "mutual aid event",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/SAYjaZb.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NY|nyc|erf studios",
+"venue": "Erf Studios"
+},
+{
 "id": "s247606b7e7",
 "src": "coolshows",
 "date": "2026-12-19",
@@ -121954,6 +122392,40 @@
 }
 ],
 "venue": "King Killer"
+},
+{
+"id": "s72ef2cc95a",
+"src": "coolshows",
+"date": "2026-12-19",
+"start": 1140,
+"title": null,
+"bands": [
+"Broken Heroes",
+"XL Bully",
+"Iron Duke",
+"Squiggy",
+"Suffering Process"
+],
+"venueRaw": "321 Marshall St",
+"city": "Phillipsburg",
+"state": "NJ",
+"address": null,
+"loc": "address",
+"locNote": null,
+"time": "7:00 PM",
+"door": "toy drive",
+"price": null,
+"priceKind": "unknown",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/0gFMjCV.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NJ|phillipsburg|321 marshall st",
+"venue": "321 Marshall St"
 },
 {
 "id": "v60c340c241",
@@ -123288,6 +123760,19 @@
 "precision": "address"
 },
 {
+"key": "NJ|hightstown|19 s 2nd ave",
+"name": "19 S 2nd Ave",
+"city": "Hightstown",
+"state": "NJ",
+"hidden": false,
+"private": false,
+"address": "19 S 2nd Ave",
+"aliases": [],
+"lat": 40.269559,
+"lng": -74.5232454,
+"precision": "city"
+},
+{
 "key": "NJ|hightstown|randy nows man cave",
 "name": "Randy Now's Man Cave",
 "city": "Hightstown",
@@ -123541,7 +124026,7 @@
 },
 {
 "key": "NJ|keyport|3br distillery",
-"name": "3br Distillery",
+"name": "3Br Distillery",
 "city": "Keyport",
 "state": "NJ",
 "hidden": false,
@@ -123549,7 +124034,7 @@
 "address": null,
 "aliases": [
 "3BR Distillery",
-"3Br Distillery"
+"3br Distillery"
 ],
 "lat": 40.4331631,
 "lng": -74.1995883,
@@ -123682,6 +124167,19 @@
 "lat": 40.3656188,
 "lng": -74.9454055,
 "precision": "city"
+},
+{
+"key": "NJ|lanoka harbor|yearbook records",
+"name": "Yearbook Records",
+"city": "Lanoka Harbor",
+"state": "NJ",
+"hidden": false,
+"private": false,
+"address": null,
+"aliases": [],
+"lat": 39.8610181,
+"lng": -74.1736659,
+"precision": "venue"
 },
 {
 "key": "NJ|lawrenceville|great meadow farm 2501 princeton pike",
@@ -125061,6 +125559,19 @@
 "lat": 40.5042904,
 "lng": -74.2726374,
 "precision": "city"
+},
+{
+"key": "NJ|phillipsburg|321 marshall st",
+"name": "321 Marshall St",
+"city": "Phillipsburg",
+"state": "NJ",
+"hidden": false,
+"private": false,
+"address": "321 Marshall St",
+"aliases": [],
+"lat": 40.693627107202,
+"lng": -75.185215098551,
+"precision": "address"
 },
 {
 "key": "NJ|phillipsburg|american legion",
@@ -126935,6 +127446,19 @@
 "aliases": [
 "ERF"
 ],
+"lat": 40.6526006,
+"lng": -73.9497211,
+"precision": "city"
+},
+{
+"key": "NY|nyc|erf studios",
+"name": "Erf Studios",
+"city": "Brooklyn",
+"state": "NY",
+"hidden": false,
+"private": false,
+"address": null,
+"aliases": [],
 "lat": 40.6526006,
 "lng": -73.9497211,
 "precision": "city"
@@ -131711,13 +132235,15 @@
 },
 {
 "key": "PA|phoenixville|polish club",
-"name": "The Polish club",
+"name": "The Polish Club",
 "city": "Phoenixville",
 "state": "PA",
 "hidden": false,
 "private": false,
 "address": null,
-"aliases": [],
+"aliases": [
+"The Polish club"
+],
 "lat": 40.1338784,
 "lng": -75.5172827,
 "precision": "city"
