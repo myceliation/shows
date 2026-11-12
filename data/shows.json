@@ -1,22 +1,22 @@
 {
-"generated": "2026-11-11T12:05-05:00",
-"scraped": "2026-11-11",
+"generated": "2026-11-12T12:34-05:00",
+"scraped": "2026-11-12",
 "sources": [
 {
 "id": "coolshows",
 "name": "coolshows.life",
 "home": "https://coolshows.life/",
 "ok": true,
-"checked": "2026-11-11T12:05-05:00",
+"checked": "2026-11-12T12:34-05:00",
 "count": 3525,
-"upcoming": 78
+"upcoming": 75
 },
 {
 "id": "abcnorio",
 "name": "ABC No Rio",
 "home": "https://www.abcnorio.org/events/",
 "ok": true,
-"checked": "2026-11-11T12:05-05:00",
+"checked": "2026-11-12T12:34-05:00",
 "count": 2,
 "upcoming": 2
 },
@@ -25,7 +25,7 @@
 "name": "The Broadway",
 "home": "https://www.thebroadway.nyc/",
 "ok": true,
-"checked": "2026-11-11T12:05-05:00",
+"checked": "2026-11-12T12:34-05:00",
 "count": 50,
 "upcoming": 20
 },
@@ -34,7 +34,7 @@
 "name": "Mama Tried",
 "home": "https://mamatriedbk.com/",
 "ok": true,
-"checked": "2026-11-11T12:05-05:00",
+"checked": "2026-11-12T12:34-05:00",
 "count": 40,
 "upcoming": 10
 },
@@ -43,16 +43,16 @@
 "name": "Property Is Theft",
 "home": "https://www.propertyistheft.org/",
 "ok": true,
-"checked": "2026-11-11T12:05-05:00",
-"count": 42,
-"upcoming": 12
+"checked": "2026-11-12T12:34-05:00",
+"count": 45,
+"upcoming": 15
 },
 {
 "id": "khyber-pass",
 "name": "Khyber Pass",
 "home": "https://www.khyberpasspub.com/",
 "ok": true,
-"checked": "2026-11-11T12:05-05:00",
+"checked": "2026-11-12T12:34-05:00",
 "count": 36,
 "upcoming": 6
 },
@@ -61,7 +61,7 @@
 "name": "Prototype 237",
 "home": "https://www.prototype237.com/",
 "ok": true,
-"checked": "2026-11-11T12:05-05:00",
+"checked": "2026-11-12T12:34-05:00",
 "count": 17,
 "upcoming": 0
 }
@@ -121701,6 +121701,36 @@
 "venue": "Yearbook Records"
 },
 {
+"id": "v1ce308c2fb",
+"src": "pit",
+"date": "2026-11-29",
+"start": 1020,
+"title": "ABC NO RIO presents C.O.M.A.",
+"bands": [
+"ABC NO RIO presents C.O.M.A."
+],
+"venueRaw": "Property Is Theft (P.I.T.)",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "",
+"door": "",
+"price": null,
+"priceKind": "unknown",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "",
+"link": "",
+"url": "https://www.propertyistheft.org/events/oxv1ofcssmv35hslks9ydpp4cgdbh9",
+"vkey": "NY|nyc|property is theft pit",
+"venue": "Property Is Theft (P.I.T.)"
+},
+{
 "id": "s6999c9e1c4",
 "src": "coolshows",
 "date": "2026-11-29",
@@ -121863,6 +121893,39 @@
 "venue": "The Pouch"
 },
 {
+"id": "v82a9e2166f",
+"src": "the-broadway",
+"date": "2026-12-04",
+"start": 1140,
+"title": "Liz Hogg w/ Jetties, Shitl<3ve + Supermarket Parking Lot",
+"bands": [
+"Liz Hogg",
+"Jetties",
+"Shitl<3ve",
+"Supermarket Parking Lot"
+],
+"venueRaw": "The Broadway",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "",
+"door": "",
+"price": null,
+"priceKind": "unknown",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://images.squarespace-cdn.com/content/v1/62bb73eaae40d4671600d300/1794358552536-JE34B6OZZH3Y6YDV2N3P/lizhogg1.jpeg",
+"link": "",
+"url": "https://www.thebroadway.nyc/showcalendar/liz-hogg-w-jetties-shitl3ve-supermarket-parking-lot",
+"vkey": "NY|nyc|broadway",
+"venue": "The Broadway"
+},
+{
 "id": "s42e6014d4d",
 "src": "coolshows",
 "date": "2026-12-04",
@@ -121927,6 +121990,36 @@
 "url": "https://coolshows.life/",
 "vkey": "PA|philadelphia|abyssinia",
 "venue": "Abyssinia"
+},
+{
+"id": "v90273c7765",
+"src": "pit",
+"date": "2026-12-05",
+"start": 1110,
+"title": "Spoon Jackson Album Release: Free Spoon Before He Serves 50 Years In Prison",
+"bands": [
+"Spoon Jackson Album Release: Free Spoon Before He Serves 50 Years In Prison"
+],
+"venueRaw": "Property Is Theft (P.I.T.)",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "",
+"door": "",
+"price": 0,
+"priceKind": "free",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://images.squarespace-cdn.com/content/v1/6425e5aec0f3ab77eef28664/1794420874894-8FJVHGCGEA0ZYKISQ8H9/img-be43bb33.webp",
+"link": "",
+"url": "https://www.propertyistheft.org/events/yoiqiks3oc3pkc19lgy548shfvret5",
+"vkey": "NY|nyc|property is theft pit",
+"venue": "Property Is Theft (P.I.T.)"
 },
 {
 "id": "sdfcd1203f9",
@@ -122131,6 +122224,39 @@
 "url": "https://www.thebroadway.nyc/showcalendar/prairie-princess-too-many-horses-zo-pete-ford",
 "vkey": "NY|nyc|broadway",
 "venue": "The Broadway"
+},
+{
+"id": "vee484a2722",
+"src": "pit",
+"date": "2026-12-11",
+"start": 1080,
+"title": "Benefit Show for Indigenous National Liberation Organization ft. Home Blitz/Van Goth/Clock Serum/Donna Allen",
+"bands": [
+"Benefit Show for Indigenous National Liberation Organization ft. Home Blitz",
+"Van Goth",
+"Clock Serum",
+"Donna Allen"
+],
+"venueRaw": "Property Is Theft (P.I.T.)",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "",
+"door": "",
+"price": null,
+"priceKind": "unknown",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://images.squarespace-cdn.com/content/v1/6425e5aec0f3ab77eef28664/1794420349937-7AQ281DW6U6NNGC9JZOK/2299.jpg",
+"link": "",
+"url": "https://www.propertyistheft.org/events/h2scgi7yg9l3liz9jvhawm5akvmzlx",
+"vkey": "NY|nyc|property is theft pit",
+"venue": "Property Is Theft (P.I.T.)"
 },
 {
 "id": "s9624266b6d",
