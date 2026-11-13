@@ -1,22 +1,22 @@
 {
-"generated": "2026-11-12T12:34-05:00",
-"scraped": "2026-11-12",
+"generated": "2026-11-13T12:11-05:00",
+"scraped": "2026-11-13",
 "sources": [
 {
 "id": "coolshows",
 "name": "coolshows.life",
 "home": "https://coolshows.life/",
 "ok": true,
-"checked": "2026-11-12T12:34-05:00",
+"checked": "2026-11-13T12:11-05:00",
 "count": 3525,
-"upcoming": 75
+"upcoming": 71
 },
 {
 "id": "abcnorio",
 "name": "ABC No Rio",
 "home": "https://www.abcnorio.org/events/",
 "ok": true,
-"checked": "2026-11-12T12:34-05:00",
+"checked": "2026-11-13T12:11-05:00",
 "count": 2,
 "upcoming": 2
 },
@@ -25,7 +25,7 @@
 "name": "The Broadway",
 "home": "https://www.thebroadway.nyc/",
 "ok": true,
-"checked": "2026-11-12T12:34-05:00",
+"checked": "2026-11-13T12:11-05:00",
 "count": 50,
 "upcoming": 20
 },
@@ -34,25 +34,25 @@
 "name": "Mama Tried",
 "home": "https://mamatriedbk.com/",
 "ok": true,
-"checked": "2026-11-12T12:34-05:00",
-"count": 40,
-"upcoming": 10
+"checked": "2026-11-13T12:11-05:00",
+"count": 39,
+"upcoming": 9
 },
 {
 "id": "pit",
 "name": "Property Is Theft",
 "home": "https://www.propertyistheft.org/",
 "ok": true,
-"checked": "2026-11-12T12:34-05:00",
-"count": 45,
-"upcoming": 15
+"checked": "2026-11-13T12:11-05:00",
+"count": 44,
+"upcoming": 14
 },
 {
 "id": "khyber-pass",
 "name": "Khyber Pass",
 "home": "https://www.khyberpasspub.com/",
 "ok": true,
-"checked": "2026-11-12T12:34-05:00",
+"checked": "2026-11-13T12:11-05:00",
 "count": 36,
 "upcoming": 6
 },
@@ -61,7 +61,7 @@
 "name": "Prototype 237",
 "home": "https://www.prototype237.com/",
 "ok": true,
-"checked": "2026-11-12T12:34-05:00",
+"checked": "2026-11-13T12:11-05:00",
 "count": 17,
 "upcoming": 0
 }
@@ -122192,6 +122192,39 @@
 "url": "https://coolshows.life/",
 "vkey": "NY|nyc|purgatory",
 "venue": "Purgatory"
+},
+{
+"id": "vafb7dabd1c",
+"src": "the-broadway",
+"date": "2026-12-07",
+"start": 1200,
+"title": "Ancil Airy, Sasha Says, River Maxfield + Sasha Sasha",
+"bands": [
+"Ancil Airy",
+"Sasha Says",
+"River Maxfield",
+"Sasha Sasha"
+],
+"venueRaw": "The Broadway",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "",
+"door": "",
+"price": null,
+"priceKind": "unknown",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://images.squarespace-cdn.com/content/v1/62bb73eaae40d4671600d300/1794359320625-9IV9HC41F74EN2GNMUXU/12_7+Flier+Portrait.png",
+"link": "",
+"url": "https://www.thebroadway.nyc/showcalendar/ancil-airy-sasha-says-river-maxfield-sasha-sasha",
+"vkey": "NY|nyc|broadway",
+"venue": "The Broadway"
 },
 {
 "id": "v4bb13e18fc",
