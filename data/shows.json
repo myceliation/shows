@@ -1,22 +1,22 @@
 {
-"generated": "2026-11-14T10:48-05:00",
-"scraped": "2026-11-14",
+"generated": "2026-11-15T11:19-05:00",
+"scraped": "2026-11-15",
 "sources": [
 {
 "id": "coolshows",
 "name": "coolshows.life",
 "home": "https://coolshows.life/",
 "ok": true,
-"checked": "2026-11-14T10:48-05:00",
-"count": 3525,
-"upcoming": 60
+"checked": "2026-11-15T11:19-05:00",
+"count": 3527,
+"upcoming": 52
 },
 {
 "id": "abcnorio",
 "name": "ABC No Rio",
 "home": "https://www.abcnorio.org/events/",
 "ok": true,
-"checked": "2026-11-14T10:48-05:00",
+"checked": "2026-11-15T11:19-05:00",
 "count": 2,
 "upcoming": 2
 },
@@ -25,34 +25,34 @@
 "name": "The Broadway",
 "home": "https://www.thebroadway.nyc/",
 "ok": true,
-"checked": "2026-11-14T10:48-05:00",
+"checked": "2026-11-15T11:19-05:00",
 "count": 48,
-"upcoming": 18
+"upcoming": 16
 },
 {
 "id": "mama-tried",
 "name": "Mama Tried",
 "home": "https://mamatriedbk.com/",
 "ok": true,
-"checked": "2026-11-14T10:48-05:00",
-"count": 39,
-"upcoming": 9
+"checked": "2026-11-15T11:19-05:00",
+"count": 38,
+"upcoming": 8
 },
 {
 "id": "pit",
 "name": "Property Is Theft",
 "home": "https://www.propertyistheft.org/",
 "ok": true,
-"checked": "2026-11-14T10:48-05:00",
-"count": 42,
-"upcoming": 12
+"checked": "2026-11-15T11:19-05:00",
+"count": 40,
+"upcoming": 10
 },
 {
 "id": "khyber-pass",
 "name": "Khyber Pass",
 "home": "https://www.khyberpasspub.com/",
 "ok": true,
-"checked": "2026-11-14T10:48-05:00",
+"checked": "2026-11-15T11:19-05:00",
 "count": 35,
 "upcoming": 5
 },
@@ -61,7 +61,7 @@
 "name": "Prototype 237",
 "home": "https://www.prototype237.com/",
 "ok": true,
-"checked": "2026-11-14T10:48-05:00",
+"checked": "2026-11-15T11:19-05:00",
 "count": 17,
 "upcoming": 0
 }
@@ -119615,6 +119615,39 @@
 "venue": "Principals G1 Coffee House"
 },
 {
+"id": "sae1ed37910",
+"src": "coolshows",
+"date": "2026-11-14",
+"start": 1080,
+"title": null,
+"bands": [
+"yoshi douglas",
+"glen vine",
+"brickarms",
+"secret set"
+],
+"venueRaw": "dm for address",
+"city": "New Brunswick",
+"state": "NJ",
+"address": null,
+"loc": "hidden",
+"locNote": "dm for address",
+"time": "6:00 PM",
+"door": "$5",
+"price": 5.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "18+",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/VrTT77v.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NJ|new brunswick|~hidden",
+"venue": "Address not public"
+},
+{
 "id": "vd839ac465d",
 "src": "the-broadway",
 "date": "2026-11-14",
@@ -121666,6 +121699,40 @@
 "url": "https://mamatriedbk.com/upcoming-events/9atamyytxcw36bw-kfpe5-gh4js-kmpke",
 "vkey": "NY|nyc|mama tried",
 "venue": "Mama Tried"
+},
+{
+"id": "sa448888733",
+"src": "coolshows",
+"date": "2026-11-29",
+"start": 900,
+"title": null,
+"bands": [
+"Never Again",
+"Fools Game",
+"Still Won't Break",
+"The Brolic",
+"New Society"
+],
+"venueRaw": "the 244 spot",
+"city": "South Amboy",
+"state": "NJ",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "3:00 PM",
+"door": "free",
+"price": 0,
+"priceKind": "free",
+"notaflof": false,
+"age": "unknown",
+"notes": "matinee",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/EjYX9ok.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NJ|south amboy|244 spot",
+"venue": "the 244 spot"
 },
 {
 "id": "s0c73f91669",
@@ -125587,6 +125654,21 @@
 "private": false,
 "address": null,
 "aliases": [],
+"lat": 40.4936119,
+"lng": -74.4436416,
+"precision": "city"
+},
+{
+"key": "NJ|new brunswick|~hidden",
+"name": "Address not public",
+"city": "New Brunswick",
+"state": "NJ",
+"hidden": true,
+"private": false,
+"address": null,
+"aliases": [
+"dm for address"
+],
 "lat": 40.4936119,
 "lng": -74.4436416,
 "precision": "city"
