@@ -1,22 +1,22 @@
 {
-"generated": "2026-11-15T11:19-05:00",
-"scraped": "2026-11-15",
+"generated": "2026-11-16T14:34-05:00",
+"scraped": "2026-11-16",
 "sources": [
 {
 "id": "coolshows",
 "name": "coolshows.life",
 "home": "https://coolshows.life/",
 "ok": true,
-"checked": "2026-11-15T11:19-05:00",
+"checked": "2026-11-16T14:34-05:00",
 "count": 3527,
-"upcoming": 52
+"upcoming": 46
 },
 {
 "id": "abcnorio",
 "name": "ABC No Rio",
 "home": "https://www.abcnorio.org/events/",
 "ok": true,
-"checked": "2026-11-15T11:19-05:00",
+"checked": "2026-11-16T14:34-05:00",
 "count": 2,
 "upcoming": 2
 },
@@ -25,8 +25,8 @@
 "name": "The Broadway",
 "home": "https://www.thebroadway.nyc/",
 "ok": true,
-"checked": "2026-11-15T11:19-05:00",
-"count": 48,
+"checked": "2026-11-16T14:34-05:00",
+"count": 46,
 "upcoming": 16
 },
 {
@@ -34,34 +34,34 @@
 "name": "Mama Tried",
 "home": "https://mamatriedbk.com/",
 "ok": true,
-"checked": "2026-11-15T11:19-05:00",
-"count": 38,
-"upcoming": 8
+"checked": "2026-11-16T14:34-05:00",
+"count": 39,
+"upcoming": 9
 },
 {
 "id": "pit",
 "name": "Property Is Theft",
 "home": "https://www.propertyistheft.org/",
 "ok": true,
-"checked": "2026-11-15T11:19-05:00",
-"count": 40,
-"upcoming": 10
+"checked": "2026-11-16T14:34-05:00",
+"count": 39,
+"upcoming": 9
 },
 {
 "id": "khyber-pass",
 "name": "Khyber Pass",
 "home": "https://www.khyberpasspub.com/",
 "ok": true,
-"checked": "2026-11-15T11:19-05:00",
-"count": 35,
-"upcoming": 5
+"checked": "2026-11-16T14:34-05:00",
+"count": 34,
+"upcoming": 4
 },
 {
 "id": "prototype-237",
 "name": "Prototype 237",
 "home": "https://www.prototype237.com/",
 "ok": true,
-"checked": "2026-11-15T11:19-05:00",
+"checked": "2026-11-16T14:34-05:00",
 "count": 17,
 "upcoming": 0
 }
@@ -122719,6 +122719,36 @@
 "url": "https://www.thebroadway.nyc/showcalendar/answering-machine-cold-wrecks-warn-the-duke-warren-britt",
 "vkey": "NY|nyc|broadway",
 "venue": "The Broadway"
+},
+{
+"id": "vce659518fe",
+"src": "mama-tried",
+"date": "2026-12-19",
+"start": 1140,
+"title": "Holiday Spectacular!",
+"bands": [
+"Holiday Spectacular!"
+],
+"venueRaw": "Mama Tried",
+"city": "Brooklyn",
+"state": "NY",
+"address": "787 3rd Avenue Brooklyn NY 11232",
+"loc": null,
+"locNote": null,
+"time": "",
+"door": "",
+"price": null,
+"priceKind": "unknown",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "",
+"link": "",
+"url": "https://mamatriedbk.com/upcoming-events/holiday-spectacular-1",
+"vkey": "NY|nyc|mama tried",
+"venue": "Mama Tried"
 },
 {
 "id": "v8934b877d9",
