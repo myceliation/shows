@@ -1,22 +1,22 @@
 {
-"generated": "2026-11-16T14:34-05:00",
-"scraped": "2026-11-16",
+"generated": "2026-11-17T13:32-05:00",
+"scraped": "2026-11-17",
 "sources": [
 {
 "id": "coolshows",
 "name": "coolshows.life",
 "home": "https://coolshows.life/",
 "ok": true,
-"checked": "2026-11-16T14:34-05:00",
+"checked": "2026-11-17T13:32-05:00",
 "count": 3527,
-"upcoming": 46
+"upcoming": 44
 },
 {
 "id": "abcnorio",
 "name": "ABC No Rio",
 "home": "https://www.abcnorio.org/events/",
 "ok": true,
-"checked": "2026-11-16T14:34-05:00",
+"checked": "2026-11-17T13:32-05:00",
 "count": 2,
 "upcoming": 2
 },
@@ -25,16 +25,16 @@
 "name": "The Broadway",
 "home": "https://www.thebroadway.nyc/",
 "ok": true,
-"checked": "2026-11-16T14:34-05:00",
-"count": 46,
-"upcoming": 16
+"checked": "2026-11-17T13:32-05:00",
+"count": 45,
+"upcoming": 15
 },
 {
 "id": "mama-tried",
 "name": "Mama Tried",
 "home": "https://mamatriedbk.com/",
 "ok": true,
-"checked": "2026-11-16T14:34-05:00",
+"checked": "2026-11-17T13:32-05:00",
 "count": 39,
 "upcoming": 9
 },
@@ -43,7 +43,7 @@
 "name": "Property Is Theft",
 "home": "https://www.propertyistheft.org/",
 "ok": true,
-"checked": "2026-11-16T14:34-05:00",
+"checked": "2026-11-17T13:32-05:00",
 "count": 39,
 "upcoming": 9
 },
@@ -52,7 +52,7 @@
 "name": "Khyber Pass",
 "home": "https://www.khyberpasspub.com/",
 "ok": true,
-"checked": "2026-11-16T14:34-05:00",
+"checked": "2026-11-17T13:32-05:00",
 "count": 34,
 "upcoming": 4
 },
@@ -61,7 +61,7 @@
 "name": "Prototype 237",
 "home": "https://www.prototype237.com/",
 "ok": true,
-"checked": "2026-11-16T14:34-05:00",
+"checked": "2026-11-17T13:32-05:00",
 "count": 17,
 "upcoming": 0
 }
