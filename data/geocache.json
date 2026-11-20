@@ -17626,5 +17626,42 @@
 40.693627107202,
 -75.185215098551,
 "321 MARSHALL ST, PHILLIPSBURG, NJ, 08865"
+],
+"nom5:Principles Gd Coffeehouse, Brooklyn, New York": [],
+"pho:Principles Gd Coffeehouse Brooklyn": [],
+"nom5:Puck Live, Doylestown, Pennsylvania": [],
+"pho:Puck Live Doylestown": [
+[
+40.3110319,
+-75.1300144,
+"Puck/Garden Bar",
+"Printers Alley"
+],
+[
+40.34714,
+-75.0782671,
+"River of Life Church",
+"Durham Road"
+],
+[
+3.1123953,
+101.6044754,
+"Laluan Kelana Jaya",
+"Lebuhraya Damansara\u2013Puchong"
+],
+[
+3.0628005,
+101.5904214,
+"Laluan Kelana Jaya",
+"Persiaran Kewajipan"
+],
+[
+3.0338435,
+101.5881461,
+"Laluan Kelana Jaya",
+"Persiaran Kewajipan"
 ]
+],
+"nom5:DuBois-Robeson People's Center, Philadelphia, Pennsylvania": [],
+"pho:DuBois-Robeson People's Center Philadelphia": []
 }
