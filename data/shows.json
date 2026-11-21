@@ -1,22 +1,22 @@
 {
-"generated": "2026-11-20T12:46-05:00",
-"scraped": "2026-11-20",
+"generated": "2026-11-21T11:46-05:00",
+"scraped": "2026-11-21",
 "sources": [
 {
 "id": "coolshows",
 "name": "coolshows.life",
 "home": "https://coolshows.life/",
 "ok": true,
-"checked": "2026-11-20T12:46-05:00",
+"checked": "2026-11-21T11:46-05:00",
 "count": 3543,
-"upcoming": 56
+"upcoming": 50
 },
 {
 "id": "abcnorio",
 "name": "ABC No Rio",
 "home": "https://www.abcnorio.org/events/",
 "ok": true,
-"checked": "2026-11-20T12:46-05:00",
+"checked": "2026-11-21T11:46-05:00",
 "count": 2,
 "upcoming": 2
 },
@@ -25,16 +25,16 @@
 "name": "The Broadway",
 "home": "https://www.thebroadway.nyc/",
 "ok": true,
-"checked": "2026-11-20T12:46-05:00",
+"checked": "2026-11-21T11:46-05:00",
 "count": 48,
-"upcoming": 17
+"upcoming": 16
 },
 {
 "id": "mama-tried",
 "name": "Mama Tried",
 "home": "https://mamatriedbk.com/",
 "ok": true,
-"checked": "2026-11-20T12:46-05:00",
+"checked": "2026-11-21T11:46-05:00",
 "count": 38,
 "upcoming": 8
 },
@@ -43,25 +43,25 @@
 "name": "Property Is Theft",
 "home": "https://www.propertyistheft.org/",
 "ok": true,
-"checked": "2026-11-20T12:46-05:00",
-"count": 39,
-"upcoming": 9
+"checked": "2026-11-21T11:46-05:00",
+"count": 38,
+"upcoming": 8
 },
 {
 "id": "khyber-pass",
 "name": "Khyber Pass",
 "home": "https://www.khyberpasspub.com/",
 "ok": true,
-"checked": "2026-11-20T12:46-05:00",
-"count": 33,
-"upcoming": 3
+"checked": "2026-11-21T11:46-05:00",
+"count": 32,
+"upcoming": 2
 },
 {
 "id": "prototype-237",
 "name": "Prototype 237",
 "home": "https://www.prototype237.com/",
 "ok": true,
-"checked": "2026-11-20T12:46-05:00",
+"checked": "2026-11-21T11:46-05:00",
 "count": 17,
 "upcoming": 0
 }
@@ -122909,6 +122909,36 @@
 "flier": "https://images.squarespace-cdn.com/content/v1/62bb73eaae40d4671600d300/1790367039682-P700HQIWNXDK4LRIFQX4/lapeche-endearments-12122026-4x5.jpg",
 "link": "",
 "url": "https://www.thebroadway.nyc/showcalendar/lapeche-endearments",
+"vkey": "NY|nyc|broadway",
+"venue": "The Broadway"
+},
+{
+"id": "vd5f8f79b15",
+"src": "the-broadway",
+"date": "2026-12-12",
+"start": 1410,
+"title": "Camdemonium II: Homecoming",
+"bands": [
+"Camdemonium II: Homecoming"
+],
+"venueRaw": "The Broadway",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "",
+"door": "",
+"price": null,
+"priceKind": "unknown",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://images.squarespace-cdn.com/content/v1/62bb73eaae40d4671600d300/1795204915141-P8RAG9481QU1FGE3O82A/Instagram+Size.jpeg",
+"link": "",
+"url": "https://www.thebroadway.nyc/showcalendar/camdemonium-ii-homecoming",
 "vkey": "NY|nyc|broadway",
 "venue": "The Broadway"
 },
