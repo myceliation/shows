@@ -1,32 +1,32 @@
 {
-"generated": "2026-11-21T11:46-05:00",
-"scraped": "2026-11-21",
+"generated": "2026-11-22T12:07-05:00",
+"scraped": "2026-11-22",
 "sources": [
 {
 "id": "coolshows",
 "name": "coolshows.life",
 "home": "https://coolshows.life/",
 "ok": true,
-"checked": "2026-11-21T11:46-05:00",
-"count": 3543,
-"upcoming": 50
+"checked": "2026-11-22T12:07-05:00",
+"count": 3553,
+"upcoming": 51
 },
 {
 "id": "abcnorio",
 "name": "ABC No Rio",
 "home": "https://www.abcnorio.org/events/",
 "ok": true,
-"checked": "2026-11-21T11:46-05:00",
-"count": 2,
-"upcoming": 2
+"checked": "2026-11-22T12:07-05:00",
+"count": 1,
+"upcoming": 1
 },
 {
 "id": "the-broadway",
 "name": "The Broadway",
 "home": "https://www.thebroadway.nyc/",
 "ok": true,
-"checked": "2026-11-21T11:46-05:00",
-"count": 48,
+"checked": "2026-11-22T12:07-05:00",
+"count": 46,
 "upcoming": 16
 },
 {
@@ -34,34 +34,34 @@
 "name": "Mama Tried",
 "home": "https://mamatriedbk.com/",
 "ok": true,
-"checked": "2026-11-21T11:46-05:00",
-"count": 38,
-"upcoming": 8
+"checked": "2026-11-22T12:07-05:00",
+"count": 37,
+"upcoming": 7
 },
 {
 "id": "pit",
 "name": "Property Is Theft",
 "home": "https://www.propertyistheft.org/",
 "ok": true,
-"checked": "2026-11-21T11:46-05:00",
-"count": 38,
-"upcoming": 8
+"checked": "2026-11-22T12:07-05:00",
+"count": 36,
+"upcoming": 6
 },
 {
 "id": "khyber-pass",
 "name": "Khyber Pass",
 "home": "https://www.khyberpasspub.com/",
 "ok": true,
-"checked": "2026-11-21T11:46-05:00",
-"count": 32,
-"upcoming": 2
+"checked": "2026-11-22T12:07-05:00",
+"count": 31,
+"upcoming": 1
 },
 {
 "id": "prototype-237",
 "name": "Prototype 237",
 "home": "https://www.prototype237.com/",
 "ok": true,
-"checked": "2026-11-21T11:46-05:00",
+"checked": "2026-11-22T12:07-05:00",
 "count": 17,
 "upcoming": 0
 }
@@ -78723,8 +78723,8 @@
 "flier": "https://i.imgur.com/MNP3iee.jpeg",
 "link": "",
 "url": "https://coolshows.life/",
-"vkey": "PA|philadelphia|1123 walnut st fl2",
-"venue": "1123 Walnut St Fl2"
+"vkey": "PA|philadelphia|1123 walnut st",
+"venue": "1123 Walnut St."
 },
 {
 "id": "s884e8a62fa",
@@ -79818,8 +79818,8 @@
 "flier": "https://i.imgur.com/3Edm6rB.jpeg",
 "link": "",
 "url": "https://coolshows.life/",
-"vkey": "PA|philadelphia|1123 walnut st fl2",
-"venue": "1123 Walnut St Fl2"
+"vkey": "PA|philadelphia|1123 walnut st",
+"venue": "1123 Walnut St."
 },
 {
 "id": "s83f7357b30",
@@ -88793,7 +88793,7 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "NY|nyc|erf",
-"venue": "ErF"
+"venue": "ERF"
 },
 {
 "id": "sdb069e5f31",
@@ -97688,7 +97688,7 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "PA|phoenixville|polish club",
-"venue": "The Polish Club"
+"venue": "The Polish club"
 },
 {
 "id": "sc6382af636",
@@ -119346,7 +119346,7 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "PA|phoenixville|polish club",
-"venue": "The Polish Club"
+"venue": "The Polish club"
 },
 {
 "id": "va077987d69",
@@ -120110,7 +120110,7 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "NY|nyc|erf",
-"venue": "ErF"
+"venue": "ERF"
 },
 {
 "id": "va30dad6bfb",
@@ -120738,8 +120738,8 @@
 "flier": "https://i.imgur.com/XxJpVA5.jpeg",
 "link": "",
 "url": "https://coolshows.life/",
-"vkey": "PA|philadelphia|1123 walnut st fl2",
-"venue": "1123 Walnut St Fl2"
+"vkey": "PA|philadelphia|1123 walnut st",
+"venue": "1123 Walnut St."
 },
 {
 "id": "v9d9d4ecc9c",
@@ -121119,7 +121119,7 @@
 "venueRaw": "Property is Theft",
 "city": "Brooklyn",
 "state": "NY",
-"address": "411 South 5th St, Brooklyn, NY",
+"address": null,
 "loc": null,
 "locNote": null,
 "time": "doors 6, music 7pm",
@@ -121127,7 +121127,7 @@
 "price": 10.0,
 "priceKind": "paid",
 "notaflof": false,
-"age": "all ages",
+"age": "unknown",
 "notes": "benefit for venue space",
 "status": null,
 "kind": "show",
@@ -121136,10 +121136,6 @@
 "url": "https://coolshows.life/",
 "vkey": "NY|nyc|property is theft pit",
 "also": [
-{
-"src": "abcnorio",
-"url": "https://www.abcnorio.org/events/1990/"
-},
 {
 "src": "pit",
 "url": "https://www.propertyistheft.org/events/p6tx8ezfdyjwt9nzgjrxss6lblxv8j-5nag4"
@@ -121769,6 +121765,39 @@
 "venue": "The Broadway"
 },
 {
+"id": "sa4374169b1",
+"src": "coolshows",
+"date": "2026-11-28",
+"start": 1200,
+"title": null,
+"bands": [
+"Abbatia",
+"Small Head Big Torso Vicious Grip",
+"Vera Yvan",
+"Call Off Your Dogs"
+],
+"venueRaw": "Minimart",
+"city": "Philadelphia",
+"state": "PA",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "doors 7 music 8pm",
+"door": "$10",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": true,
+"age": "unknown",
+"notes": "notaflof",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/4C2yIEq.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "PA|philadelphia|minimart",
+"venue": "Minimart"
+},
+{
 "id": "vf0e953fc2a",
 "src": "mama-tried",
 "date": "2026-11-28",
@@ -122024,6 +122053,39 @@
 "venue": "Property Is Theft (P.I.T.)"
 },
 {
+"id": "s8a9990b150",
+"src": "coolshows",
+"date": "2026-12-03",
+"start": 1080,
+"title": null,
+"bands": [
+"Te Vista",
+"Ringtone",
+"Shampoo",
+"Ghostship Dreamland"
+],
+"venueRaw": "The Rotunda",
+"city": "Philadelphia",
+"state": "PA",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "6:00 PM",
+"door": "$10-15",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/htpaXdt.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "PA|philadelphia|rotunda",
+"venue": "The Rotunda"
+},
+{
 "id": "s0d14e51846",
 "src": "coolshows",
 "date": "2026-12-03",
@@ -122257,6 +122319,39 @@
 "venue": "Maggie's Farm"
 },
 {
+"id": "s7429e4679f",
+"src": "coolshows",
+"date": "2026-12-05",
+"start": 1080,
+"title": null,
+"bands": [
+"Eulogy",
+"Static Brian",
+"Sappers",
+"Captial Punishment"
+],
+"venueRaw": "Rock Bottom",
+"city": "Philadelphia",
+"state": "PA",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "6:00 PM",
+"door": "$15",
+"price": 15.0,
+"priceKind": "paid",
+"notaflof": true,
+"age": "unknown",
+"notes": "notaflof, benefit shot for Mohammed's Mission",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/RC9xjUN.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "PA|philadelphia|rock bottom",
+"venue": "Rock Bottom"
+},
+{
 "id": "sd72c3d1177",
 "src": "coolshows",
 "date": "2026-12-05",
@@ -122288,6 +122383,39 @@
 "url": "https://coolshows.life/",
 "vkey": "PA|philadelphia|nikki lopez",
 "venue": "Nikki Lopez"
+},
+{
+"id": "s44ec15561b",
+"src": "coolshows",
+"date": "2026-12-05",
+"start": 1110,
+"title": null,
+"bands": [
+"Mar Stellium",
+"Más Trauma",
+"Modern Crybaby",
+"Cussing"
+],
+"venueRaw": "Wild Air Beerworks",
+"city": "Asbury Park",
+"state": "NJ",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "6:30 PM",
+"door": "$15",
+"price": 15.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "all ages",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/GJGRTsc.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NJ|asbury park|wild air beerworks",
+"venue": "Wild Air Beerworks"
 },
 {
 "id": "v90273c7765",
@@ -122590,6 +122718,39 @@
 "venue": "The Broadway"
 },
 {
+"id": "s2fc6ffb9ca",
+"src": "coolshows",
+"date": "2026-12-10",
+"start": 1140,
+"title": null,
+"bands": [
+"Michvale Terrace (NC)",
+"ᑫAmygdalae",
+"Casca",
+"Ariadne's Thread"
+],
+"venueRaw": "Cinco",
+"city": "New Brunswick",
+"state": "NJ",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "7:00 PM",
+"door": "$10",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/Pvy8GqG.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NJ|new brunswick|cinco",
+"venue": "Cinco"
+},
+{
 "id": "v4bb13e18fc",
 "src": "the-broadway",
 "date": "2026-12-10",
@@ -122816,6 +122977,39 @@
 "venue": "Milkboy"
 },
 {
+"id": "s13810cc215",
+"src": "coolshows",
+"date": "2026-12-12",
+"start": 1140,
+"title": null,
+"bands": [
+"Nmlstyl",
+"Perpetual Oyster",
+"Suleiman",
+"Rilith"
+],
+"venueRaw": "The Kennel",
+"city": "Philadelphia",
+"state": "PA",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "7:00 PM",
+"door": "$10",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": true,
+"age": "unknown",
+"notes": "notaflof, masks required",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/0oas5wQ.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "PA|philadelphia|kennel",
+"venue": "The Kennel"
+},
+{
 "id": "s3a71470bf1",
 "src": "coolshows",
 "date": "2026-12-12",
@@ -122941,6 +123135,40 @@
 "url": "https://www.thebroadway.nyc/showcalendar/camdemonium-ii-homecoming",
 "vkey": "NY|nyc|broadway",
 "venue": "The Broadway"
+},
+{
+"id": "s3ea5ae2cd7",
+"src": "coolshows",
+"date": "2026-12-13",
+"start": 1080,
+"title": null,
+"bands": [
+"Deceased",
+"Vigil",
+"Tombstoner",
+"Phantasmal Rot",
+"Exoceny"
+],
+"venueRaw": "The Woodshop",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "6:00 PM",
+"door": "",
+"price": null,
+"priceKind": "unknown",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/9GWnKwm.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NY|nyc|woodshop",
+"venue": "The Woodshop"
 },
 {
 "id": "s914b62cf14",
@@ -123139,6 +123367,37 @@
 "venue": "Trans-Pecos"
 },
 {
+"id": "s48b5efe4a0",
+"src": "coolshows",
+"date": "2026-12-17",
+"start": 1080,
+"title": null,
+"bands": [
+"Teddy Bear Band",
+"Pegasus Meteor Fist"
+],
+"venueRaw": "563 Broad St",
+"city": "Newark",
+"state": "NJ",
+"address": null,
+"loc": "address",
+"locNote": null,
+"time": "6:00 PM",
+"door": "free",
+"price": 0,
+"priceKind": "free",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/TVOAs1P.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "NJ|newark|563 broad st",
+"venue": "563 Broad St"
+},
+{
 "id": "scca2007427",
 "src": "coolshows",
 "date": "2026-12-18",
@@ -123239,6 +123498,38 @@
 "url": "https://coolshows.life/",
 "vkey": "NY|nyc|erf studios",
 "venue": "Erf Studios"
+},
+{
+"id": "s8a90b69326",
+"src": "coolshows",
+"date": "2026-12-19",
+"start": 1110,
+"title": null,
+"bands": [
+"Asher Ryan (KY)",
+"Animal or Angel",
+"Birdeater"
+],
+"venueRaw": "Molly's Books and Records",
+"city": "Philadelphia",
+"state": "PA",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "6:30 PM",
+"door": "$10-20",
+"price": 10.0,
+"priceKind": "paid",
+"notaflof": true,
+"age": "unknown",
+"notes": "notaflof",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/kvI9tli.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "PA|philadelphia|mollys books and records",
+"venue": "Molly's Books and Records"
 },
 {
 "id": "s247606b7e7",
@@ -123501,6 +123792,38 @@
 "url": "https://mamatriedbk.com/upcoming-events/drink-and-draw-9nr8f-wcjhg-zw7th-ftxrr-x5fmb-6mkkl-7ff57-r4pyc-zj8cp-zxcnt-kasc8",
 "vkey": "NY|nyc|mama tried",
 "venue": "Mama Tried"
+},
+{
+"id": "s1da2e408be",
+"src": "coolshows",
+"date": "2026-12-31",
+"start": 1140,
+"title": null,
+"bands": [
+"Noun",
+"Songs for Mom's",
+"Soji"
+],
+"venueRaw": "God's Automatic Body",
+"city": "Philadelphia",
+"state": "PA",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "7:00 PM",
+"door": "$0-20",
+"price": 0.0,
+"priceKind": "paid",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://i.imgur.com/JdTbQYA.jpeg",
+"link": "",
+"url": "https://coolshows.life/",
+"vkey": "PA|philadelphia|gods automatic body",
+"venue": "God's Automatic Body"
 },
 {
 "id": "vbdc65d678d",
@@ -126379,6 +126702,19 @@
 "precision": "city"
 },
 {
+"key": "NJ|newark|563 broad st",
+"name": "563 Broad St",
+"city": "Newark",
+"state": "NJ",
+"hidden": false,
+"private": false,
+"address": "563 Broad St",
+"aliases": [],
+"lat": 40.741835907266,
+"lng": -74.169150108116,
+"precision": "address"
+},
+{
 "key": "NJ|newark|fernandas",
 "name": "Fernanda's",
 "city": "Newark",
@@ -128402,14 +128738,14 @@
 },
 {
 "key": "NY|nyc|erf",
-"name": "ErF",
+"name": "ERF",
 "city": "Brooklyn",
 "state": "NY",
 "hidden": false,
 "private": false,
 "address": null,
 "aliases": [
-"ERF"
+"ErF"
 ],
 "lat": 40.6526006,
 "lng": -73.9497211,
@@ -129406,7 +129742,6 @@
 "411 S 5th St",
 "411 South 5th Street",
 "P.I.T",
-"P.I.T (Property is Theft)",
 "P.I.T.",
 "PIT",
 "Property is Theft",
@@ -130532,16 +130867,16 @@
 "precision": "city"
 },
 {
-"key": "PA|philadelphia|1123 walnut st fl2",
-"name": "1123 Walnut St Fl2",
+"key": "PA|philadelphia|1123 walnut st",
+"name": "1123 Walnut St.",
 "city": "Philadelphia",
 "state": "PA",
 "hidden": false,
 "private": false,
-"address": "1123 Walnut St Fl2",
+"address": "1123 Walnut St.",
 "aliases": [
-"1123 Walnut St Flr 2",
-"1123 Walnut St."
+"1123 Walnut St Fl2",
+"1123 Walnut St Flr 2"
 ],
 "lat": 39.948856188689,
 "lng": -75.159873737308,
@@ -132453,6 +132788,19 @@
 "precision": "city"
 },
 {
+"key": "PA|philadelphia|rock bottom",
+"name": "Rock Bottom",
+"city": "Philadelphia",
+"state": "PA",
+"hidden": false,
+"private": false,
+"address": null,
+"aliases": [],
+"lat": 39.9527237,
+"lng": -75.1635262,
+"precision": "city"
+},
+{
 "key": "PA|philadelphia|rotunda",
 "name": "The Rotunda",
 "city": "Philadelphia",
@@ -133226,14 +133574,14 @@
 },
 {
 "key": "PA|phoenixville|polish club",
-"name": "The Polish Club",
+"name": "The Polish club",
 "city": "Phoenixville",
 "state": "PA",
 "hidden": false,
 "private": false,
 "address": null,
 "aliases": [
-"The Polish club"
+"The Polish Club"
 ],
 "lat": 40.1338784,
 "lng": -75.5172827,

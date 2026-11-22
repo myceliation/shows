@@ -17663,5 +17663,58 @@
 ]
 ],
 "nom5:DuBois-Robeson People's Center, Philadelphia, Pennsylvania": [],
-"pho:DuBois-Robeson People's Center Philadelphia": []
+"pho:DuBois-Robeson People's Center Philadelphia": [],
+"nom5:Rock Bottom, Philadelphia, Pennsylvania": [],
+"pho:Rock Bottom Philadelphia": [
+[
+39.9621393,
+-75.1533935,
+"Triple Bottom Brewing",
+"Spring Garden Street"
+],
+[
+39.9621393,
+-75.1533935,
+"Triple Bottom Brewing",
+"Spring Garden Street"
+],
+[
+40.0414027,
+-75.1347899,
+"Fern Rock Transportation Center",
+"West Nedro Avenue"
+],
+[
+40.0418091,
+-75.1368239,
+"Fern Rock Transportation Center",
+"West Nedro Avenue"
+],
+[
+39.9655895,
+-75.2067467,
+"Bottom of the Sea",
+"Lancaster Avenue"
+]
+],
+"cen:563 Broad St, Newark, NJ": [
+40.741835907266,
+-74.169150108116,
+"563 BROAD ST, NEWARK, NJ, 07102"
+],
+"nom5:ERF, Brooklyn, New York": [],
+"pho:ERF Brooklyn": [
+[
+40.6348628,
+-74.0170011,
+"Brooklyn Arabic Bible Church",
+"Erik Place"
+],
+[
+39.7722518,
+-75.0052605,
+"Blenheim-Erial-New Brooklyn Road",
+""
+]
+]
 }
