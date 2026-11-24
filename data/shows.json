@@ -1,13 +1,13 @@
 {
-"generated": "2026-11-23T16:18-05:00",
-"scraped": "2026-11-23",
+"generated": "2026-11-24T15:08-05:00",
+"scraped": "2026-11-24",
 "sources": [
 {
 "id": "coolshows",
 "name": "coolshows.life",
 "home": "https://coolshows.life/",
 "ok": true,
-"checked": "2026-11-23T16:18-05:00",
+"checked": "2026-11-24T15:08-05:00",
 "count": 3553,
 "upcoming": 47
 },
@@ -15,17 +15,17 @@
 "id": "abcnorio",
 "name": "ABC No Rio",
 "home": "https://www.abcnorio.org/events/",
-"ok": true,
-"checked": "2026-11-23T16:18-05:00",
-"count": 1,
-"upcoming": 1
+"ok": false,
+"error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)>",
+"checked": "2026-11-24T15:08-05:00",
+"lastGood": "2026-11-23T16:18-05:00"
 },
 {
 "id": "the-broadway",
 "name": "The Broadway",
 "home": "https://www.thebroadway.nyc/",
 "ok": true,
-"checked": "2026-11-23T16:18-05:00",
+"checked": "2026-11-24T15:08-05:00",
 "count": 46,
 "upcoming": 16
 },
@@ -34,7 +34,7 @@
 "name": "Mama Tried",
 "home": "https://mamatriedbk.com/",
 "ok": true,
-"checked": "2026-11-23T16:18-05:00",
+"checked": "2026-11-24T15:08-05:00",
 "count": 37,
 "upcoming": 7
 },
@@ -43,7 +43,7 @@
 "name": "Property Is Theft",
 "home": "https://www.propertyistheft.org/",
 "ok": true,
-"checked": "2026-11-23T16:18-05:00",
+"checked": "2026-11-24T15:08-05:00",
 "count": 36,
 "upcoming": 6
 },
@@ -52,7 +52,7 @@
 "name": "Khyber Pass",
 "home": "https://www.khyberpasspub.com/",
 "ok": true,
-"checked": "2026-11-23T16:18-05:00",
+"checked": "2026-11-24T15:08-05:00",
 "count": 31,
 "upcoming": 1
 },
@@ -61,7 +61,7 @@
 "name": "Prototype 237",
 "home": "https://www.prototype237.com/",
 "ok": true,
-"checked": "2026-11-23T16:18-05:00",
+"checked": "2026-11-24T15:08-05:00",
 "count": 17,
 "upcoming": 0
 }
@@ -122145,7 +122145,7 @@
 "notes": "",
 "status": null,
 "kind": "show",
-"flier": "https://images.squarespace-cdn.com/content/v1/62bb73eaae40d4671600d300/1794958172373-EGX6ALEXA9Q90WFRSFF5/Bway+12_26+%282%29.jpg",
+"flier": "https://images.squarespace-cdn.com/content/v1/62bb73eaae40d4671600d300/1795472089311-YT5D5PBZUYZZOL2ZB9WM/Broadway+Banner-1.jpg",
 "link": "",
 "url": "https://www.thebroadway.nyc/showcalendar/whimbrels-w-oof-tough-darling-song-people",
 "vkey": "NY|nyc|broadway",
@@ -123546,7 +123546,7 @@
 "venueRaw": "King Killer",
 "city": "Brooklyn",
 "state": "NY",
-"address": "69 2nd Avenue, Brooklyn, NY",
+"address": null,
 "loc": null,
 "locNote": null,
 "time": "7:00 PM",
@@ -123554,7 +123554,7 @@
 "price": 12.0,
 "priceKind": "paid",
 "notaflof": false,
-"age": "all ages",
+"age": "unknown",
 "notes": "",
 "status": null,
 "kind": "show",
@@ -123562,12 +123562,6 @@
 "link": "",
 "url": "https://coolshows.life/",
 "vkey": "NY|nyc|king killer",
-"also": [
-{
-"src": "abcnorio",
-"url": "https://www.abcnorio.org/events/punk-show-blu-anxxiety-kortex-take-care-of-my-bones-boxcutter-collective/"
-}
-],
 "venue": "King Killer"
 },
 {
@@ -129205,11 +129199,11 @@
 "state": "NY",
 "hidden": false,
 "private": false,
-"address": "69 2nd Avenue, Brooklyn, NY",
+"address": null,
 "aliases": [],
-"lat": 40.673134005557,
-"lng": -73.992851190661,
-"precision": "address"
+"lat": 40.6526006,
+"lng": -73.9497211,
+"precision": "city"
 },
 {
 "key": "NY|nyc|kingsland",
