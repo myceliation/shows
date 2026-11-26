@@ -1,13 +1,13 @@
 {
-"generated": "2026-11-25T14:13-05:00",
-"scraped": "2026-11-25",
+"generated": "2026-11-26T13:58-05:00",
+"scraped": "2026-11-26",
 "sources": [
 {
 "id": "coolshows",
 "name": "coolshows.life",
 "home": "https://coolshows.life/",
 "ok": true,
-"checked": "2026-11-25T14:13-05:00",
+"checked": "2026-11-26T13:58-05:00",
 "count": 3553,
 "upcoming": 46
 },
@@ -16,7 +16,7 @@
 "name": "ABC No Rio",
 "home": "https://www.abcnorio.org/events/",
 "ok": true,
-"checked": "2026-11-25T14:13-05:00",
+"checked": "2026-11-26T13:58-05:00",
 "count": 1,
 "upcoming": 1
 },
@@ -25,25 +25,25 @@
 "name": "The Broadway",
 "home": "https://www.thebroadway.nyc/",
 "ok": true,
-"checked": "2026-11-25T14:13-05:00",
-"count": 46,
-"upcoming": 16
+"checked": "2026-11-26T13:58-05:00",
+"count": 47,
+"upcoming": 17
 },
 {
 "id": "mama-tried",
 "name": "Mama Tried",
 "home": "https://mamatriedbk.com/",
 "ok": true,
-"checked": "2026-11-25T14:13-05:00",
-"count": 37,
-"upcoming": 7
+"checked": "2026-11-26T13:58-05:00",
+"count": 36,
+"upcoming": 6
 },
 {
 "id": "pit",
 "name": "Property Is Theft",
 "home": "https://www.propertyistheft.org/",
 "ok": true,
-"checked": "2026-11-25T14:13-05:00",
+"checked": "2026-11-26T13:58-05:00",
 "count": 36,
 "upcoming": 6
 },
@@ -52,7 +52,7 @@
 "name": "Khyber Pass",
 "home": "https://www.khyberpasspub.com/",
 "ok": true,
-"checked": "2026-11-25T14:13-05:00",
+"checked": "2026-11-26T13:58-05:00",
 "count": 31,
 "upcoming": 1
 },
@@ -61,7 +61,7 @@
 "name": "Prototype 237",
 "home": "https://www.prototype237.com/",
 "ok": true,
-"checked": "2026-11-25T14:13-05:00",
+"checked": "2026-11-26T13:58-05:00",
 "count": 17,
 "upcoming": 0
 }
@@ -121736,12 +121736,12 @@
 "src": "the-broadway",
 "date": "2026-11-28",
 "start": 1140,
-"title": "Diceholes w/ Black Beach, Yard + Steep Leans",
+"title": "Diceholes w/ Yard, Steep Leans + Doom Pile",
 "bands": [
 "Diceholes",
-"Black Beach",
 "Yard",
-"Steep Leans"
+"Steep Leans",
+"Doom Pile"
 ],
 "venueRaw": "The Broadway",
 "city": "Brooklyn",
@@ -122618,6 +122618,39 @@
 "url": "https://coolshows.life/",
 "vkey": "NY|nyc|fringe records",
 "venue": "Fringe Records"
+},
+{
+"id": "v6d4dfdeb83",
+"src": "the-broadway",
+"date": "2026-12-06",
+"start": 1140,
+"title": "BET! w/ Milkmans Molotov, Julia Knifefist + GASSED",
+"bands": [
+"BET!",
+"Milkmans Molotov",
+"Julia Knifefist",
+"GASSED"
+],
+"venueRaw": "The Broadway",
+"city": "Brooklyn",
+"state": "NY",
+"address": null,
+"loc": null,
+"locNote": null,
+"time": "",
+"door": "",
+"price": null,
+"priceKind": "unknown",
+"notaflof": false,
+"age": "unknown",
+"notes": "",
+"status": null,
+"kind": "show",
+"flier": "https://images.squarespace-cdn.com/content/v1/62bb73eaae40d4671600d300/1795644617884-48EXXSHRNTQPFUQAN0NK/12.6+flyer.png",
+"link": "",
+"url": "https://www.thebroadway.nyc/showcalendar/bet-w-milkmans-molotov-julia-knifefist-gassed",
+"vkey": "NY|nyc|broadway",
+"venue": "The Broadway"
 },
 {
 "id": "sc870b4c694",
