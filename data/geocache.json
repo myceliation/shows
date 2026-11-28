@@ -17730,5 +17730,124 @@
 40.498202630315,
 -74.430084341265,
 "19 S 2ND AVE, HIGHLAND PARK, NJ, 08904"
+],
+"nom5:Third Space, Asbury Park, New Jersey": [],
+"pho:Third Space Asbury Park": [
+[
+51.5374685,
+-0.2065165,
+"Third Space",
+"Salusbury Road"
+],
+[
+39.3196513,
+-76.6507193,
+"Third Space at Shaarei Tfiloh",
+"Liberty Heights Avenue"
+],
+[
+13.0783821,
+77.5785324,
+"Parking space",
+"G.K.V.K"
+]
+],
+"nom5:The Gutter, Brooklyn, New York": [
+[
+40.7227408,
+-73.9554759,
+"The Gutter",
+"The Gutter, 200, North 14th Street, Williamsburg, Brooklyn, Kings County, New York, 11249, United States"
+]
+],
+"pho:The Gutter Brooklyn": [
+[
+40.7227408,
+-73.9554759,
+"The Gutter",
+"North 14th Street"
+]
+],
+"nom5:Relax Lounge, Ridgewood, New York": [
+[
+40.7031983,
+-73.9011676,
+"Relax Lounge",
+"Relax Lounge, 68-17, Forest Avenue, Ridgewood, Queens, Queens County, New York, 11385, United States"
+]
+],
+"pho:Relax Lounge Ridgewood": [
+[
+40.7031983,
+-73.9011676,
+"Relax Lounge",
+"Forest Avenue"
+]
+],
+"nom5:Hammonton DAV, Hammonton, New Jersey": [],
+"pho:Hammonton DAV Hammonton": [
+[
+39.6315664,
+-74.7994655,
+"Hammonton",
+"Egg Harbor Road"
+],
+[
+39.6366543,
+-74.8027651,
+"Hammonton",
+""
+],
+[
+39.6564259,
+-74.807069,
+"Hammonton High School",
+"Old Forks Road"
+],
+[
+39.6289483,
+-74.7773016,
+"Hammonton Lake",
+""
+],
+[
+39.6681728,
+-74.7568276,
+"Hammonton Municipal Airport",
+"Academy Drive"
+]
+],
+"nom5:Silver Stream, Montclair, New Jersey": [],
+"pho:Silver Stream Montclair": [
+[
+41.4560897,
+-74.0503433,
+"Silver Stream",
+""
+],
+[
+41.4571688,
+-74.0546268,
+"Silver Stream",
+""
+],
+[
+41.4572182,
+-74.0542112,
+"Silver Stream",
+""
+],
+[
+41.4573149,
+-74.0521807,
+"Silver Stream",
+""
+],
+[
+41.4532467,
+-74.0492363,
+"Silver Stream",
+""
+]
 ]
 }
